@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="web存储随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案 Storage 存储 1window.sessionStorage(浏览器存储)  1window.lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5新增属性">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/H5新增属性/index.html">
+<meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="web存储随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案 Storage 存储 1window.sessionStorage(浏览器存储)  1window.lo">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/assets/1.png">
+<meta property="og:image" content="http://yoursite.com/assets/2.png">
+<meta property="og:updated_time" content="2019-10-09T07:46:19.404Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5新增属性">
+<meta name="twitter:description" content="web存储随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案 Storage 存储 1window.sessionStorage(浏览器存储)  1window.lo">
+<meta name="twitter:image" content="http://yoursite.com/assets/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/09/H5新增属性/">
+
+
+
+
+
+  <title>H5新增属性 | 跌倒的小黄瓜</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">跌倒的小黄瓜</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/H5新增属性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨国杰">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跌倒的小黄瓜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">H5新增属性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T15:42:47+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="web存储"><a href="#web存储" class="headerlink" title="web存储"></a>web存储</h2><p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案</p>
+<p>Storage 存储</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.sessionStorage(浏览器存储)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.localStorage（本地存储）</span><br></pre></td></tr></table></figure>
+
+<p>(向本地保存数据,有可能在浏览器内存里面，有可能在硬盘上面.)</p>
+<h5 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h5><p>1、设置、读取方便<br>2、容量较大，sessionStorage约5M、localStorage约20M<br>3、只能存储字符串，可以将对象JSON.stringify() 编码后存储</p>
+<h5 id="window-sessionStorage"><a href="#window-sessionStorage" class="headerlink" title="window.sessionStorage"></a>window.sessionStorage</h5><p>1、生命周期为关闭浏览器窗口<br>2、在同一个窗口下数据可以共享</p>
+<h5 id="window-localStorage"><a href="#window-localStorage" class="headerlink" title="window.localStorage"></a>window.localStorage</h5><p>1、永久生效，除非手动删除<br>2、可以多窗口共享</p>
+<h5 id="方法详解"><a href="#方法详解" class="headerlink" title="方法详解"></a>方法详解</h5><p>setItem(key, value) 设置存储内容<br>getItem(key) 读取存储内容<br>removeItem(key) 删除键值为key的存储内容<br>clear() 清空所有存储内容<br>key(n) 以索引值来获取存储内容</p>
+<p>案例：记住用户名</p>
+<h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><p>WebSQL、IndexDB<br>已经被w3c 放弃了..<br>生命周期差异，存储空间差异<br>WebSQL、IndexDB</p>
+<p>sessionStorage</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line">&lt;button&gt;sesssionStorage存储&lt;/button&gt;</span><br><span class="line">&lt;button&gt;sesssionStorage获取&lt;/button&gt;</span><br><span class="line">&lt;button&gt;sesssionStorage更新&lt;/button&gt;</span><br><span class="line">&lt;button&gt;sesssionStorage删除&lt;/button&gt;</span><br><span class="line">&lt;button&gt;sesssionStorage清除&lt;/button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">//在h5中提供两种web存储方式</span><br><span class="line"></span><br><span class="line">// sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存</span><br><span class="line">// localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上</span><br><span class="line"></span><br><span class="line">var txt=document.querySelector(&apos;input&apos;);</span><br><span class="line"></span><br><span class="line">var btns=document.querySelectorAll(&apos;button&apos;);</span><br><span class="line">// sessionStorage存储数据</span><br><span class="line">btns[0].onclick=function()&#123;</span><br><span class="line">window.sessionStorage.setItem(&apos;userName&apos;,txt.value);</span><br><span class="line">window.sessionStorage.setItem(&apos;pwd&apos;,&apos;123456&apos;);</span><br><span class="line">window.sessionStorage.setItem(&apos;age&apos;,18);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// sessionStorage获取数据</span><br><span class="line">btns[1].onclick=function()&#123;</span><br><span class="line">txt.value= window.sessionStorage.getItem(&apos;userName&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// sessionStorage更新数据</span><br><span class="line">btns[2].onclick=function()&#123;</span><br><span class="line">window.sessionStorage.setItem(&apos;userName&apos;,txt.value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// sessionStorage删除数据</span><br><span class="line">btns[3].onclick=function()&#123;</span><br><span class="line">window.sessionStorage.removeItem(&apos;userName&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// sessionStorage清空数据</span><br><span class="line">btns[4].onclick=function()&#123;</span><br><span class="line">window.sessionStorage.clear();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>localStorage</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line">&lt;button&gt;localStorage存储&lt;/button&gt;</span><br><span class="line">&lt;button&gt;localStorage获取&lt;/button&gt;</span><br><span class="line">&lt;button&gt;localStorage更新&lt;/button&gt;</span><br><span class="line">&lt;button&gt;localStorage删除&lt;/button&gt;</span><br><span class="line">&lt;button&gt;localStorage清除&lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">* localStorage</span><br><span class="line">* 数据存在硬盘上</span><br><span class="line">* 永久生效</span><br><span class="line">* 20M</span><br><span class="line">* */</span><br><span class="line"></span><br><span class="line">var txt=document.querySelector(&apos;input&apos;);</span><br><span class="line">var btns=document.querySelectorAll(&apos;button&apos;);</span><br><span class="line"></span><br><span class="line">// localStorage存储数据</span><br><span class="line">btns[0].onclick=function()&#123;</span><br><span class="line">window.localStorage.setItem(&apos;userName&apos;,txt.value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// localStorage存储数据</span><br><span class="line">btns[1].onclick=function()&#123;</span><br><span class="line">txt.value= window.localStorage.getItem(&apos;userName&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">btns[3].onclick=function()&#123;</span><br><span class="line">window.localStorage.removeItem(&apos;userName&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="地理定位"><a href="#地理定位" class="headerlink" title="地理定位"></a>地理定位</h3><p>在HTML规范中，增加了获取用户地理信息的API，这样使得我们可以基于用户位置开发互联网应用，即基于位置服务 (Location Base Service)<br>1、IP地址<br>2、三维坐标<br>GPS（Global Positioning System，全球定位系统）<br>目前世界上在用或在建的第2代全球卫星导航系统（GNSS）有：1.美国 Global Positioning System （全球定位系统） 简称GPS；.2.苏联/俄罗斯 GLOBAL NAVIGATION SATELLITE SYSTEM （全球卫星导航系统）简称GLONASS（格洛纳斯）；3.欧盟（欧洲是不准确的说法，包括中国在内的诸多国家也参与其中）Galileo satellite navigation system（伽利略卫星导航系统） 简称GALILEO（伽利略）；4.中国 BeiDou(COMPASS) Navigation Satellite System（北斗卫星导航系统）简称 BDS ；5.日本 Quasi-Zenith Satellite System （准天顶卫星系统） 简称QZSS ；印度 India Regional Navigation Satellite System（印度区域卫星导航系统）简称IRNSS；以上6个系统中国都能使用。<br>Wi-Fi<br>手机信号<br>3、用户自定义数据<br>如下图对不同获取方式的优缺点进行了比较，浏览器会自动以最优方式去获取用户地理信息。<br><img src="/assets/1.png" alt></p>
+<p><a href="http://lbsyun.baidu.com/index.php?title=jspopular3.0" target="_blank" rel="noopener">使用可以查看</a></p>
+<p>HTML5 Geolocation(地理位置定位)规范提供了一套保护用户隐私的机制。必须先得到用户明确许可，才能获取用户的位置信息</p>
+<p><code>navigator.getCurrentPosition\(successCallback, errorCallback, options\)</code>获取当前地理信息</p>
+<p><code>navigator.watchPosition\(successCallback, errorCallback, options\)</code>重复获取当前地理信息</p>
+<p>1、当成功获取地理信息后，会调用succssCallback，并返回一个包含位置信息的对象position。Coords(坐标)</p>
+<p><code>position.coords.latitude</code>纬度</p>
+<p><code>position.coords.longitude</code>经度</p>
+<p>2、当获取地理信息失败后，会调用errorCallback，并返回错误信息error</p>
+<p>3、可选参数options对象可以调整位置信息数据收集方式</p>
+<p>百度地图</p>
+<h3 id="网络状态"><a href="#网络状态" class="headerlink" title="网络状态"></a>网络状态</h3><p>我们可以通过<code>window.onLine</code>来检测，用户当前的网络状况，返回一个布尔值<br><code>window.online</code>用户网络连接时被调用<br><code>window.offline</code>用户网络断开时被调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">window.addEventListener(&apos;online&apos;,function()&#123;</span><br><span class="line">alert(&apos;网络连接已建立！&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">window.addEventListener(&apos;offline&apos;,function()&#123;</span><br><span class="line">alert(&apos;网络连接已断开！&apos;);</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用程序缓存"><a href="#应用程序缓存" class="headerlink" title="应用程序缓存"></a>应用程序缓存</h3><h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><p>1、可配置需要缓存的资源<br>2、网络无连接应用仍可用<br>3、本地读取缓存资源，提升访问速度，增强用户体验<br>4、减少请求，缓解服务器负担</p>
+<h4 id="缓存清单"><a href="#缓存清单" class="headerlink" title="缓存清单"></a>缓存清单</h4><p>一个普通文本文件，其中列出了浏览器应缓存以供离线访问的资源，推荐使用.appcache为后缀名，添加MIME类型<br>AddType text/cache-manifest .appcache<br>例如我们创建了一个名为demo.appcache的文件，然后在需要应用缓存在页面的根元素(html)添加属性manifest=”demo.appcache”，路径要保证正确。</p>
+<h4 id="manifest文件格式"><a href="#manifest文件格式" class="headerlink" title="manifest文件格式"></a>manifest文件格式</h4><p>1、顶行写CACHE MANIFEST<br>2、CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等<br>3、NETWORK: 换行 指定需要在线访问的资源，可使用通配符<br>4、FALLBACK: 当前页面无法访问时退回的页面(回退; 后退)<br>换行 当被缓存的文件找不到时的备用资源 可自行查阅资料</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>1、CACHE: 可以省略，这种情况下将需要缓存的资源写在CACHE MANIFEST<br>2、可以指定多个CACHE: NETWORK: FALLBACK:，无顺序限制</p>
+<p>CACHE:需要缓存那些资源.<br>NETWORK:不需要缓存那些资源，必须在网络下面才能访问.<br>FALLBACK:当访问不到某个资源时，自动由另外一个资源替换.<br>CACHE MANIFEST</p>
+<p>CACHE:<br>此部分是需要缓存的资源<br>1.jpg<br>js/jquery.min.js</p>
+<p>NETWORK:<br>js/demo.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 可以使用 * 好替代</span><br><span class="line">FALLBACK:</span><br><span class="line">one.css two.css 会缓存two.css 当找不到one.css 会去找two.css 文件.</span><br></pre></td></tr></table></figure>
+
+<p>3、#表示注释，只有当demo.appcache文件内容发生改变时或者手动清除缓存后，才会重新缓存。<br>4、chrome 可以通过chrome://appcache-internals/工具和离线（offline）模式来调试管理应用缓存</p>
+<p><img src="/assets/2.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html manifest=&quot;01.appcache&quot;&gt;</span><br><span class="line">&lt;head lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;img src=&quot;https://pics4.baidu.com/feed/fc1f4134970a304eca032cbd7e46f883c8175cec.jpeg?token=f670fd861109be52106b566bfc5fae4e&amp;s=7710798F5683BEB8103CADDB0300C093&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html manifest=&quot;02.appcache&quot;&gt;</span><br><span class="line">&lt;head lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;img src=&quot;images/img1.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">&lt;img src=&quot;images/img2.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">&lt;img src=&quot;images/img3.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">&lt;img src=&quot;images/img4.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>01.appcache文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line"></span><br><span class="line"># 注锟斤拷锟斤拷#锟斤拷头</span><br><span class="line">#锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷募锟?</span><br><span class="line">CACHE:</span><br><span class="line">https://pics4.baidu.com/feed/fc1f4134970a304eca032cbd7e46f883c8175cec.jpeg?token=f670fd861109be52106b566bfc5fae4e&amp;s=7710798F5683BEB8103CADDB0300C093</span><br></pre></td></tr></table></figure>
+
+<p>02.appcache</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line"></span><br><span class="line">#要缓存的文件</span><br><span class="line">CACHE:</span><br><span class="line">images/img1.jpg</span><br><span class="line">images/img2.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#指定必须联网才能访问的文件</span><br><span class="line">NETWORK:</span><br><span class="line">images/img3.jpg</span><br><span class="line">images/img4.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#当前页面无法访问是回退的页面</span><br><span class="line">FALLBACK:</span><br><span class="line">404.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h4><p>HTML5规范允许用户自定义网页上任一元素全屏显示。<br><code>requestFullscreen()</code> 开启全屏显示<br><code>cancleFullscreen()</code> 关闭全屏显示<br>不同浏览器需要添加前缀如：<br><code>webkitRequestFullScreen、mozRequestFullScreen</code><br><code>webkitCancleFullScreen、mozCancleFullScreen</code><br>通过<code>document.fullScreen</code>检测当前是否处于全屏<br>不同浏览器需要添加前缀<br><code>document.webkitIsFullScreen、document.mozFullScreen</code><br>全屏伪类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">:full-screen .box &#123;&#125;、:-webkit-full-screen &#123;&#125;、:moz-full-screen &#123;&#125;</span><br><span class="line">var docElm = document.documentElement;</span><br><span class="line">if (docElm.requestFullscreen) &#123;</span><br><span class="line">docElm.requestFullscreen();</span><br><span class="line">&#125;</span><br><span class="line">else if (docElm.mozRequestFullScreen) &#123;</span><br><span class="line">docElm.mozRequestFullScreen();</span><br><span class="line">&#125;</span><br><span class="line">else if (docElm.webkitRequestFullScreen) &#123;</span><br><span class="line">docElm.webkitRequestFullScreen();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="智能表单"><a href="#智能表单" class="headerlink" title="智能表单"></a>智能表单</h2><p>伴随着互联网富应用以及移动开发的兴起，传统的Web表单已经越来越不能满足开发的需求，所以HTML5在Web表单方向也做了很大的改进，如拾色器、日期/时间组件等，使表单处理更加高效。<br>一起来了解HTML5表单的新增的特性，以及PC和移动设备间的差异，其兼容性较差</p>
+<h4 id="输入类型-表单类型，表单元素，表单属性-表单事件"><a href="#输入类型-表单类型，表单元素，表单属性-表单事件" class="headerlink" title="输入类型 (表单类型，表单元素，表单属性,表单事件.)"></a>输入类型 (表单类型，表单元素，表单属性,表单事件.)</h4><p>email 输入email格式<br>tel 手机号码<br>url 只能输入url格式<br>number 只能输入数字<br>search 搜索框<br>range 范围 滑动条<br>color 拾色器<br>time    时间<br>date 日期 不是绝对的<br>–datetime 时间日期<br>month 月份<br>week 星期<br>部分类型是针对移动设备生效的，且具有一定的兼容性，在实际应用当中可选择性的使用。</p>
+<h4 id="表单元素（标签）"><a href="#表单元素（标签）" class="headerlink" title="表单元素（标签）"></a>表单元素（标签）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;datalist&gt; 数据列表</span><br><span class="line">与input 配合使用</span><br><span class="line">&lt;input type=”text” list=”data”&gt;</span><br><span class="line">&lt;datalist id=”data”&gt;</span><br><span class="line">&lt;option&gt;男&lt;/option&gt;</span><br><span class="line">&lt;option&gt;女&lt;/option&gt;</span><br><span class="line">&lt;option&gt;不详&lt;/option&gt;</span><br><span class="line">&lt;/datalist&gt;</span><br><span class="line">&lt;keygen&gt; 生成加密字符串</span><br></pre></td></tr></table></figure>
+
+<p>keygen 元素</p>
+<p>keygen 元素的作用是提供一种验证用户的可靠方法。<br>keygen 元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键， 一个是私钥，一个公钥。</p>
+<p>私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。（SSH）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;output&gt; 不可当做数据提交？</span><br><span class="line">&lt;meter&gt; 表示度量器，不建议用作进度条</span><br><span class="line">&lt;progress&gt;&lt;/progress&gt;</span><br><span class="line">&lt;meter value=&quot;81&quot; min=&quot;0&quot; max=&quot;100&quot; low=&quot;60&quot; high=&quot;80&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Max-width</span><br><span class="line">Min-width</span><br></pre></td></tr></table></figure>
+
+<h4 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h4><p>placeholder 占位符<br>autofocus 获取焦点<br>multiple 文件上传多选或多个邮箱地址<br>autocomplete 自动完成，用于表单元素，也可用于表单自身(on/off)<br>form 指定表单项属于哪个form，处理复杂表单时会需要<br>novalidate 关闭验证，可用于<form>标签<br>required 必填项<br>pattern 正则表达式 验证表单<br>手机号:<br><code>&lt;input type=&quot;tel&quot; name=&quot;tel&quot; required=&quot;required&quot; pattern=&quot;^(\+86)?1[3,5,8](\d{9})$&quot;&gt;</code><br>表单重写没有提及，自行验证，共包含<br>应用于提交按钮上，如：<code>&lt;input type=&quot;submit&quot; formaction=&quot;xxx.php&quot;&gt;</code></form></p>
+<h4 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h4><p><code>oninput</code> 用户输入内容时触发，可用于移动端输入字数统计<br><code>oninvalid</code> 验证不通过时触发</p>
+<h3 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h3><p>在HTML5之前，在网页上播放音频/视频的通用方法是利用Flash来播放，但是大多情况下，并非所有用户的浏览器都安装了Flash插件，由此使得处理音频/视频播放变的非常复杂，并且移动设备的浏览器并不支持Flash插件<br>一起来了解如何通过HTML5播放音频/视频，以及针对不同浏览器所支持的格式，做多浏览器兼容处理</p>
+<h4 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h4><p>HTML5通过<code>&lt;audio&gt;</code>标签来解决音频播放的问题。<br>并且可以通过附加属性可以更友好控制音频的播放，如：<br>autoplay 自动播放<br>controls 是否显不默认播放控件<br>loop 循环播放<br>preload 预加载 同时设置autoplay时些属性失效<br>由于版权等原因，不同的浏览器可支持播放的格式是不一样的</p>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><p>HTML5通过<code>&lt;video&gt;</code>标签来解决音频播放的问题。<br>同样，通过附加属性可以更友好的控制视频的播放<br>autoplay 自动播放<br>controls 是否显示默认播放控件<br>loop 循环播放<br>preload 预加载，同时设置了autoplay，此属性将失效<br>width 设置播放窗口宽度<br>height 设置播放窗口的高度<br>由于版权等原因，不同的浏览器可支持播放的格式是不一样的</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/09/HTML及新增DOM/" rel="next" title="HTML及新增DOM">
+                <i class="fa fa-chevron-left"></i> HTML及新增DOM
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/09/HTML小案例/" rel="prev" title="HTML小案例">
+                HTML小案例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">杨国杰</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#web存储"><span class="nav-number">1.</span> <span class="nav-text">web存储</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#特性"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#window-sessionStorage"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">window.sessionStorage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#window-localStorage"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">window.localStorage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法详解"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">方法详解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其它"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">其它</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#地理定位"><span class="nav-number">1.1.</span> <span class="nav-text">地理定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络状态"><span class="nav-number">1.2.</span> <span class="nav-text">网络状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序缓存"><span class="nav-number">1.3.</span> <span class="nav-text">应用程序缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优势"><span class="nav-number">1.3.1.</span> <span class="nav-text">优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存清单"><span class="nav-number">1.3.2.</span> <span class="nav-text">缓存清单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#manifest文件格式"><span class="nav-number">1.3.3.</span> <span class="nav-text">manifest文件格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">1.3.4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全屏"><span class="nav-number">1.3.5.</span> <span class="nav-text">全屏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#智能表单"><span class="nav-number">2.</span> <span class="nav-text">智能表单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入类型-表单类型，表单元素，表单属性-表单事件"><span class="nav-number">2.0.1.</span> <span class="nav-text">输入类型 (表单类型，表单元素，表单属性,表单事件.)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单元素（标签）"><span class="nav-number">2.0.2.</span> <span class="nav-text">表单元素（标签）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单属性"><span class="nav-number">2.0.3.</span> <span class="nav-text">表单属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表单事件"><span class="nav-number">2.0.4.</span> <span class="nav-text">表单事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多媒体"><span class="nav-number">2.1.</span> <span class="nav-text">多媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#音频"><span class="nav-number">2.1.1.</span> <span class="nav-text">音频</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视频"><span class="nav-number">2.1.2.</span> <span class="nav-text">视频</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨国杰</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="_OK，现在我要正式开始我的web前端开发之旅了…._ 引言HTML作为一种标记语言，我觉得就跟Markdown一样，一学就会，当然H5引入了一些比较与意思的东西，我就是先学的HTML（不带数字5），然后在学的HTML5，接着我就总结一下我对HTML这门超文本标记语言的学习吧  不带数字5的HTML   先回顾一下自己都学了哪些东西在这个阶段，首先是基本的标签，属性，属性值，单标签，双标签，对网页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML及新增DOM">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/HTML及新增DOM/index.html">
+<meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="_OK，现在我要正式开始我的web前端开发之旅了…._ 引言HTML作为一种标记语言，我觉得就跟Markdown一样，一学就会，当然H5引入了一些比较与意思的东西，我就是先学的HTML（不带数字5），然后在学的HTML5，接着我就总结一下我对HTML这门超文本标记语言的学习吧  不带数字5的HTML   先回顾一下自己都学了哪些东西在这个阶段，首先是基本的标签，属性，属性值，单标签，双标签，对网页">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-09T10:48:03.031Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML及新增DOM">
+<meta name="twitter:description" content="_OK，现在我要正式开始我的web前端开发之旅了…._ 引言HTML作为一种标记语言，我觉得就跟Markdown一样，一学就会，当然H5引入了一些比较与意思的东西，我就是先学的HTML（不带数字5），然后在学的HTML5，接着我就总结一下我对HTML这门超文本标记语言的学习吧  不带数字5的HTML   先回顾一下自己都学了哪些东西在这个阶段，首先是基本的标签，属性，属性值，单标签，双标签，对网页">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/09/HTML及新增DOM/">
+
+
+
+
+
+  <title>HTML及新增DOM | 跌倒的小黄瓜</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">跌倒的小黄瓜</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/HTML及新增DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨国杰">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="跌倒的小黄瓜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML及新增DOM</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T15:35:53+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>_<br>OK，现在我要正式开始我的web前端开发之旅了…._</p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>HTML作为一种标记语言，我觉得就跟Markdown一样，一学就会，当然H5引入了一些比较与意思的东西，我就是先学的HTML（不带数字5），然后在学的HTML5，接着我就总结一下我对HTML这门超文本标记语言的学习吧</strong></p>
+<hr>
+<h2 id="不带数字5的HTML"><a href="#不带数字5的HTML" class="headerlink" title="不带数字5的HTML"></a>不带数字5的HTML</h2><p>   先回顾一下自己都学了哪些东西在这个阶段，首先是基本的标签，属性，属性值，单标签，双标签，对网页上的内容租出改变，比如：文字大小，文字样式，插入一个水平线等等。我觉得在这个阶段学的最重要的，也就是在后面基本上一直用的，我也印象比较深的应该是这些内容：<br></p>
+<ul>
+<li><p>图片标签，基本上很重要吧，同样是最为比较吸引人的标签多媒体表亲，像音乐，视频，学的时候感觉很牛逼，但后面基本真的没怎么用过，包括后面好多针对图片做处理的css操作，而多媒体标签不能说没有，不如图片丰富，毕竟一个网站，图片（<strong>图片资源，图标（不包括图标字体），logo</strong>）还是相对较多的。<br></p>
+</li>
+<li><p>form表单，对这个东西，我去，真的是服了，开始学的时候是在表格之后学的，当时觉得表格有点东西，表单跟表格差不多，表格应该很有用，表单一般般，不是很重视，到后面，学Ajax，才知道form表单是多么重要，学nodejs更是了解了HTML的奥秘所在，在这还学历，表单控件（<strong>H5有智能的表单控件</strong>），锚点，列表等有些东西，还都挺有趣。<br></p>
+</li>
+<li><p>还有一标签语义化，我觉得这个也挺重要的，当我自己在写一个HTML近700行，css近2000行，js500多行的网页的时候(<strong>当然能力尚不足够，是仿腾讯视频的做的，<a href="https://github.com/1793523411/TencentWeb" target="_blank" rel="noopener">仓库网址</a></strong>)，我知道在HTML这必须分清自己写的标签代表的是什么元素，这个时候标签的语义化很有用，我是这么觉得，虽然基本所有标签都可以用div取代，但我真的不建议这么做（<strong>包括超链接，插入图片，列表，表格，加上css,div无所不能，故HTML又叫div</strong>），真的会把自己迷死的。</p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><p>HTML5相比较HTML可有趣多了，也高级多了。（<strong>广义上讲H5=html5+css+javascript</strong>）<br><br>首先新增了智能表单，可以取色支持自动提示，度量器等丰富的功能满足了许多需求，多媒体标签，对浏览器的兼容性更好，可以自己做自己喜欢的进度条，对标签语义化做的更好了，最重要的一点是做了Dom拓展，还有一些，拖拽，web存储，，地理定位，，网络状态，应用程序缓存等高级功能。</p>
+</li>
+</ul>
+<h3 id="DOM拓展"><a href="#DOM拓展" class="headerlink" title="DOM拓展"></a>DOM拓展</h3><h4 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h4><p>获取单个元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var box1 = document.querySelector(&apos;.box3&apos;)</span><br><span class="line">box1.styel.background = &apos;red&apos;</span><br></pre></td></tr></table></figure>
+
+<p>1、document.getElementsByClassName (‘class’) 通过类名获取元素，以类数组形式存在。<br>2、document.querySelector(‘div’) 通过CSS选择器获取元素，符合匹配条件的第1个元素。<br>3、document.querySelectorAll(‘selector’) 通过CSS选择器获取元素，以类数组形式存在。<br></p>
+<p>获取复合元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//会获取所有复合条的 标签，返回的是一个数组， 参数：可以是任意 css选择器</span><br><span class="line">var divs= document.querySelectorAll(&apos;div.box&apos;);</span><br><span class="line">console.log(divs);</span><br><span class="line"></span><br><span class="line">for(var i=0;i&lt;divs.length;i++)&#123;</span><br><span class="line">divs[i].style.background=&apos;red&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>####类名操作<br>1、Node.classList.add(‘class’) 添加class<br><code>box1.classList.add(&#39;active&#39;);</code><br>2、Node.classList.remove(‘class’) 移除class<br><code>box1.classList.remove(&#39;active&#39;);</code><br>3、Node.classList.toggle(‘class’) 切换class，有则移除，无则添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&apos;button&apos;).onclick=function()&#123;</span><br><span class="line">document.querySelector(&apos;.box3&apos;).classList.toggle(&apos;active&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、Node.classList.contains(‘class’) 检测是否存在class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">判断是否包含某个类名 返回结果 true/false</span><br><span class="line">var f=box1.classList.contains(&apos;active&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>Node指一个有效的DOM节点，是一个通称。<br>H5的操作类名的方式跟jQuery一样好用</p>
+<h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><p>在HTML5中我们可以自定义属性，其格式如下<code>data-*=&quot;&quot;</code>，例如<br>data-info=”我是自定义属性”，通过Node.dataset[‘info’] 我们便可以获取到自定义的属性值。<br>Node.dataset是以类对象形式存在的<br>当我们如下格式设置时，则需要以驼峰格式才能正确获取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 给标签添加自定义属性 必须以data-开头 --&gt;</span><br><span class="line">&lt;div class=&quot;box&quot; title=&quot;盒子&quot; data-my-name=&quot;zs&quot; data-content=&quot;我是一个div&quot;&gt;div&lt;/div&gt;</span><br><span class="line">自定义的属性 需要通过 dateset[]方式来获取</span><br><span class="line">var box=document.querySelector(&apos;.box&apos;);</span><br><span class="line">console.log(box.dataset[&apos;content&apos;]);</span><br><span class="line">var num=100;</span><br><span class="line">num.index=10;</span><br><span class="line">box.index=100;</span><br><span class="line">box.dataset[&apos;content&apos;]=&apos;aaaa&apos;;</span><br><span class="line">// data-my-name=&quot;zs&quot; 如何获取</span><br><span class="line">console.log(box.dataset[&apos;myName&apos;]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h3><p><strong>事件监听</strong><br>拖拽元素<br>ondrag 应用于拖拽元素，整个拖拽过程都会调用<br>ondragstart    应用于拖拽元素，当拖拽开始时调用<br>ondragleave    应用于拖拽元素，当鼠标离开拖拽元素时调用<br>ondragend    应用于拖拽元素，当拖拽结束时调用<br>目标元素<br>ondragenter    应用于目标元素，当拖拽元素进入时调用<br>ondragover    应用于目标元素，当停留在目标元素上时调用<br>ondrop    应用于目标元素，当在目标元素上松开鼠标时调用<br>ondragleave    应用于目标元素，当鼠标离开目标元素时调用</p>
+<h4 id="拖拽事件"><a href="#拖拽事件" class="headerlink" title="拖拽事件"></a>拖拽事件</h4><p>页面中设置了draggable=”true”属性的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var box=document.querySelector(&apos;.box&apos;);</span><br><span class="line"></span><br><span class="line">// 绑定拖拽事件</span><br><span class="line">// 拖拽开始</span><br><span class="line">box.ondragstart=function()&#123;</span><br><span class="line">console.log(&apos;拖拽开始...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// 拖拽结束</span><br><span class="line">box.ondragend=function()&#123;</span><br><span class="line">console.log(&apos;拖拽结束...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// 拖拽离开 :鼠标拖拽时离开被拖拽的元素是触发</span><br><span class="line">box.ondragleave=function()&#123;</span><br><span class="line">console.log(&apos;拖拽离开了....&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">box.ondrag=function()&#123;</span><br><span class="line">console.log(&apos;拖拽....&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="拖拽-目标元素事件"><a href="#拖拽-目标元素事件" class="headerlink" title="拖拽-目标元素事件"></a>拖拽-目标元素事件</h4><p>页面中任何一个元素都可以成为目标元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var two=document.querySelector(&apos;.two&apos;);</span><br><span class="line">var one=document.querySelector(&apos;.one&apos;);</span><br><span class="line"></span><br><span class="line">// 当被拖拽元素进入是触发</span><br><span class="line">two.ondragenter=function()&#123;</span><br><span class="line">console.log(&apos;来了...&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 当被拖拽元素离开时触发</span><br><span class="line">two.ondragleave=function()&#123;</span><br><span class="line">console.log(&apos;走了...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">one.ondragstart=function()&#123;</span><br><span class="line">console.log(&apos;拖拽开始...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">one.ondragend=function()&#123;</span><br><span class="line">console.log(&apos;拖拽结束...&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// 当 拖拽元素在 目标元素上是 连续触发</span><br><span class="line">two.ondragover=function(e)&#123;</span><br><span class="line">// 阻止拖拽事件的默认行为；</span><br><span class="line">e.preventDefault();</span><br><span class="line">console.log(&apos;over...&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/07/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/09/H5新增属性/" rel="prev" title="H5新增属性">
+                H5新增属性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">杨国杰</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不带数字5的HTML"><span class="nav-number">1.1.</span> <span class="nav-text">不带数字5的HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5"><span class="nav-number">1.2.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM拓展"><span class="nav-number">1.2.1.</span> <span class="nav-text">DOM拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取元素"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">获取元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义属性"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">自定义属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拖拽"><span class="nav-number">1.2.2.</span> <span class="nav-text">拖拽</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拖拽事件"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">拖拽事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拖拽-目标元素事件"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">拖拽-目标元素事件</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">杨国杰</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
