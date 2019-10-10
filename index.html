@@ -177,63 +177,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#循环链表与双向链表</p>
-<p><strong>这回除了写一写链表知识外，还要在比较一下链表和顺序表哦！</strong></p>
+        <h1 id="循环链表与双向链表"><a href="#循环链表与双向链表" class="headerlink" title="循环链表与双向链表"></a>循环链表与双向链表</h1><p><strong>这回除了写一写链表知识外，还要在比较一下链表和顺序表哦！</strong></p>
 <h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>循环链表是另一种形式的链式存贮结构。它的特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环</p>
-<h3 id="主要语句"><a href="#主要语句" class="headerlink" title="主要语句"></a>主要语句</h3><p>判断空链表的条件是<br>单链表中，判别条件为：<code>p!=NULL或p-&gt;next!=NULL;</code><br>循环链表中，判别条件为：<code>p!=L或p-&gt;next!=L;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">head==head-&gt;next;</span><br><span class="line">rear==rear-&gt;next;</span><br></pre></td></tr></table></figure>
-
-<h3 id="循环链表合并"><a href="#循环链表合并" class="headerlink" title="循环链表合并"></a>循环链表合并</h3><p>假设A,B都是两个链表的尾指针<br>下面只保留A的头结点，B的头结点舍弃掉</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = B-&gt;next-&gt;next;//存储B的首元结点</span><br><span class="line">B-&gt;next = A-&gt;next;//B链表的尾部指向A链表的头部</span><br><span class="line">a-&gt;next = p;//A的尾结点指向B的首元结点</span><br></pre></td></tr></table></figure>
-
-<h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p>单链表查找后继节点时间复杂度为：0（1），而查找前驱节点为0（n）,<br>为克服这个缺陷，有了双向链表。</p>
-<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。</p>
-<h3 id="主要语句-1"><a href="#主要语句-1" class="headerlink" title="主要语句"></a>主要语句</h3><p>d-&gt;next-&gt;prior-&gt;next=d</p>
-<h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">typedef struct DuLNode</span><br><span class="line">&#123;</span><br><span class="line">ElemTyple data;</span><br><span class="line">struct DuLNode *prior;</span><br><span class="line">struct DuLNode *next;</span><br><span class="line">&#125;DuLNode,*DuLinkList;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双向链表的插入"><a href="#双向链表的插入" class="headerlink" title="双向链表的插入"></a>双向链表的插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Status ListInsert_Dul(DuLinkList &amp;L,int i,ElemType e)</span><br><span class="line">&#123;</span><br><span class="line">if(!(p=GetElem_Dul(L,i)))//在L中确定第i个元素的位置指针p</span><br><span class="line">return ERROE;</span><br><span class="line">s=new DuLNode;//生成新的节点</span><br><span class="line">s-&gt;data=e;</span><br><span class="line">s-&gt;prior=p-&gt;prior;//s-&gt;q(设q为p前面的节点)</span><br><span class="line">p-&gt;prior-&gt;next=s;//q-&gt;p</span><br><span class="line">s-next=p;//s-&gt;p</span><br><span class="line">p-prior=s;//p-&gt;s</span><br><span class="line">return OK;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="双向链表的删除"><a href="#双向链表的删除" class="headerlink" title="双向链表的删除"></a>双向链表的删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Status ListDelte_Dul(DuLinkList &amp;L,int i)</span><br><span class="line">&#123;</span><br><span class="line">if(!(p=GetElem_Dul(L,i)))</span><br><span class="line">return ERROR;</span><br><span class="line">//下面这两个可以交换位置</span><br><span class="line">p-&gt;prior-&gt;next=p-&gt;next;</span><br><span class="line">p-&gt;next-&gt;prior=p-&gt;prior;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="时间复杂度的比较"><a href="#时间复杂度的比较" class="headerlink" title="时间复杂度的比较"></a>时间复杂度的比较</h2><table>
-<thead>
-<tr>
-<th align="center">顺序表</th>
-<th align="center">插入</th>
-<th align="center">取值</th>
-<th align="center">查找</th>
-<th align="left">删除</th>
-<th align="left">创建</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">顺序表</td>
-<td align="center">o(n)</td>
-<td align="center">o(1)</td>
-<td align="center">o(n)</td>
-<td align="left">o(n)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">平均时间复杂度(顺序表)</td>
-<td align="center">n/2</td>
-<td align="center"></td>
-<td align="center">(n+1)/2</td>
-<td align="left">(n-1)/2</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">单链表</td>
-<td align="center">o(n)（找）</td>
-<td align="center">o(n)</td>
-<td align="center">o(n)</td>
-<td align="left">o(n)（找）</td>
-<td align="left">o(n)(前插后插都是)</td>
-</tr>
-</tbody></table>
-<p>创建一个有序单链表·的时间复杂度为o(n^2)</p>
-<p>单链表存储密度小于1</p>
-
+        
       
 
       
@@ -871,15 +817,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">案例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">线性表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">案例</a>
               </li>
             
             <div class="clearfix"></div>
