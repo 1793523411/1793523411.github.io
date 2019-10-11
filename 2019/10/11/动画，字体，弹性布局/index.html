@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 跌倒的小黄瓜</title>
+  <title>动画，字体，弹性布局 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="过渡从一种状态过渡到另一种状态transition: 过渡属性 持续时间 运动曲线  延迟时间；">
+<meta name="keywords" content="前端,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/10/07/hello-world/index.html">
+<meta property="og:title" content="动画，字体，弹性布局">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/动画，字体，弹性布局/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="过渡从一种状态过渡到另一种状态transition: 过渡属性 持续时间 运动曲线  延迟时间；">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-09T11:12:08.138Z">
+<meta property="og:updated_time" content="2019-10-11T07:17:11.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="动画，字体，弹性布局">
+<meta name="twitter:description" content="过渡从一种状态过渡到另一种状态transition: 过渡属性 持续时间 运动曲线  延迟时间；">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -158,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="css-动画，字体，弹性布局" class="article article-type-css " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      动画，字体，弹性布局
     </h1>
   
 
         
-        <a href="/2019/10/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-07T02:32:02.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+        <a href="/2019/10/11/动画，字体，弹性布局/" class="archive-article-date">
+  	<time datetime="2019-10-11T07:14:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
 </a>
         
         
@@ -183,19 +184,76 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><p>从一种状态过渡到另一种状态<br>transition: 过渡属性 持续时间 运动曲线  延迟时间；</p>
+<a id="more"></a>
+<p>transition-property:过渡的属性<br>            所有的属性都过渡使用：all 代替<br> transition-duration:持续时间<br> transition-timing-function:运动曲线<br>            ：linear  匀速  ease-in-out ：先加速后减速<br>transition-delay: 延迟时间</p>
+<p>谁过渡加给谁</p>
+<h3 id="2d变换-：transform"><a href="#2d变换-：transform" class="headerlink" title="2d变换 ：transform"></a>2d变换 ：transform</h3><p>缩放：scale(水平比例，垂直比例);<br>        只写一个值 等比例缩放<br>        小于1：缩小<br>        大于1：放大</p>
+<p> 位移：translate(水平位移，垂直位移);<br>        只写一个值 :水平位移，垂直位移为0</p>
+<p> 可以用百分比： 相对于自身的宽度进行移动</p>
+<p> 让定位的盒子居中:<br>            transform:translate(-50%); 等价于：margin-left:-150px;</p>
+<p> 旋转：rotate(45deg);<br>             正值：顺时针<br>             负值：逆时针</p>
+<p>变换中心：transform-origin<br>            默认 几何中心<br>            自定义： left  right  center top bottom   ,40px 30px;</p>
+<h3 id="3d变换"><a href="#3d变换" class="headerlink" title="3d变换"></a>3d变换</h3><pre><code>rotateX(30deg) 绕着x旋转30deg
+rotateY(30deg) 绕着y旋转30deg
+rotateZ(30deg) 绕着z旋转30deg
+translateX(30px) 沿着x轴移动30px
+translatey(30px) 沿着y轴移动30px
+translatez(30px) 沿着Z轴移动30px( 必须给父盒子加透视)</code></pre><h4 id="透视："><a href="#透视：" class="headerlink" title="透视："></a>透视：</h4><pre><code>加给变换元素的父盒子， 设置的是用户眼睛和屏幕的距离；
+只是视觉上的呈现，不是正真的3d
+perspective:1000px;</code></pre><ul>
+<li><p>transform-style:preserve-3d;<br>加给变换元素的父盒子，让子盒子存在三维空间中，保持3d效果<br>   flat:默认值 （让子盒子被扁平化）</p>
+</li>
+<li><p>backface-visibility:hidden; 背面不可见</p>
+</li>
+</ul>
+<pre><code>skew(30deg,30deg);  2d变换 -倾斜
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br> <a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+css3中获取自定义属性的值：content:attr(data-text);</code></pre><h2 id="动画："><a href="#动画：" class="headerlink" title="动画："></a>动画：</h2><p> 定义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@keyframes 动画名&#123;</span><br><span class="line">            0%&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            100%&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            或者</span><br><span class="line">            from&#123;&#125;</span><br><span class="line">            to&#123;&#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>动画调用：<br>animation: 动画名称 动画时间  执行次数  运动曲线 延迟执行 结束后状态 是否反向；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> inifnite: 无限次</span><br><span class="line">alternate: 反向执行</span><br><span class="line">forwards: 保持结束后的状态</span><br><span class="line">backwards: 保持动起开始前的状态</span><br><span class="line">steps(5): 让动画分步执行；</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p> 动画详细属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> animation-name:动画名称</span><br><span class="line">animation-duration:持续时间</span><br><span class="line">animation-iteration-count:执行次数</span><br><span class="line">animation-timing-function:运动曲线</span><br><span class="line">animation-fill-mode:结束状态</span><br><span class="line">animation-direction: 动画方向</span><br><span class="line">animation-delay: 延迟时间</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="多列："><a href="#多列：" class="headerlink" title="多列："></a>多列：</h2><pre><code>-webkit-column-count:列数
+-webkit-column-rule:分割线样式
+-webkit-column-width:列宽
+-webkit-column-gap:列间距
+-webkit-column-span:跨列 all 跨所有列</code></pre><h2 id="伸缩布局："><a href="#伸缩布局：" class="headerlink" title="伸缩布局："></a>伸缩布局：</h2><pre><code>`display:flex;`</code></pre><p>主轴 ，侧轴（垂直于主轴的方向）</p>
+<pre><code>主轴方向：flex-direction:
+    row  row-reverse
+    column column-reverse
+
+主轴方向上的对齐方式：justify-content
+    flex-start: 主轴开始
+    flex-end: 主轴结束
+    center: 居中
+    space-around:平分
+    sapce-between：两端对齐 中间平均
+
+
+侧轴对齐方式：
+      flex-start: 侧轴开始
+      flex-end: 侧轴结束
+      center: 居中
+      baseline:基线对齐
+      streth:拉伸
+
+子盒子伸缩比例：
+    flex: 1;
+    如果某盒子不参与划分比里， 不写flex属性即可</code></pre><h2 id="字体格式"><a href="#字体格式" class="headerlink" title="字体格式"></a>字体格式</h2><p><em>不同浏览器所支持的字体格式是不一样的，我们有必要了解一下有关字体格式的知识。</em></p>
+<h3 id="TureTpe-ttf-格式"><a href="#TureTpe-ttf-格式" class="headerlink" title="TureTpe(.ttf)格式"></a>TureTpe(.ttf)格式</h3><p>.ttf字体是Windows和Mac的最常见的字体，是一种RAW格式，支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome4+、Safari3+、Opera10+、iOS Mobile、Safari4.2+；</p>
+<h3 id="OpenType-otf-格式"><a href="#OpenType-otf-格式" class="headerlink" title="OpenType(.otf)格式"></a>OpenType(.otf)格式</h3><p>.otf字体被认为是一种原始的字体格式，其内置在TureType的基础上，支持这种字体的浏览器有Firefox3.5+、Chrome4.0+、Safari3.1+、Opera10.0+、iOS Mobile、Safari4.2+；</p>
+<h3 id="Web-Open-Font-Format-woff-格式"><a href="#Web-Open-Font-Format-woff-格式" class="headerlink" title="Web Open Font Format(.woff)格式"></a>Web Open Font Format(.woff)格式</h3><p>woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离，支持这种字体的浏览器有IE9+、Firefox3.5+、Chrome6+、Safari3.6+、Opera11.1+；</p>
+<h3 id="Embedded-Open-Type-eot-格式"><a href="#Embedded-Open-Type-eot-格式" class="headerlink" title="Embedded Open Type(.eot)格式"></a>Embedded Open Type(.eot)格式</h3><p>.eot字体是IE专用字体，可以从TrueType创建此格式字体，支持这种字体的浏览器有IE4+；</p>
+<h3 id="SVG-svg-格式"><a href="#SVG-svg-格式" class="headerlink" title="SVG(.svg)格式"></a>SVG(.svg)格式</h3><p>.svg字体是基于SVG字体渲染的一种格式，支持这种字体的浏览器有Chrome4+、Safari3.1+、Opera10.0+、iOS Mobile Safari3.2+；</p>
+<h2 id="图标字体"><a href="#图标字体" class="headerlink" title="图标字体"></a>图标字体</h2><p>优点：<br>        1、将所有图标打包成字体库，减少请求；<br>        2、具有矢量性，可保证清晰度；<br>        3、使用灵活，便于维护；</p>
+<p>使用步骤：<br>               1、引入字体包<br>               2、申明字体：告诉浏览器去哪找字体<br>               3、定义类名<br>               4、在结构中写 图标的编码，给标签添加类名</p>
+<p>伪元素中：<br>            <code>&amp;#xe628;  ----&gt; content:&quot;\e628&quot;;</code></p>
+<p><strong>鼠标滚轮事件：</strong><br>            onmousewheel=function(){}</p>
 
       
 
@@ -228,6 +286,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -278,7 +351,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/07/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/动画，字体，弹性布局/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,15 +365,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/09/HTML及新增DOM/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HTML及新增DOM
-        
-      </div>
-    </a>
   
+    <a href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css3 选择器，边框，伪类，渐变，背景，图片</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -325,7 +394,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#过渡"><span class="toc-number">1.</span> <span class="toc-text">过渡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2d变换-：transform"><span class="toc-number">1.1.</span> <span class="toc-text">2d变换 ：transform</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3d变换"><span class="toc-number">1.2.</span> <span class="toc-text">3d变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#透视："><span class="toc-number">1.2.1.</span> <span class="toc-text">透视：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画："><span class="toc-number">2.</span> <span class="toc-text">动画：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多列："><span class="toc-number">3.</span> <span class="toc-text">多列：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伸缩布局："><span class="toc-number">4.</span> <span class="toc-text">伸缩布局：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体格式"><span class="toc-number">5.</span> <span class="toc-text">字体格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TureTpe-ttf-格式"><span class="toc-number">5.1.</span> <span class="toc-text">TureTpe(.ttf)格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenType-otf-格式"><span class="toc-number">5.2.</span> <span class="toc-text">OpenType(.otf)格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web-Open-Font-Format-woff-格式"><span class="toc-number">5.3.</span> <span class="toc-text">Web Open Font Format(.woff)格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embedded-Open-Type-eot-格式"><span class="toc-number">5.4.</span> <span class="toc-text">Embedded Open Type(.eot)格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SVG-svg-格式"><span class="toc-number">5.5.</span> <span class="toc-text">SVG(.svg)格式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图标字体"><span class="toc-number">6.</span> <span class="toc-text">图标字体</span></a></li></ol>
                     </div>
                 </span>
             </div>
