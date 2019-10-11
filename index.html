@@ -237,19 +237,19 @@
 
 
   
-    <article id="post-JD案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-京东案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/JD案例/">JD??</a>
+      <a class="article-title" href="/2019/10/11/京东案例/">京东案例</a>
     </h1>
   
 
         
-        <a href="/2019/10/11/JD案例/" class="archive-article-date">
+        <a href="/2019/10/11/京东案例/" class="archive-article-date">
   	<time datetime="2019-10-11T14:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
 </a>
         
@@ -258,8 +258,91 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="js"><a href="#js" class="headerlink" title="??????js?"></a>??????js?</h1><h2 id><a href="#" class="headerlink" title="?????? (????????)"></a>?????? (????????)</h2><p>??HTML    ???? index.html<br>??CSS ????</p>
-        
+        <h1 id="京东案例（无js）"><a href="#京东案例（无js）" class="headerlink" title="京东案例（无js）"></a>京东案例（无js）</h1><h2 id="搭建项目环境-结构样式行为分离"><a href="#搭建项目环境-结构样式行为分离" class="headerlink" title="搭建项目环境     (结构样式行为分离)"></a>搭建项目环境     (结构样式行为分离)</h2><p>一、HTML         核心文件     index.html<br>二、CSS       控制样式<br>a）base.css(基础样式)       b）global.css(全局样式)<br>三、Image      放图片的文件夹<br>四、JS            音频视频…..</p>
+<h2 id="站点"><a href="#站点" class="headerlink" title="站点"></a>站点</h2><p>站点 == 项目 == 项目文件夹 == （根目录）</p>
+<h2 id="引入图标"><a href="#引入图标" class="headerlink" title="引入图标"></a>引入图标</h2><p>一、下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">京东：www.jd.com/favicon.ico           能下载京东图标</span><br><span class="line">        所有：网站名（带www.）/favicon.ico    下载所有网站的图标</span><br></pre></td></tr></table></figure>
+
+<p>二、引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网站名：bitbug.net      </span><br><span class="line">  &lt;link rel=&quot;shortcut icon&quot; href=&quot; /favicon.ico&quot; /&gt;     绿色部分删掉</span><br></pre></td></tr></table></figure>
+
+<h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><p>font :  加粗  字号/行高  格式；    行高如果不写，默认为0；</p>
+<p>u   ins     下划线<br>i   em      倾斜<br>s   del      删除线</p>
+<p>font-weight:  normal;         加粗变正常<br>font-style:  normal;           倾斜变正常<br>text-decoration: none;         下划线删除线变正常<br>outline-style: none;           去除蓝色外边框<br>resize:  none;               禁止文本框拖拽</p>
+<h2 id="权限问题"><a href="#权限问题" class="headerlink" title="权限问题"></a>权限问题</h2><table>
+<thead>
+<tr>
+<th align="center">选择器</th>
+<th align="center">权限</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">div</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">.box .site-nav</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">#box</td>
+<td align="center">100</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;div style=&quot;width:..&quot;&gt;</code></td>
+<td align="center">1000</td>
+</tr>
+<tr>
+<td align="center">!important</td>
+<td align="center">1/0</td>
+</tr>
+</tbody></table>
+<h2 id="盒子稳定性"><a href="#盒子稳定性" class="headerlink" title="盒子稳定性"></a>盒子稳定性</h2><p>一、只给宽高的盒子（宽/高度剩余法）<br>二、给padding的盒子<br>三、给margin的盒子</p>
+<h2 id="量取盒子高度"><a href="#量取盒子高度" class="headerlink" title="量取盒子高度"></a>量取盒子高度</h2><p>fireworks</p>
+<h2 id="模拟鼠标"><a href="#模拟鼠标" class="headerlink" title="模拟鼠标"></a>模拟鼠标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cursor: pointer;           鼠标变成小手</span><br><span class="line">cursor: move;            鼠标变成四角箭头</span><br><span class="line">cursor: text;             鼠标变成工形插入条光标</span><br><span class="line">cursor: default;           鼠标变成小白</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字居中问题"><a href="#文字居中问题" class="headerlink" title="文字居中问题"></a>文字居中问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.text-align: center;</span><br><span class="line">2.padding-left/padding-right;</span><br><span class="line">3.定位、margin.......</span><br></pre></td></tr></table></figure>
+
+<h2 id="圆角矩形"><a href="#圆角矩形" class="headerlink" title="圆角矩形"></a>圆角矩形</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">border-radius: 宽/高一半；</span><br><span class="line">border-radius: 50%；</span><br><span class="line">border-radius: 0.3em；</span><br><span class="line">border-radius: 左上角  右上角  右下角  左下角；</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><p>问题：父盒子高度为0，子盒子不占位置，子盒子不会撑开父盒子。<br>（下面的标准流盒子，会跑到父盒子中的子盒子下面。）<br>处理办法：清除浮动。（清除子盒子因为浮动，对父子造成的影响）<br>使用方法：谁出问题给谁加一个clearfix类名。</p>
+<p>清除浮动方法：</p>
+<ul>
+<li><p>clear: both;</p>
+</li>
+<li><p>overflow: hidden;  </p>
+</li>
+<li><p>单伪元素标签法</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123;</span><br><span class="line">content: “”;</span><br><span class="line">height: 0;</span><br><span class="line">visibility: hidden;</span><br><span class="line">overflow: hidden;</span><br><span class="line">dispaly: block;</span><br><span class="line">clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">zoom: 1;/*IE678*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>双伪元素标签法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:before,  .clearfix:after &#123;</span><br><span class="line">content: “”;</span><br><span class="line">display: table;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix:after &#123;</span><br><span class="line">clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">zoom: 1;/*IE678*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="层级"><a href="#层级" class="headerlink" title="层级"></a>层级</h2><p>简单概述：谁高。<br>使用：<br>一、必须有定位。（除去static）<br>二、用z-index来控制层级数。</p>
+<h2 id="小知识（浮动的盒子相互影响）"><a href="#小知识（浮动的盒子相互影响）" class="headerlink" title="小知识（浮动的盒子相互影响）"></a>小知识（浮动的盒子相互影响）</h2><p>浮动的盒子千万不要让他超出父盒子。<br>超出父盒子的部分会影响下面盒子中的浮动的子盒子。</p>
+<h2 id="什么时候用margin和padding（不考虑宽高）"><a href="#什么时候用margin和padding（不考虑宽高）" class="headerlink" title="什么时候用margin和padding（不考虑宽高）"></a>什么时候用margin和padding（不考虑宽高）</h2><p>1.需要使用背景图的时候必须用padding。<br>2.会出现外边距合并或者margin塌陷的时候用padding。<br>3.行内元素上下只能设置padding，不能设置margin。（行内高16px）<br>4.看border，如果是a连接，看能不能让字体变色，或者显示小手。<br>5.看需求。</p>
+<h2 id="隐藏盒子问题"><a href="#隐藏盒子问题" class="headerlink" title="隐藏盒子问题"></a>隐藏盒子问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.overflow：hidden;			隐藏盒子超出的部分。</span><br><span class="line">2.display: none;				隐藏盒子，而且不占位置。(用的最多)</span><br><span class="line">3.visibility: hidden;			隐藏盒子，而且占位置。</span><br><span class="line">4.opacity: 0;					隐藏盒子，而且占位置。</span><br><span class="line">5.Position/top/left/...-999px 隐藏盒子，而且占位置。</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮动的盒子问题"><a href="#浮动的盒子问题" class="headerlink" title="浮动的盒子问题"></a>浮动的盒子问题</h2><p>浮动的盒子比标准流盒子高，但是能够遮挡住标准流盒子，遮挡不住里面的图片和文字。</p>
+<h2 id="JS关闭a链接的跳转"><a href="#JS关闭a链接的跳转" class="headerlink" title="JS关闭a链接的跳转"></a>JS关闭a链接的跳转</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;javascript:;&quot;&gt;1111111111&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;javascript:void(0)&quot;&gt;1111&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="权重问题"><a href="#权重问题" class="headerlink" title="权重问题"></a>权重问题</h2><p>left比right，权重高。有left又有right的时候，执行left的值。<br>top比bottom，权重高。有top又有bottom的时候，执行top的值。</p>
+<h2 id="半透明"><a href="#半透明" class="headerlink" title="半透明"></a>半透明</h2><p>opacity：0.4；   优点方便。缺点：里面的内容也会半透明。<br>C3的技术来解决半透明：<br>background: rgba(0,0,0,0.3);<br>background: rgba(0,0,0, .3);</p>
+<h2 id="定位问题"><a href="#定位问题" class="headerlink" title="定位问题"></a>定位问题</h2><p>relative不能给行内元素设置宽高<br>定位中，两个定位不能给行内元素设置宽高。<br>Static和relative。另外两个可以。</p>
+<h2 id="层级问题-（谁高）"><a href="#层级问题-（谁高）" class="headerlink" title="层级问题  （谁高）"></a>层级问题  （谁高）</h2><p>总结：标准流盒子，低于浮动的盒子，浮动的盒子又低于定位的盒子。<br>定位高于浮动，浮动高于标准流。（高低和占不占位置无关）<br>（除去static之外）。<br>用法：</p>
+<ul>
+<li>必须有定位。（除去static之外）。</li>
+<li>给定z-index的值为层级的值。（不给默认为0）<br>（层级为0的盒子，也比标准流和浮动高。）<br>（层级为负数的盒子，比标准流和浮动低。）<br>（层级不取小数）<br>（层级一样，后面的盒子比前面的层级高。）<br>（浮动或者标准流的盒子，后面的盒子比前面的层级高。）</li>
+</ul>
+<p>定位中：abselute是不占位置的，relative是站位的的。而层级的高低，是和占不占位置没有关系的。</p>
+
       
 
       
@@ -272,7 +355,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">??</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
         		</li>
       		
 		</ul>
@@ -282,7 +369,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/JD案例/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/11/京东案例/">展开全文 >></a>
         </p>
       
 
@@ -1076,10 +1163,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">案例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">??</a>
               </li>
              
               <li class="article-tag-list-item">
