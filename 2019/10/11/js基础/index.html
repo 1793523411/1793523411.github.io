@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>跌倒的小黄瓜</title>
+  <title>js基础 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="先介绍一下JavaScript的故事吧！ Javascript的历史来源94年网景公司 研发出世界上第一款浏览器。95年 sun公司 java语言诞生网景公司和sun合作。Java+script ===&amp;gt; javascript">
+<meta name="keywords" content="前端,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/js基础/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="先介绍一下JavaScript的故事吧！ Javascript的历史来源94年网景公司 研发出世界上第一款浏览器。95年 sun公司 java语言诞生网景公司和sun合作。Java+script ===&amp;gt; javascript">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-11T14:04:32.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="js基础">
+<meta name="twitter:description" content="先介绍一下JavaScript的故事吧！ Javascript的历史来源94年网景公司 研发出世界上第一款浏览器。95年 sun公司 java语言诞生网景公司和sun合作。Java+script ===&amp;gt; javascript">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,16 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-js基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-js基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/js基础/">js基础</a>
+    <h1 class="article-title" itemprop="name">
+      js基础
     </h1>
   
 
@@ -173,6 +176,10 @@
 </a>
         
         
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -180,9 +187,97 @@
         <h2 id="先介绍一下JavaScript的故事吧！"><a href="#先介绍一下JavaScript的故事吧！" class="headerlink" title="先介绍一下JavaScript的故事吧！"></a>先介绍一下JavaScript的故事吧！</h2><ul>
 <li>Javascript的历史来源<br>94年网景公司 研发出世界上第一款浏览器。<br>95年 sun公司 java语言诞生<br>网景公司和sun合作。<br>Java+script ===&gt; javascript</li>
 </ul>
-        
+<a id="more"></a>
+
+<ul>
+<li><p>W3c规范<br>结构标准 html<br>表现标准    css<br>行为标准    js</p>
+</li>
+<li><p>JavaScript和ECMAScript的关系<br>ECMAScript是一种由Ecma国际前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association，制定的标准。<br>JavaScript是由公司开发而成的，公司开发而成的一定是有一些问题，不便于其他的公司拓展和使用。所以欧洲的这个ECMA的组织，牵头制定JavaScript的标准，取名为ECMAScript。<br>简单来说ECMAScript不是一门语言，而是一个标准。符合这个标准的比较常见的有：JavaScript、Action Script（Flash中用的语言）。就是说，你JavaScript学完了，Flash中的程序也会写了。<br>ECMAScript在2015年6月，发布了ECMAScript 6版本，语言的能力更强。但是，浏览器的厂商不能那么快的去追上这个标准。这些新的特性，我们就业班的深入，也会给大家介绍。</p>
+</li>
+<li><p>今天的JavaScript：承担更多责任<br>2003年之前，JavaScript被认为“牛皮鲜”，用来制作页面上的广告，弹窗、漂浮的广告。什么东西让人烦，什么东西就是JavaScript开发的。所以浏览器就推出了屏蔽广告功能。<br>2004年JavaScript命运开始改变了，那一年谷歌公司，开始带头使用Ajax技术了，Ajax技术就是JavaScript的一个应用。并且，那时候人们逐渐开始提升用户体验了。</p>
+</li>
+<li><p>2010年的时候，人们更加了解HTML5技术了，HTML5推出了一个东西叫做Canvas（画布），工程师可以在Canvas上进行游戏制作，利用的就是JavaScript。</p>
+</li>
+<li><p>2011年，Node.js诞生，使JavaScript能够开发服务器程序了。</p>
+</li>
+<li><p>今天，JavaScript工程师是绝对的吃香，能够和iOS、Android工程师比肩，毫不逊色的。<br>现在，公司都流行WebApp，就是用网页技术开发手机应用。什么意思呢？手机系统有iOS、安卓、windows phone。那么公司比如说开发一个“携程网”APP，就需要招聘三队人马，比如iOS工程师10人，安卓工程师10人，windows工程师10人。共30人，工资开销大。并且，如果要改版，要改3个版本。所以，现在公司，都用web技术，用html+css+javascript技术来开发app。好处是不用招聘那么多工程师，只需要几个前端开发工程师即可。并且也易于迭代，就是网页一改变，所有的终端都变了。</p>
+</li>
+</ul>
+<h2 id="js介绍"><a href="#js介绍" class="headerlink" title="js介绍"></a>js介绍</h2><p>js是一款运行在客户端的网页编程语言。</p>
+<ul>
+<li><p>组成部分</p>
+</li>
+<li><p>ecmascript js标准</p>
+</li>
+<li><p>dom 通过js操作网页元素</p>
+</li>
+<li><p>bom 通过api操作浏览器</p>
+</li>
+<li><p>特点</p>
+</li>
+<li><p>简单易用</p>
+</li>
+<li><p>解释执行</p>
+</li>
+<li><p>编译执行 java c# 转化为.dll可执行文件==&gt;电脑读取.dll可执行文件</p>
+</li>
+<li><p>基于对象</p>
+</li>
+<li><p>面向过程</p>
+</li>
+<li><p>作用</p>
+</li>
+<li><p>表单验证</p>
+</li>
+<li><p>轮播特效</p>
+</li>
+<li><p>开发游戏</p>
+</li>
+</ul>
+<h2 id="JS作用"><a href="#JS作用" class="headerlink" title="JS作用"></a>JS作用</h2><p>1．验证表单（以前的网速慢）<br>2．页面特效（PC端的网页效果）<br>3．移动端（移动web和app）<br>4．异步和服务器交互（AJAX）<br>5．服务端开发（nodejs）</p>
+<h2 id="浏览器工作原理"><a href="#浏览器工作原理" class="headerlink" title="浏览器工作原理"></a>浏览器工作原理</h2><h2 id="弱类型脚本语言（解释型语言，解析执行与编译执行）"><a href="#弱类型脚本语言（解释型语言，解析执行与编译执行）" class="headerlink" title="弱类型脚本语言（解释型语言，解析执行与编译执行）"></a>弱类型脚本语言（解释型语言，解析执行与编译执行）</h2><ul>
+<li>解析执行与编译执行<br>编译执行：把代码编译成CPU认识的语言(文件)，然后整体的执行。<br>解析执行：一行一行解析，解析一行执行一行。</li>
+<li>弱类型脚本语言<br>脚本语言是：弥补编译语言的不足而存在的，作为补充语言，不用编译。<br>弱类型语言：简单理解定义一个变量，可以有多种数据类型。（var temp）</li>
+</ul>
+<h2 id="组成（前端标准和JS组成）"><a href="#组成（前端标准和JS组成）" class="headerlink" title="组成（前端标准和JS组成）"></a>组成（前端标准和JS组成）</h2><h3 id="前端标准（HTML-CSS-JS）"><a href="#前端标准（HTML-CSS-JS）" class="headerlink" title="前端标准（HTML/CSS/JS）"></a>前端标准（HTML/CSS/JS）</h3><p>JavaScript、HTML、CSS各自的作用<br>HTML    提供网页上显示的内容（结构）<br>CSS    美化网页（样式）<br>JavaScript（JS）    控制网页行为（行为）<br>设计原则：<br>结构、样式、行为—分离！</p>
+<h3 id="JS组成"><a href="#JS组成" class="headerlink" title="JS组成"></a>JS组成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JS = ECMAScript + DOM + BOM + 高级</span><br></pre></td></tr></table></figure>
+
+<p>ECMAScript（前身为欧洲计算机制造商协会）<br>JavaScript的语法规范<br>DOM（Document Object Model 的简称）<br>JavaScript操作网页上元素的API<br>BOM（Browser Object Model 的简称）<br>JavaScript操作浏览器部分功能的API</p>
+<h2 id="输出语句"><a href="#输出语句" class="headerlink" title="输出语句"></a>输出语句</h2><p>一、console.log(“内容”)在控制台打印输出内容<br>二、alert(“内容”)弹窗显示内容<br>三、document.write(“内容”)在页面书写内容</p>
+<h2 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h2><ul>
+<li>内嵌式（学习期间用）</li>
+<li>外链式（实际开发）<br>注释问题：单行，多行，方法注释等….. 快捷键：ctrl+/ 和ctrl+shift+/</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h3><p>驼峰命名规则：getElementById/matherAndFather/aaaOrBbbAndCcc<br>遵从规则：<br>1.变量命名必须以字母或是下标符号”_”或者”$”为开头。<br>2.变量名长度不能超过255个字符。<br>3.变量名中不允许使用空格，首个字不能为数字。<br>4.不用使用脚本语言中保留的关键字及保留符号作为变量名。<br>5.变量名区分大小写。(javascript是区分大小写的语言)<br>6.汉语可以作为变量名。但是不建议使用！！！（low）</p>
+<h3 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h3><h4 id="定义赋值和定义后在赋值"><a href="#定义赋值和定义后在赋值" class="headerlink" title="定义赋值和定义后在赋值"></a>定义赋值和定义后在赋值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var age = 19;</span><br><span class="line">var age ; age = 19</span><br><span class="line">不建议使用：var age = “张三”; age = 19; 跨类型。</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -206,16 +301,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/js基础/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/js基础/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/11/JD案例/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JD??</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,742 +384,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JD案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/JD案例/">JD??</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/JD案例/" class="archive-article-date">
-  	<time datetime="2019-10-11T14:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="js"><a href="#js" class="headerlink" title="??????js?"></a>??????js?</h1><h2 id><a href="#" class="headerlink" title="?????? (????????)"></a>?????? (????????)</h2><p>??HTML    ???? index.html<br>??CSS ????</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">??</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/JD案例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先介绍一下JavaScript的故事吧！"><span class="toc-number">1.</span> <span class="toc-text">先介绍一下JavaScript的故事吧！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js介绍"><span class="toc-number">2.</span> <span class="toc-text">js介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS作用"><span class="toc-number">3.</span> <span class="toc-text">JS作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器工作原理"><span class="toc-number">4.</span> <span class="toc-text">浏览器工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#弱类型脚本语言（解释型语言，解析执行与编译执行）"><span class="toc-number">5.</span> <span class="toc-text">弱类型脚本语言（解释型语言，解析执行与编译执行）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组成（前端标准和JS组成）"><span class="toc-number">6.</span> <span class="toc-text">组成（前端标准和JS组成）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端标准（HTML-CSS-JS）"><span class="toc-number">6.1.</span> <span class="toc-text">前端标准（HTML/CSS/JS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS组成"><span class="toc-number">6.2.</span> <span class="toc-text">JS组成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出语句"><span class="toc-number">7.</span> <span class="toc-text">输出语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引入方式"><span class="toc-number">8.</span> <span class="toc-text">引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">9.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命名规则"><span class="toc-number">9.1.</span> <span class="toc-text">命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量使用"><span class="toc-number">9.2.</span> <span class="toc-text">变量使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义赋值和定义后在赋值"><span class="toc-number">9.2.1.</span> <span class="toc-text">定义赋值和定义后在赋值</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-小安卓，哆啦A梦" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/小安卓，哆啦A梦/">小安卓，哆啦A梦</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/小安卓，哆啦A梦/" class="archive-article-date">
-  	<time datetime="2019-10-11T13:20:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>代码有点多</em></p>
-<h1 id="小安卓"><a href="#小安卓" class="headerlink" title="小安卓"></a>小安卓</h1><p><img src="http://pz56qt9o7.bkt.clouddn.com/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20191011211814.png" alt><br><img src="http://pz56qt9o7.bkt.clouddn.com/8.gif" alt></p>
-<h2 id="下面看具体代码！"><a href="#下面看具体代码！" class="headerlink" title="下面看具体代码！"></a>下面看具体代码！</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/小安卓，哆啦A梦/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="css-动画，字体，弹性布局" class="article article-type-css  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/动画，字体，弹性布局/">动画，字体，弹性布局</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/动画，字体，弹性布局/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:14:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><p>从一种状态过渡到另一种状态<br>transition: 过渡属性 持续时间 运动曲线  延迟时间；</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/动画，字体，弹性布局/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-选择器，边框，伪类，渐变，背景，图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/">css3，选择器，边框，伪类，渐变，背景，图片</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><ul>
-<li>基础选择器   </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&gt;p: 子代</span><br><span class="line">    div+p： div后面相邻的第一个p</span><br><span class="line">    div~p: div后面所有的兄弟p</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS最后" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/CSS最后/">CSS最后</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/CSS最后/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:10:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="Css可见性"><a href="#Css可见性" class="headerlink" title="Css可见性"></a>Css可见性</h2><p>overflow:hidden;   溢出隐藏<br>visibility:hidden;   隐藏元素    隐藏之后还占据原来的位置。<br>display:none;      隐藏元素    隐藏之后不占据原来的位置。<br>Display:block;     元素可见<br>Display:none  和display:block  常配合js使用。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/CSS最后/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-浮动，定位，初始化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/浮动，定位，初始化/">浮动，定位，初始化</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/浮动，定位，初始化/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>文档流（标准流）<br>元素自上而下，自左而右，块元素独占一行，行内元素在一行上显示，碰到父集元素的边框换行。</p>
-<h2 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">float:  left   |   right</span><br></pre></td></tr></table></figure>
-
-<h3 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h3>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/浮动，定位，初始化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-行高，盒子，边距，fireworks" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/行高，盒子，边距，fireworks/">行高，盒子，边距，fireworks</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/行高，盒子，边距，fireworks/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:03:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h2><h3 id="浏览器默认文字大小"><a href="#浏览器默认文字大小" class="headerlink" title="浏览器默认文字大小"></a>浏览器默认文字大小</h3><p>浏览器默认文字大小：16px</p>
-<p>行高：是基线与基线之间的距离</p>
-<p>行高=文字高度+上下边距</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/行高，盒子，边距，fireworks/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css书写，表签元素，三大特性，修饰，伪类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/">css书写，表签元素，三大特性，修饰，伪类</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="样式表书写位置"><a href="#样式表书写位置" class="headerlink" title="样式表书写位置"></a>样式表书写位置</h2><ul>
-<li>内嵌式写法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=”text/css”&gt;</span><br><span class="line">样式表写法</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css选择器，文本元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/css选择器，文本元素/">css选择器，文本元素</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/css选择器，文本元素/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>css相比较html来说内容的确是丰富了许多，毕竟是控制样式的嘛，css3之前差不多有这些内容：选择器，元素属性，css三大特性，盒子，边距，浮动，清除浮动（水很深），定位，精灵图。啊~，大致也就这吗多，css3是真的比css要厉害得多，但基本的布局还差不多得靠css</strong></p>
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><p> 选择器，标签，类，通配符，id，并集，交集，后代，子代，这些选择器基本就是css3,之前的了，到了css3，又多了，伪类选择器，伪元素选择器，序选择器，用这些可以做出许多花里胡哨的东西。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/css选择器，文本元素/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -991,8 +435,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
