@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据类型，运算符，结构 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="十分基础数据类型数据类型划分使用关键字typeof：查看方法： typeof name 或者 typeof(name) 简单数据类型（值类型）四种： 字符串 数字 布尔 未定义 空String Number Boolean undefined null 复杂数据类型（引用类型）Object、function、Array、Date、RegExp、Error……. 字面量固定的值，让你从“字面上”理解">
+  <meta name="description" content="十分基础数据类型数据类型划分">
 <meta name="keywords" content="前端,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据类型，运算符，结构">
 <meta property="og:url" content="http://yoursite.com/2019/10/12/数据类型，运算符，结构/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="十分基础数据类型数据类型划分使用关键字typeof：查看方法： typeof name 或者 typeof(name) 简单数据类型（值类型）四种： 字符串 数字 布尔 未定义 空String Number Boolean undefined null 复杂数据类型（引用类型）Object、function、Array、Date、RegExp、Error……. 字面量固定的值，让你从“字面上”理解">
+<meta property="og:description" content="十分基础数据类型数据类型划分">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-12T06:28:02.486Z">
+<meta property="og:updated_time" content="2019-10-12T06:32:29.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据类型，运算符，结构">
-<meta name="twitter:description" content="十分基础数据类型数据类型划分使用关键字typeof：查看方法： typeof name 或者 typeof(name) 简单数据类型（值类型）四种： 字符串 数字 布尔 未定义 空String Number Boolean undefined null 复杂数据类型（引用类型）Object、function、Array、Date、RegExp、Error……. 字面量固定的值，让你从“字面上”理解">
+<meta name="twitter:description" content="十分基础数据类型数据类型划分">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -184,7 +184,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="十分基础"><a href="#十分基础" class="headerlink" title="十分基础"></a>十分基础</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数据类型划分"><a href="#数据类型划分" class="headerlink" title="数据类型划分"></a>数据类型划分</h3><p><strong>使用关键字typeof：查看方法： typeof name 或者 typeof(name)</strong></p>
+        <h1 id="十分基础"><a href="#十分基础" class="headerlink" title="十分基础"></a>十分基础</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数据类型划分"><a href="#数据类型划分" class="headerlink" title="数据类型划分"></a>数据类型划分</h3><a id="more"></a>
+
+<p><strong>使用关键字typeof：查看方法： typeof name 或者 typeof(name)</strong></p>
 <h4 id="简单数据类型（值类型）"><a href="#简单数据类型（值类型）" class="headerlink" title="简单数据类型（值类型）"></a>简单数据类型（值类型）</h4><p>四种： 字符串 数字 布尔 未定义 空<br>String Number Boolean undefined null</p>
 <h4 id="复杂数据类型（引用类型）"><a href="#复杂数据类型（引用类型）" class="headerlink" title="复杂数据类型（引用类型）"></a>复杂数据类型（引用类型）</h4><p>Object、function、Array、Date、RegExp、Error…….</p>
 <h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>固定的值，让你从“字面上”理解其含义。<br>数值字面量<br>var age = 18; // 数值字面量，18为字面值</p>
@@ -200,7 +202,10 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isNaN(NaN);// true</span><br><span class="line">isNaN(“blue”); // true</span><br><span class="line">isNaN(123); // false</span><br></pre></td></tr></table></figure>
 
-<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>1.字面量定义方式<br>用引号时，可单可双，唯独不可一单一双。可用.length看有几个字符。<br>var name = “zhangsan”;<br>var name = ‘zhangsan’;<br>var name = ‘zhangsan”; //错误，单引号和双引号要成对出现<br>2.转译<br>总结：无法输出的字符，先输出/，在输出字符。（“、\、换行等….）<br>3.字符串不可变<br>在内存中不会立刻消失，只能二次赋值，原有的字符在一定时间 内被 垃圾回收器回收。<br>4.字符串拼接<br>如果两个变量都是字符串，无论是否包含数字，只要是拼接，那么在前一个后面添加后一个字符串。（+与-情况不同，详情参考数据转换）</p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>1.字面量定义方式<br>用引号时，可单可双，唯独不可一单一双。可用.length看有几个字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var name = &quot;zhangsan&quot;;</span><br><span class="line">var name = &apos;zhangsan&apos;;</span><br><span class="line">var name = &apos;zhangsan&quot;; //错误，单引号和双引号要成对出现</span><br></pre></td></tr></table></figure>
+
+<p>2.转译<br>总结：无法输出的字符，先输出/，在输出字符。（“、\、换行等….）<br>3.字符串不可变<br>在内存中不会立刻消失，只能二次赋值，原有的字符在一定时间 内被 垃圾回收器回收。<br>4.字符串拼接<br>如果两个变量都是字符串，无论是否包含数字，只要是拼接，那么在前一个后面添加后一个字符串。（+与-情况不同，详情参考数据转换）</p>
 <h4 id="Booblean"><a href="#Booblean" class="headerlink" title="Booblean"></a>Booblean</h4><p>1.Boolean类型有两个字面量：true和false，区分大小写。（大写不对）<br>虽然Boolean 类型的字面值只有两个，但 ECMAScript 中所有类型的值都有与这两个 Boolean 值等价的值<br>2.true<br>true、除0数字、“something”、Object(任何对象)为true<br>3.false<br>false、0 、“”、undefined 、null为false<br>4.if判断时会把（）内的值强行转换成boolean类型进行判断。</p>
 <h4 id="undefined和null"><a href="#undefined和null" class="headerlink" title="undefined和null"></a>undefined和null</h4><p>null和undefined有最大的相似性。看看null == undefined的结果(true)也就更加能说明这点。但是null ===undefined的结果(false)。不过相似归相似，还是有区别的，就是和数字运算时，10 + null结果为：10；10 + undefined结果为：NaN。<br>任何数据类型和undefined运算都是NaN;<br>任何值和null运算，null可看做0运算。</p>
 <h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p><strong>一、转换成字符串类型<br>二、转换成数值类型<br>三、转换成布尔类型</strong></p>
@@ -211,8 +216,11 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此转换容易产生NaN，一旦被转换的变量中含有非数字字符，都容易出现NaN</span><br></pre></td></tr></table></figure>
 
-<h4 id="变量-一个数字（有非数字字符会出现NaN）"><a href="#变量-一个数字（有非数字字符会出现NaN）" class="headerlink" title="变量-*/一个数字（有非数字字符会出现NaN）"></a>变量-*/一个数字（有非数字字符会出现NaN）</h4><p>例：var num1 = “11”- 0; var num2 =“11”* 1;var num =“11”/1;<br>JS底层做了一个强制类型转换，把字符串转换成了Number进行运算。</p>
-<h4 id="Number-变量-（有非数字字符会出现NaN）"><a href="#Number-变量-（有非数字字符会出现NaN）" class="headerlink" title="Number(变量)（有非数字字符会出现NaN）"></a>Number(变量)（有非数字字符会出现NaN）</h4><p>var num1 = Number(“18”); 把字符变成了数字。<br>var num2 = Number(“18.99”); 结果为18.99数字型。（有小数也转换）</p>
+<h4 id="变量-一个数字（有非数字字符会出现NaN）"><a href="#变量-一个数字（有非数字字符会出现NaN）" class="headerlink" title="变量-*/一个数字（有非数字字符会出现NaN）"></a>变量-*/一个数字（有非数字字符会出现NaN）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">例：var num1 = “11”- 0; var num2 =“11”\* 1;var num =“11”/1;</span><br></pre></td></tr></table></figure>
+
+<p>JS底层做了一个强制类型转换，把字符串转换成了Number进行运算。</p>
+<h4 id="Number-变量-（有非数字字符会出现NaN）"><a href="#Number-变量-（有非数字字符会出现NaN）" class="headerlink" title="Number(变量)（有非数字字符会出现NaN）"></a>Number(变量)（有非数字字符会出现NaN）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var num1 = Number\(“18”\); 把字符变成了数字。</span><br><span class="line">var num2 = Number\(“18.99”\); 结果为18.99数字型。（有小数也转换）</span><br></pre></td></tr></table></figure>
+
 <h4 id="parseInt-和parseFloat-（译为取整和取浮点数）"><a href="#parseInt-和parseFloat-（译为取整和取浮点数）" class="headerlink" title="parseInt()和parseFloat()（译为取整和取浮点数）"></a>parseInt()和parseFloat()（译为取整和取浮点数）</h4><p>空字符串parseInt()和parseFloat()返回NaN，Number(“”)返回0<br>parseInt(变量)：如果变量中收割字符为字母则结果为NaN。<br>否则取出现首个非数字前的整数。<br>123 = parseInt(“123.123aaaa”);</p>
 <p>parseFloat(变量)：如果变量中收割字符为字母则结果为NaN。<br>否则取出现首个非数字前的浮点数。（没有小数取整）<br>123.123 = parseFloat(“123.123aaaa”);</p>
 <h4 id="提别提示"><a href="#提别提示" class="headerlink" title="提别提示"></a>提别提示</h4><p>Boolean类型中：true数值为1；false为0；<br>null的数值类型为0；<br>undefined无数值类型或者为NaN;</p>
@@ -231,12 +239,19 @@
 <h3 id="循序结构"><a href="#循序结构" class="headerlink" title="循序结构"></a>循序结构</h3><p>程序正常执行顺序不必过多研究，特殊需求，后续老师特殊讲解。</p>
 <h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><p>共有两种，if语句和switch语句。If常用，switch为特殊情况使用，判断条件出现的情况特别多的时候用switch，其他时候if语句比较方便。</p>
 <h4 id="If语句"><a href="#If语句" class="headerlink" title="If语句"></a>If语句</h4><p>一、If语句用法有三种<br>1．if(条件1){程序1}<br>2．if(条件1){程序1}else{程序2}<br>3．if(条件1){程序1}else if(条件2){程序2}…else{程序n}<br>二、三目运算（也叫三元运算）（目或者元代表几个表达式）<br>三目运算可以替代部分if…else…功能，运算简单，使用方便，代码清晰。<br>表达式1？值1：值2</p>
-<h4 id="Switch语句"><a href="#Switch语句" class="headerlink" title="Switch语句"></a>Switch语句</h4><p>switch (值1) {<br>case value1:<br>程序1；<br>break; // break 关键字会导致代码执行流跳出 switch 语句<br>case value2:<br>程序2；<br>break;<br>default:<br>程序3；<br>}<br><strong>注意：</strong><br>break可以省略，如果省略，代码会继续执行下一个case<br>switch 语句在比较值时使用的是全等操作符，因此不会发生类型转换<br>（例如，字符串 “10” 不等于数值 10）。</p>
+<h4 id="Switch语句"><a href="#Switch语句" class="headerlink" title="Switch语句"></a>Switch语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">switch \(值1\) &#123;</span><br><span class="line">case value1:</span><br><span class="line">程序1；</span><br><span class="line">break; // break 关键字会导致代码执行流跳出 switch 语句</span><br><span class="line">case value2:</span><br><span class="line">程序2；</span><br><span class="line">break;</span><br><span class="line">default:</span><br><span class="line">程序3；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong><br>break可以省略，如果省略，代码会继续执行下一个case<br>switch 语句在比较值时使用的是全等操作符，因此不会发生类型转换<br>（例如，字符串 “10” 不等于数值 10）。</p>
 <h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>共3种，for/while/do…while；可根据需求选择使用；<br>1．遍历数组首选for循环，简单循环使用for。<br>2．而while循环强调，不记循环次数（不知道循环多少次），首选while。<br>3．最后do…while循环强调，无论怎样，至少执行一次是，使用do…while。</p>
 <h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><ul>
 <li>执行流程<br>for (变量;条件1;条件2){ 执行程序 }<br>执行过程：变量-&gt;条件1-&gt;执行程序-&gt;条件2-&gt;条件1-&gt;执行程序…..<br>直到条件1不成立，跳出循环。</li>
 <li>三个表达式均为可选，但是必须写分号！！！<br>for(;;){程序} 死循环;</li>
 </ul>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>语法规则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var i = 0; while(i&lt;10)&#123;程序1；i++&#125;;	可以使用死循环和break连用。 While(true)(程序1; if(条件1)&#123;break;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="do…while循环（一定会执行一次do中的程序）"><a href="#do…while循环（一定会执行一次do中的程序）" class="headerlink" title="do…while循环（一定会执行一次do中的程序）"></a>do…while循环（一定会执行一次do中的程序）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var i = 0； Do&#123; 程序1； i++; &#125;while(1&lt;10);</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -348,6 +363,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/10/12/函数和数组/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          函数和数组
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/10/11/js基础/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">js基础</div>
@@ -377,7 +401,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#十分基础"><span class="toc-number">1.</span> <span class="toc-text">十分基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型划分"><span class="toc-number">1.1.1.</span> <span class="toc-text">数据类型划分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单数据类型（值类型）"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">简单数据类型（值类型）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复杂数据类型（引用类型）"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">复杂数据类型（引用类型）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字面量"><span class="toc-number">1.1.2.</span> <span class="toc-text">字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单数据类型介绍"><span class="toc-number">1.1.3.</span> <span class="toc-text">简单数据类型介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Number"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">Number</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Booblean"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">Booblean</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined和null"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">undefined和null</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型转换"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成String（三种方法）"><span class="toc-number">1.2.1.</span> <span class="toc-text">任何简单类型转换成String（三种方法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成Number"><span class="toc-number">1.2.2.</span> <span class="toc-text">任何简单类型转换成Number</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#变量-一个数字（有非数字字符会出现NaN）"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">变量-*/一个数字（有非数字字符会出现NaN）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Number-变量-（有非数字字符会出现NaN）"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Number(变量)（有非数字字符会出现NaN）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#parseInt-和parseFloat-（译为取整和取浮点数）"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">parseInt()和parseFloat()（译为取整和取浮点数）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提别提示"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">提别提示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成Boolean"><span class="toc-number">1.2.3.</span> <span class="toc-text">任何简单类型转换成Boolean</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean-变量"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Boolean(变量)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#！！变量"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">！！变量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作符"><span class="toc-number">1.3.</span> <span class="toc-text">操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符种类"><span class="toc-number">1.3.1.</span> <span class="toc-text">操作符种类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优先级"><span class="toc-number">1.3.2.</span> <span class="toc-text">优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amp-amp-和-运算"><span class="toc-number">1.3.3.</span> <span class="toc-text">&amp;&amp;和||运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#amp-amp-链接两个boolean类型，有一个是false结果就是false。"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">&amp;&amp;链接两个boolean类型，有一个是false结果就是false。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程控制"><span class="toc-number">1.4.</span> <span class="toc-text">流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#循序结构"><span class="toc-number">1.4.1.</span> <span class="toc-text">循序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择结构"><span class="toc-number">1.4.2.</span> <span class="toc-text">选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#If语句"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">If语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch语句"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">Switch语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构"><span class="toc-number">1.4.3.</span> <span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for循环"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">for循环</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#十分基础"><span class="toc-number">1.</span> <span class="toc-text">十分基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型划分"><span class="toc-number">1.1.1.</span> <span class="toc-text">数据类型划分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单数据类型（值类型）"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">简单数据类型（值类型）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复杂数据类型（引用类型）"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">复杂数据类型（引用类型）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字面量"><span class="toc-number">1.1.2.</span> <span class="toc-text">字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单数据类型介绍"><span class="toc-number">1.1.3.</span> <span class="toc-text">简单数据类型介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Number"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">Number</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Booblean"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">Booblean</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined和null"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">undefined和null</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型转换"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成String（三种方法）"><span class="toc-number">1.2.1.</span> <span class="toc-text">任何简单类型转换成String（三种方法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成Number"><span class="toc-number">1.2.2.</span> <span class="toc-text">任何简单类型转换成Number</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#变量-一个数字（有非数字字符会出现NaN）"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">变量-*/一个数字（有非数字字符会出现NaN）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Number-变量-（有非数字字符会出现NaN）"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">Number(变量)（有非数字字符会出现NaN）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#parseInt-和parseFloat-（译为取整和取浮点数）"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">parseInt()和parseFloat()（译为取整和取浮点数）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提别提示"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">提别提示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任何简单类型转换成Boolean"><span class="toc-number">1.2.3.</span> <span class="toc-text">任何简单类型转换成Boolean</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean-变量"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Boolean(变量)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#！！变量"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">！！变量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作符"><span class="toc-number">1.3.</span> <span class="toc-text">操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作符种类"><span class="toc-number">1.3.1.</span> <span class="toc-text">操作符种类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优先级"><span class="toc-number">1.3.2.</span> <span class="toc-text">优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amp-amp-和-运算"><span class="toc-number">1.3.3.</span> <span class="toc-text">&amp;&amp;和||运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#amp-amp-链接两个boolean类型，有一个是false结果就是false。"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">&amp;&amp;链接两个boolean类型，有一个是false结果就是false。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程控制"><span class="toc-number">1.4.</span> <span class="toc-text">流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#循序结构"><span class="toc-number">1.4.1.</span> <span class="toc-text">循序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择结构"><span class="toc-number">1.4.2.</span> <span class="toc-text">选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#If语句"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">If语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Switch语句"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">Switch语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环结构"><span class="toc-number">1.4.3.</span> <span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for循环"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">for循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while循环"><span class="toc-number">1.4.4.</span> <span class="toc-text">while循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do…while循环（一定会执行一次do中的程序）"><span class="toc-number">1.4.5.</span> <span class="toc-text">do…while循环（一定会执行一次do中的程序）</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -497,19 +521,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">案例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
