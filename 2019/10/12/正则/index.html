@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>正则 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正则表达式（RegExp）##　概述正则表达式（英语：Regular Expression）">
+  <meta name="description" content="正则表达式（RegExp）概述正则表达式（英语：Regular Expression）">
 <meta name="keywords" content="前端,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则">
 <meta property="og:url" content="http://yoursite.com/2019/10/12/正则/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="正则表达式（RegExp）##　概述正则表达式（英语：Regular Expression）">
+<meta property="og:description" content="正则表达式（RegExp）概述正则表达式（英语：Regular Expression）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-12T13:43:54.226Z">
+<meta property="og:updated_time" content="2019-10-12T13:54:23.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则">
-<meta name="twitter:description" content="正则表达式（RegExp）##　概述正则表达式（英语：Regular Expression）">
+<meta name="twitter:description" content="正则表达式（RegExp）概述正则表达式（英语：Regular Expression）">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -184,9 +184,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="正则表达式（RegExp）"><a href="#正则表达式（RegExp）" class="headerlink" title="正则表达式（RegExp）"></a>正则表达式（RegExp）</h1><p>##　概述<br>正则表达式（英语：Regular Expression）</p>
+        <h1 id="正则表达式（RegExp）"><a href="#正则表达式（RegExp）" class="headerlink" title="正则表达式（RegExp）"></a>正则表达式（RegExp）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>正则表达式（英语：Regular Expression）</p>
 <a id="more"></a>
-<p>本质：用来记录文本规则的代码<br>（为字符串定义规则，为输入内容定义规则！）<br>应用非常广泛，如：表单验证、高级搜索、生化科学<br>（有一定难度，不要求非常熟练，但至少会表单验证）<br>1.表单验证</p>
+<p>本质：用来记录文本规则的代码<br>（为字符串定义规则，为输入内容定义规则！）<br>应用非常广泛，如：表单验证、高级搜索、生化科学<br>（有一定难度，不要求非常熟练，但至少会表单验证） </p>
+<ul>
+<li>表单验证</li>
+</ul>
 <ol start="2">
 <li>隐藏手机号码：  150****7654 </li>
 <li>可以通过正则表达式，从字符串中获取我们想要的特定部分</li>
@@ -378,7 +381,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#正则表达式（RegExp）"><span class="toc-number">1.</span> <span class="toc-text">正则表达式（RegExp）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式的特点是："><span class="toc-number">1.1.</span> <span class="toc-text">正则表达式的特点是：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式声明"><span class="toc-number">1.2.</span> <span class="toc-text">正则表达式声明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过构造函数定义"><span class="toc-number">1.2.1.</span> <span class="toc-text">通过构造函数定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过直接量定义-（较为常用）"><span class="toc-number">1.2.2.</span> <span class="toc-text">通过直接量定义  （较为常用）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式的组成是：-总结"><span class="toc-number">1.2.3.</span> <span class="toc-text">正则表达式的组成是：(总结)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#test-方法"><span class="toc-number">1.3.</span> <span class="toc-text">test() 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则内部类（帮我们写好的工具直接使用）"><span class="toc-number">1.4.</span> <span class="toc-text">正则内部类（帮我们写好的工具直接使用）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#预定义类"><span class="toc-number">1.4.1.</span> <span class="toc-text">预定义类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单类（正则：-中什么特殊符号都不写，和-的加入）"><span class="toc-number">1.4.2.</span> <span class="toc-text">简单类（正则：//中什么特殊符号都不写，和[]的加入）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负向类（不能是其中的整体或者一部分）"><span class="toc-number">1.4.3.</span> <span class="toc-text">负向类（不能是其中的整体或者一部分）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#范围类"><span class="toc-number">1.4.4.</span> <span class="toc-text">范围类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组合类"><span class="toc-number">1.4.5.</span> <span class="toc-text">组合类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则边界（重点）"><span class="toc-number">1.5.</span> <span class="toc-text">正则边界（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#量词（重点）"><span class="toc-number">1.6.</span> <span class="toc-text">量词（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#案例："><span class="toc-number">1.7.</span> <span class="toc-text">案例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#replace-函数"><span class="toc-number">1.8.</span> <span class="toc-text">replace 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装自己的trim-函数"><span class="toc-number">1.8.1.</span> <span class="toc-text">封装自己的trim 函数</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#正则表达式（RegExp）"><span class="toc-number">1.</span> <span class="toc-text">正则表达式（RegExp）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式的特点是："><span class="toc-number">1.2.</span> <span class="toc-text">正则表达式的特点是：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式声明"><span class="toc-number">1.3.</span> <span class="toc-text">正则表达式声明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通过构造函数定义"><span class="toc-number">1.3.1.</span> <span class="toc-text">通过构造函数定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过直接量定义-（较为常用）"><span class="toc-number">1.3.2.</span> <span class="toc-text">通过直接量定义  （较为常用）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式的组成是：-总结"><span class="toc-number">1.3.3.</span> <span class="toc-text">正则表达式的组成是：(总结)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#test-方法"><span class="toc-number">1.4.</span> <span class="toc-text">test() 方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则内部类（帮我们写好的工具直接使用）"><span class="toc-number">1.5.</span> <span class="toc-text">正则内部类（帮我们写好的工具直接使用）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#预定义类"><span class="toc-number">1.5.1.</span> <span class="toc-text">预定义类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单类（正则：-中什么特殊符号都不写，和-的加入）"><span class="toc-number">1.5.2.</span> <span class="toc-text">简单类（正则：//中什么特殊符号都不写，和[]的加入）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负向类（不能是其中的整体或者一部分）"><span class="toc-number">1.5.3.</span> <span class="toc-text">负向类（不能是其中的整体或者一部分）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#范围类"><span class="toc-number">1.5.4.</span> <span class="toc-text">范围类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组合类"><span class="toc-number">1.5.5.</span> <span class="toc-text">组合类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则边界（重点）"><span class="toc-number">1.6.</span> <span class="toc-text">正则边界（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#量词（重点）"><span class="toc-number">1.7.</span> <span class="toc-text">量词（重点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#案例："><span class="toc-number">1.8.</span> <span class="toc-text">案例：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#replace-函数"><span class="toc-number">1.9.</span> <span class="toc-text">replace 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装自己的trim-函数"><span class="toc-number">1.9.1.</span> <span class="toc-text">封装自己的trim 函数</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -498,11 +501,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">案例</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -510,7 +509,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">案例</a>
               </li>
              
               <li class="article-tag-list-item">
