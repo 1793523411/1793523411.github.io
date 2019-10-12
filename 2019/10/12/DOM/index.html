@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: HTML | 跌倒的小黄瓜</title>
+  <title>DOM | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/tags/HTML/index.html">
+  <meta name="description" content="DOM基础事件概述JS是以事件驱动为核心的一门语言。 事件三要素">
+<meta name="keywords" content="前端,DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/DOM/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="DOM基础事件概述JS是以事件驱动为核心的一门语言。 事件三要素">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-12T12:24:57.766Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="DOM">
+<meta name="twitter:description" content="DOM基础事件概述JS是以事件驱动为核心的一门语言。 事件三要素">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,36 +159,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DOM" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DOM
+    </h1>
+  
+
+        
+        <a href="/2019/10/12/DOM/" class="archive-article-date">
+  	<time datetime="2019-10-12T12:23:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
     
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM基础"><a href="#DOM基础" class="headerlink" title="DOM基础"></a>DOM基础</h1><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>JS是以事件驱动为核心的一门语言。</p>
+<h3 id="事件三要素"><a href="#事件三要素" class="headerlink" title="事件三要素"></a>事件三要素</h3><a id="more"></a>
+<p>事件源、事件、事件驱动程序。<br>三句话：获取事件源、绑定事件、书写事件驱动程序。<br>获取事件源：document.getElementById(“box”);<br>绑定事件： box.onclick = function(){ 程序 };<br>书写事件驱动程序：以后要学习的关于DOM的操作。</p>
+<h2 id="DOM概述"><a href="#DOM概述" class="headerlink" title="DOM概述"></a>DOM概述</h2><h3 id="解析过程"><a href="#解析过程" class="headerlink" title="解析过程"></a>解析过程</h3><p>HTML加载完毕，渲染引擎会在内存中把HTML文档，生成一个DOM树，getElementById是获取内中DOM上的元素节点。然后操作的时候修改的是该元素的属性。</p>
+<h3 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM (文档对象模型)"></a>DOM (文档对象模型)</h3><p>document是文档对象模型的一部分。<br>DOM是一个复合的数据类型。<br><strong>DOM的数据结构（树状）</strong></p>
+<h3 id="HTML的组成部分为节点（-Node-）"><a href="#HTML的组成部分为节点（-Node-）" class="headerlink" title="HTML的组成部分为节点（ Node ）"></a>HTML的组成部分为节点（ Node ）</h3><p>在HTML当中一切都是节点……<br>由结构图中我们可以看到，整个文档就是一个文档节点。<br>每一个HMTL标签都是一个元素节点（标签）。<br>标签中的文字则是文字节点。（文本）<br>标签的属性是属性节点。（属性）</p>
+<h3 id="DOM节点的获得"><a href="#DOM节点的获得" class="headerlink" title="DOM节点的获得"></a>DOM节点的获得</h3><p>操作节点，必须首先找到该元素。有三种方法来做这件事：<br>通过 id 找到 HTML 元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;demo&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>通过标签名找到 HTML 元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;div&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>通过类名找到 HTML 元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByClassName(&quot;a&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>通过类名查找 HTML 元素在 IE 5,6,7,8 中无效<br>标签=document.getElementById(“demo”); 通过ID获得标签<br>他的返回值是一个标签，可以直接使用。获得属性值，设置属性。<br>标签数组= document.getElementsByTagName(“div”); 通过标签名获得标签数组<br>标签数组= document.getElementsByClassName(“a”);通过类名获得标签数组<br>他们两个的返回值是标签数组，习惯性是遍历之后再使用。<br>特殊情况：数组中的值只有1个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;div&quot;)[0];取数组中第一个元素</span><br><span class="line">document.getElementsByClassName(&quot;a&quot;)[0];取数组中第一个元素</span><br></pre></td></tr></table></figure>
+
+<h3 id="DOM-访问关系（节点的获得）"><a href="#DOM-访问关系（节点的获得）" class="headerlink" title="DOM 访问关系（节点的获得）"></a>DOM 访问关系（节点的获得）</h3><p>节点的访问关系，是以属性的方式存在的。<br>DOM的节点并不是孤立的，因此可以通过DOM节点之间的相对关系对它们进行访问。</p>
+<h4 id="父节点-（-parentNode-）"><a href="#父节点-（-parentNode-）" class="headerlink" title="父节点 （ parentNode ）"></a>父节点 （ parentNode ）</h4><p>调用者就是节点。一个节点只有一个父节点。调用方式就是节点.parentNode.<br>案例：<br>1.通过子盒子设置父盒子的背景色。<br>2.关闭二维码</p>
+<h4 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h4><p><code>Sibling</code>就是兄弟的意思。<br><code>Next：</code>下一个的意思。<br><code>Previous:</code>前一个的意思。<br><code>nextSibling：</code>调用者是节点。IE678中指下一个元素节点（标签）。在火狐谷歌IE9+以后都指的是下一个节点（包括空文档和换行节点）。<br><code>nextElementSibling：</code>在火狐谷歌IE9都指的是下一个元素节点。<br>总结：在IE678中用nextSibling，在火狐谷歌IE9+以后用nextElementSibling<br>下一个兄弟节点=节点.nextElementSibling || 节点.nextSibling</p>
+<p><code>previousSibling：</code>调用者是节点。IE678中指前一个元素节点（标签）。在火狐谷歌IE9+以后都指的是前一个节点（包括空文档和换行节点）。<br><code>previousElementSibling：</code>在火狐谷歌IE9都指的是前一个元素节点。<br>总结：在IE678中用previousSibling，在火狐谷歌IE9+以后用previousElementSibling。<br>下一个兄弟节点=节点.previousElementSibling|| 节点.previousSibling</p>
+<h4 id="单个子节点"><a href="#单个子节点" class="headerlink" title="单个子节点"></a>单个子节点</h4><p><code>firstChild：</code>调用者是父节点。IE678中指第一个子元素节点（标签）。在火狐谷歌IE9+以后都指的是第一个节点（包括空文档和换行节点）。<br><code>firstElementChild:</code>在火狐谷歌IE9都指的第一个元素节点。<br>第一个子节点=父节点.firstElementChild || 父节点.firstChild<br><code>lastChild:</code>调用者是父节点。IE678中指最后一个子元素节点（标签）。在火狐谷歌IE9+以后都指的是最后一个节点（包括空文档和换行节点）。<br><code>lastElementChild：</code>在火狐谷歌IE9都指的最后一个元素节点。<br>第一个子节点=父节点.lastElementChild|| 父节点.lastChild</p>
+<h4 id="所有子节点"><a href="#所有子节点" class="headerlink" title="所有子节点"></a>所有子节点</h4><p><code>childNodes：</code>它是标准属性，它返回指定元素的子元素集合，包括HTML节点，所有属性，文本节点 （他还是W3C的亲儿子 ）<br>火狐 谷歌等高本版会把换行也看做是子节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nodeType==1时才是元素节点(标签)</span><br><span class="line">nodeType == 1 表示的是元素节点 记住 元素就是标签</span><br><span class="line">nodeType == 2 表示是属性节点</span><br><span class="line">nodeType == 3 是文本节点</span><br></pre></td></tr></table></figure>
+
+<p>子节点数组 = 父节点.childNodes; 获取所有节点。<br><code>children：</code>非标准属性，它返回指定元素的子元素集合。<br>但它只返回HTML节点，甚至不返回文本节点，虽然不是标准的DOM属性，但它和innerHTML方法一样，得到了几乎所有浏览器的支持。<br>children在IE6/7/8中包含注释节点<br>在IE678中，注释节点不要写在里面。<br>子节点数组 = 父节点.children; 用的最多。</p>
+<h4 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h4><p>节点自己.parentNode.children[index];随意得到兄弟节点。</p>
+<p>作为了解内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function siblings(elm) &#123;</span><br><span class="line">var a = [];</span><br><span class="line">var p = elm.parentNode.children;</span><br><span class="line">for(var i =0,pl= p.length;i&lt;pl;i++) &#123;</span><br><span class="line">if(p[i] !== elm) a.push(p[i]);</span><br><span class="line">&#125;</span><br><span class="line">return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>定义一个函数。必须传递自己。定义一个数组，获得自己的父亲，在获得自己父亲的所有儿子（包括自己）。遍历所哟与的儿子，只要不是自己就放进数组中。</p>
+<h4 id="要明白两个属性（！！！重点！！！）"><a href="#要明白两个属性（！！！重点！！！）" class="headerlink" title="要明白两个属性（！！！重点！！！）"></a>要明白两个属性（！！！重点！！！）</h4><p>parentNode 和 children 这两个属性。</p>
+<h3 id="DOM节点操作-（！！！！！重点！！！！！）"><a href="#DOM节点操作-（！！！！！重点！！！！！）" class="headerlink" title="DOM节点操作 （！！！！！重点！！！！！）"></a>DOM节点操作 （！！！！！重点！！！！！）</h3><p>节点的访问关系都是属性。节点的操作都是函数或者方法。</p>
+<h4 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h4><p>使用方法是这样的document.createElement();<br>新的标签（节点） = document.createElement(“标签名”);</p>
+<h4 id="插入节点（使用节点）"><a href="#插入节点（使用节点）" class="headerlink" title="插入节点（使用节点）"></a>插入节点（使用节点）</h4><p>使用方法： 父节点.appendChild();<br>父节点.appendChild(新节点); 父节点的最后插入一个新节点</p>
+<p>使用方法：父节点.insertBefore(要插入的节点，参考节点)；<br>父节点.insertBefore(新节点,参考节点)在参考节点前插入;<br>如果参考节点为null，那么他将在节点最后插入一个节点。</p>
+<h4 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h4><p>用法：用父节点删除子节点。<br>父节点.removeChild（子节点）；必须制定要删除的子节点<br>节点自己删除自己：<br>不知道父级的情况下，可以这么写：node.parentNode.removeChild(node)</p>
+<h4 id="复制节点-（-oldNode-cloneNode（true）-）"><a href="#复制节点-（-oldNode-cloneNode（true）-）" class="headerlink" title="复制节点 （ oldNode.cloneNode（true） ）"></a>复制节点 （ oldNode.cloneNode（true） ）</h4><p>想要复制的节点调用这个函数cloneNode()，得到一个新节点。 方法内部可以传参，入股是true，深层复制，如果是false，只复制节点本身。<br>新节点=要复制的节点.cloneNode(参数) ; 参数可选复制节点<br>用于复制节点， 接受一个布尔值参数， true 表示深复制（复制节点及其所有子节点）， false 表示浅复制（复制节点本身，不复制子节点）</p>
+<h4 id="节点属性（节点-属性）"><a href="#节点属性（节点-属性）" class="headerlink" title="节点属性（节点.属性）"></a>节点属性（节点.属性）</h4><p>获取：getAttribute(名称)<br>设置：setAttribute(名称, 值)<br>删除：removeAttribute(名称)<br>注意：IE6、7不支持。<br>调用者：节点。 有参数。 没有返回值。<br>每一个方法意义不同。</p>
+<h2 id="DOM详解（属性操作）"><a href="#DOM详解（属性操作）" class="headerlink" title="DOM详解（属性操作）"></a>DOM详解（属性操作）</h2><h3 id="DOM元素"><a href="#DOM元素" class="headerlink" title="DOM元素"></a>DOM元素</h3><p>DOM就是html文档的模型抽象。数据以树的形式在内存中排列。<br>节点就是DOM的组成。是一个对象，有属性和方法。获取方式有很多种。<br>节点分为元素节点（标签），文本节点，属性节点。<br>区分方法：nodeType: 1是标签,2是属性,3是文本</p>
+<p><strong>value和innerHTML和innerText和textContent<br>1.老版本的火狐不支持innerText，支持textContent<br>2.p不能嵌套p。h1不能嵌套h1。a连接内部不能嵌套a连接</strong></p>
+<p>###DOM案例</p>
+<ul>
+<li>显示二维码</li>
+<li>禁用文本框和获取失去焦点输入事件。</li>
+<li>表单处理。Input取值赋值和select选水果。</li>
+<li>验证账号密码，高亮显示。</li>
+<li>全选反选<h4 id="属性获取修改和删除（属性绑定）"><a href="#属性获取修改和删除（属性绑定）" class="headerlink" title="属性获取修改和删除（属性绑定）"></a>属性获取修改和删除（属性绑定）</h4></li>
+<li>teb栏。（排他思想）（简单写法和兼容写法）</li>
+</ul>
+<p>1.点亮盒子。<br>（第三种体验双重for循环，第一种打印三角形，第二种冒泡排序）<br>2.弹出索引值。<br>3.属性绑定。<br>4.两个for循环变一个</p>
+<ul>
+<li>自定义属性（兼容写法）</li>
+</ul>
+<p>1.直接绑定属性：不会再标签中显示（没有的属性）；<br>2.标签中的自定义属性，不能box.aaa获取<br>（火狐谷歌IE9+）(IE678可以获取)<br>3.get/setAttribute（）；可以</p>
+<h4 id="节点关系。（父节点、兄弟节点、子节点、所有子节点）"><a href="#节点关系。（父节点、兄弟节点、子节点、所有子节点）" class="headerlink" title="节点关系。（父节点、兄弟节点、子节点、所有子节点）"></a>节点关系。（父节点、兄弟节点、子节点、所有子节点）</h4><p>1.子节点。（京东头）<br>2.nodeType/nodeName/nodeValue:<br>元素/属性/文本 123/标签:属性名:#text/null:属性值:内容<br>3.childNodes实现各行变色index = 0;<br>4.父节点/所有子节点/兄弟节点</p>
+<h3 id="style属性设置和获取（-方法的封装）"><a href="#style属性设置和获取（-方法的封装）" class="headerlink" title="style属性设置和获取（$方法的封装）"></a>style属性设置和获取（$方法的封装）</h3><p>（style是一个对象，不能获取内嵌和外链）</p>
+<ul>
+<li>样式少的时候使用</li>
+<li>style是对象</li>
+<li>值是字符串，没有设置值是“”；</li>
+<li>命名规则，驼峰命名。和css不一样</li>
+<li>设置了类样式不能获取。（只和行内式交互，和内嵌和外链无关）</li>
+<li>box.style.cssText = “字符串形式的样式”；</li>
+</ul>
+<p>###　BOM简介</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.open/alert/confirm</span><br><span class="line">2.close</span><br><span class="line">3.setTimeOut/setInterval</span><br><span class="line">4.location</span><br><span class="line">5.onload</span><br><span class="line">6.navigator</span><br></pre></td></tr></table></figure>
+
+<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><p>案例：日历、倒计时</p>
+<h3 id="String-Number-Boolean"><a href="#String-Number-Boolean" class="headerlink" title="String/Number/Boolean"></a>String/Number/Boolean</h3><h4 id="给索引查字符-charAt-charCodeAt"><a href="#给索引查字符-charAt-charCodeAt" class="headerlink" title="给索引查字符(charAt/charCodeAt)"></a>给索引查字符(charAt/charCodeAt)</h4><p>1 charAt，获取相应位置字符（参数： 字符位置）<br>注释：字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。<br>2 charCodeAt获取相应位置字符编码（参数： 字符位置）<br>charAt()方法和charCodeAt()方法用于选取字符串中某一位置上的单个字符<br>区别：charCodeAt()方法，它并不返回指定位置上的字符本身，而是返回该字符在Unicode字符集中的编码值。如果该位置没有字符，返回值为NaN.<br>字符/字符编码 = Str.charAt/charCodeAt(索引值);</p>
+<h4 id="给字符查索引（indexOf-lastIndexOf）"><a href="#给字符查索引（indexOf-lastIndexOf）" class="headerlink" title="给字符查索引（indexOf/lastIndexOf）"></a>给字符查索引（indexOf/lastIndexOf）</h4><p>1 indexOf，从前向后索引字符串位置（参数： 索引字符串）<br>从前面寻找第一个符合元素的位置<br>2 lastIndexOf，从后向前索引字符串位置（参数：索引字符串）<br>从后面寻找第一个符合元素的位置<br>找不到则返回 -1<br>索引值 = str.indexOf/lastIndexOf(想要查询的字符);</p>
+<h4 id="url-编码和解码"><a href="#url-编码和解码" class="headerlink" title="url 编码和解码"></a>url 编码和解码</h4><p>URI (Uniform ResourceIdentifiers,通用资源标识符)进行编码，以便发送给浏览器。有效的URI中不能包含某些字符，例如空格。而这URI编码方法就可以对URI进行编码，它们用特殊的UTF-8编码替换所有无效的字符，从而让浏览器能够接受和理解。<br>encodeURIComponent() 函数可把字符串作为 URI 组件进行编码<br>decodeURIComponent() 函数可把字符串作为 URI 组件进行解码</p>
+<h4 id="字符串的链接"><a href="#字符串的链接" class="headerlink" title="字符串的链接"></a>字符串的链接</h4><p>新字符串 = str1.concat(str2)； 链接两个字符串</p>
+<h4 id="字符串的截取"><a href="#字符串的截取" class="headerlink" title="字符串的截取"></a>字符串的截取</h4><ul>
+<li><p>slice，截取字符串（参数：1，截取位置【必须】，2终结点）<br>3字符串 = str.slice（索引1，索引2); 两个参数都是索引值。<br>(1).（2,5） 正常包左不包右。<br>(2). ( 2 ) 从指定的索引位置剪到最后。<br>(3).（-3） 从倒数第几个剪到最后.<br>(4).（5,2） 前面的大，后面的小，空。</p>
+</li>
+<li><p>substr，截取字符串（参数：1，截取位置【必须】，2截取长度）<br>字符串 = str.substr（参数1，参数2); 1索引值,2长度。<br>第一个参数为从索引位置取值，第二个参数返回字符长度。<br>(1).（2,4） 从索引值为2的字符开始，截取4个字符。<br>(2).（1） 一个值，从指定位置到最后。<br>(3).（-3） 从倒数第几个剪到最后.<br>(4). 不包括前大后小的情况。</p>
+</li>
+<li><p>substring 同slice<br>字符串 = str.substring（参数1，参数2); 两个参数都是索引值。<br>不同1：参数智能调转位置。<br>不同2：参数负值，将全部获取字符串。<br>（1）.（2,5） 正常包左不包右。<br>(2). ( 2 ) 从指定的索引位置剪到最后。<br>(3). （-3） 获取全部字符串.<br>(4). （5,2） 前面的大，后面的小，不是空。（2,5）</p>
+<h4 id="特殊方法简介"><a href="#特殊方法简介" class="headerlink" title="特殊方法简介"></a>特殊方法简介</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">trim() //只能去除字符串前后的空白</span><br><span class="line">replace() //替换 str.replace(/aaa/gi,“bbb”);</span><br><span class="line">split() //字符串变数组</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Math<br>Math.abs(); 取绝对值<br>Math.floor(); 向下取整<br>Math.ceil(); 向上取整<br>Math.round(); 四舍五入取整<br>Math.random(); 随机数0-1</li>
+<li>addEventListenner（兼容绑定、移除、原理）</li>
+</ul>
+<p>1.使用方法<br>2.实现原理<br>3.兼容性。<br>5.移除事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.bnt.onclick = null;</span><br><span class="line">2.btn.removeEventListener(...);</span><br><span class="line">3.btn.detachEvent(...);(attachEvent)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML小案例/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML小案例/">HTML小案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,113 +316,125 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/12/DOM/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/H5新增属性/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/12/简单对象及数组高级api/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单对象及数组高级api</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/H5新增属性/">H5新增属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM基础"><span class="toc-number">1.</span> <span class="toc-text">DOM基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#事件"><span class="toc-number">1.1.</span> <span class="toc-text">事件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-number">1.1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件三要素"><span class="toc-number">1.1.2.</span> <span class="toc-text">事件三要素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM概述"><span class="toc-number">1.2.</span> <span class="toc-text">DOM概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解析过程"><span class="toc-number">1.2.1.</span> <span class="toc-text">解析过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM-文档对象模型"><span class="toc-number">1.2.2.</span> <span class="toc-text">DOM (文档对象模型)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML的组成部分为节点（-Node-）"><span class="toc-number">1.2.3.</span> <span class="toc-text">HTML的组成部分为节点（ Node ）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM节点的获得"><span class="toc-number">1.2.4.</span> <span class="toc-text">DOM节点的获得</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM-访问关系（节点的获得）"><span class="toc-number">1.2.5.</span> <span class="toc-text">DOM 访问关系（节点的获得）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#父节点-（-parentNode-）"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">父节点 （ parentNode ）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#兄弟节点"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">兄弟节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#单个子节点"><span class="toc-number">1.2.5.3.</span> <span class="toc-text">单个子节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#所有子节点"><span class="toc-number">1.2.5.4.</span> <span class="toc-text">所有子节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#知识补充"><span class="toc-number">1.2.5.5.</span> <span class="toc-text">知识补充</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#要明白两个属性（！！！重点！！！）"><span class="toc-number">1.2.5.6.</span> <span class="toc-text">要明白两个属性（！！！重点！！！）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM节点操作-（！！！！！重点！！！！！）"><span class="toc-number">1.2.6.</span> <span class="toc-text">DOM节点操作 （！！！！！重点！！！！！）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建节点"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">创建节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入节点（使用节点）"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">插入节点（使用节点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除节点"><span class="toc-number">1.2.6.3.</span> <span class="toc-text">删除节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#复制节点-（-oldNode-cloneNode（true）-）"><span class="toc-number">1.2.6.4.</span> <span class="toc-text">复制节点 （ oldNode.cloneNode（true） ）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#节点属性（节点-属性）"><span class="toc-number">1.2.6.5.</span> <span class="toc-text">节点属性（节点.属性）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM详解（属性操作）"><span class="toc-number">1.3.</span> <span class="toc-text">DOM详解（属性操作）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM元素"><span class="toc-number">1.3.1.</span> <span class="toc-text">DOM元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#属性获取修改和删除（属性绑定）"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">属性获取修改和删除（属性绑定）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#节点关系。（父节点、兄弟节点、子节点、所有子节点）"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">节点关系。（父节点、兄弟节点、子节点、所有子节点）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#style属性设置和获取（-方法的封装）"><span class="toc-number">1.3.2.</span> <span class="toc-text">style属性设置和获取（$方法的封装）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内置对象"><span class="toc-number">1.4.</span> <span class="toc-text">内置对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Date"><span class="toc-number">1.4.1.</span> <span class="toc-text">Date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Number-Boolean"><span class="toc-number">1.4.2.</span> <span class="toc-text">String/Number/Boolean</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#给索引查字符-charAt-charCodeAt"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">给索引查字符(charAt/charCodeAt)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#给字符查索引（indexOf-lastIndexOf）"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">给字符查索引（indexOf/lastIndexOf）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#url-编码和解码"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">url 编码和解码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的链接"><span class="toc-number">1.4.2.4.</span> <span class="toc-text">字符串的链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的截取"><span class="toc-number">1.4.2.5.</span> <span class="toc-text">字符串的截取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特殊方法简介"><span class="toc-number">1.4.2.6.</span> <span class="toc-text">特殊方法简介</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML及新增DOM/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:35:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML及新增DOM/">HTML及新增DOM</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -325,9 +460,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
