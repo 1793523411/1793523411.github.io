@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>跌倒的小黄瓜</title>
+  <title>简单对象及数组高级api | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="简单对象及数组高级apiJS中的对象（Object）创建空白对象">
+<meta name="keywords" content="前端,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单对象及数组高级api">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/简单对象及数组高级api/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="简单对象及数组高级apiJS中的对象（Object）创建空白对象">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-12T11:47:17.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="简单对象及数组高级api">
+<meta name="twitter:description" content="简单对象及数组高级apiJS中的对象（Object）创建空白对象">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,35 +159,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-行高，盒子，边距，fireworks" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-简单对象及数组高级api" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/行高，盒子，边距，fireworks/">行高，盒子，边距，fireworks</a>
+    <h1 class="article-title" itemprop="name">
+      简单对象及数组高级api
     </h1>
   
 
         
-        <a href="/2019/10/11/行高，盒子，边距，fireworks/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:03:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+        <a href="/2019/10/12/简单对象及数组高级api/" class="archive-article-date">
+  	<time datetime="2019-10-12T11:46:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
 </a>
         
         
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h2><h3 id="浏览器默认文字大小"><a href="#浏览器默认文字大小" class="headerlink" title="浏览器默认文字大小"></a>浏览器默认文字大小</h3><p>浏览器默认文字大小：16px</p>
-<p>行高：是基线与基线之间的距离</p>
-<p>行高=文字高度+上下边距</p>
-        
+        <h1 id="简单对象及数组高级api"><a href="#简单对象及数组高级api" class="headerlink" title="简单对象及数组高级api"></a>简单对象及数组高级api</h1><h2 id="JS中的对象（Object）"><a href="#JS中的对象（Object）" class="headerlink" title="JS中的对象（Object）"></a>JS中的对象（Object）</h2><h4 id="创建空白对象"><a href="#创建空白对象" class="headerlink" title="创建空白对象"></a>创建空白对象</h4><a id="more"></a>
+
+<p>var obj = new Object();</p>
+<h2 id="构造函数（就是为了创建对象实例）"><a href="#构造函数（就是为了创建对象实例）" class="headerlink" title="构造函数（就是为了创建对象实例）"></a>构造函数（就是为了创建对象实例）</h2><p>一、可以创建对象实例的函数。<br>二、区别与普通函数，首字母大写。</p>
+<h3 id="创建自定义对象"><a href="#创建自定义对象" class="headerlink" title="创建自定义对象"></a>创建自定义对象</h3><h4 id="This"><a href="#This" class="headerlink" title="This"></a>This</h4><p>一、this只出现在函数中。<br>二、谁调用函数，this就指的是谁。<br>三、new People(); People中的this代指被创建的对象实例。</p>
+<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><p>1.开辟内存空间，存储新创建的对象（ new Object() ）<br>2.把this设置为当前对象<br>3.执行内部代码，设置对象属性和方法<br>4.返回新创建的对象<br>十进制的值 = 位值_进制（位数-1） +位值_进制（位数-1） +位值*进制（位数-1）…………</p>
+<h3 id="对象字面量个JSON"><a href="#对象字面量个JSON" class="headerlink" title="对象字面量个JSON"></a>对象字面量个JSON</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;aaa: 111&#125;; var json = &#123;“aaa”:111&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对象字面量定义方法和json很像，只有一点不同，json的key要求必须加“”;</p>
+<h3 id="Json组成"><a href="#Json组成" class="headerlink" title="Json组成"></a>Json组成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Var json = &#123;“aaa”: 1,“bbb”: 2,“ccc”: 3,“ddd”: 4&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Json由{}和key:value以及逗号组成，三部分。（只有一个键值对key:value时,可以没有逗号）</p>
+<h3 id="For…in…"><a href="#For…in…" class="headerlink" title="For…in…"></a>For…in…</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Var json = &#123;“aaa”: 1,“bbb”: 2,“ccc”: 3,“ddd”: 4&#125;</span><br><span class="line">for(var key in json)&#123;</span><br><span class="line">//key代表aaa,bbb.....等</span><br><span class="line">//json[key]代表1,2,3....等</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数和传值问题"><a href="#参数和传值问题" class="headerlink" title="参数和传值问题"></a>参数和传值问题</h3><p>一、简单类型数据做参数，函数内部对参数的修改不应影响外部变量<br>简单类型传数值。<br>二、复杂类型数据做参数，函数内部对参数的修改会应影响外部变量<br>复杂类型传地址。</p>
+<h2 id="高级数组api"><a href="#高级数组api" class="headerlink" title="高级数组api"></a>高级数组api</h2><h3 id="侧重点（四点）"><a href="#侧重点（四点）" class="headerlink" title="侧重点（四点）"></a>侧重点（四点）</h3><p>调用者：谁调用的。<br>参数：有无，几个。<br>返回值：有无，什么类型。<br>功能：干什么用的。</p>
+<h3 id="Array的内置方法"><a href="#Array的内置方法" class="headerlink" title="Array的内置方法"></a>Array的内置方法</h3><h4 id="判断数组和转换数组。"><a href="#判断数组和转换数组。" class="headerlink" title="判断数组和转换数组。"></a>判断数组和转换数组。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Instanceof: 是一个关键字。 判断A是否是B类型。</span><br></pre></td></tr></table></figure>
+
+<p>布尔类型值 = A Instanceof B ;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array.isArray() //HTML5中新增 判断是不是数组</span><br></pre></td></tr></table></figure>
+
+<p>布尔类型值 = Array.isArray(变量) ;<br>调用者：Array 参数：变量(被检测值) 返回值：布尔类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toString() //把数组转换成字符串，每一项用,分割</span><br></pre></td></tr></table></figure>
+
+<p>字符串 = 数组.toString();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">valueOf() //返回数组对象本身</span><br></pre></td></tr></table></figure>
+
+<p>数组本身 = 数组.valueOf();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Join //根据每个字符把数组元素连起来变成字符串</span><br></pre></td></tr></table></figure>
+
+<p>字符串 = 数组.join(变量);<br>变量可以有可以没有。不写默认用逗号分隔，无缝连接用空字符串。</p>
+<h4 id="数组增删和换位置（原数组讲被修改）"><a href="#数组增删和换位置（原数组讲被修改）" class="headerlink" title="数组增删和换位置（原数组讲被修改）"></a>数组增删和换位置（原数组讲被修改）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">push() //在数组最后面插入项，返回数组的长度</span><br></pre></td></tr></table></figure>
+
+<p>数组1改后的长度 = 数组1.push(元素1);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pop() //取出数组中的最后一项，返回最后一项</span><br></pre></td></tr></table></figure>
+
+<p>被删除的元素 = 数组1.pop();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unshift() //在数组最前面插入项，返回数组的长度</span><br></pre></td></tr></table></figure>
+
+<p>数组1改后的长度 = 数组1.unshift(元素1);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift() //取出数组中的第一个元素，返回最后一项</span><br></pre></td></tr></table></figure>
+
+<p>被删除的元素 = 数组1.shift();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reverse() //翻转数组（原数组讲呗反转，返回值也是被反转后的数组）</span><br></pre></td></tr></table></figure>
+
+<p>反转后的数组 = 数组1.reverse();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sort(); //给数组排序，返回排序后的数组。如何排序看参数。</span><br><span class="line">从小到大排序后的数组 = 数组1.sort(function(a,b)&#123;</span><br><span class="line">return a-b;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>无参：按照数组元素的首字符对应的Unicode编码值从小到大排列数组元素。<br>带参：必须为函数（回调函数–callback）。函数中带有两个参数，代表数组中的 前后元素。如果计算后（a-b），返回值为负数，a排b前面。等于0不动。 返回值为正数，a排b后面。</p>
+<h4 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">concat() //把参数拼接到当前数组</span><br><span class="line">新数组 = 数组1.concat(数组2);</span><br><span class="line">slice() //从当前数组中截取一个新的数组，不影响原来的数组，参数start从0开始,end从1开始</span><br><span class="line">新数组 = 数组1.slice(索引1，索引2);</span><br><span class="line">splice()//删除或替换当前数组的某些项目，参数start,deleteCount,options(要替换的项目)</span><br><span class="line">新数组 = 数组1.splice(起始索引，结束索引，替换内容);</span><br><span class="line">indexOf()、lastIndexOf() //如果没找到返回-1</span><br><span class="line">索引值 = 数组.indexOf/lastIndexOf(数组中的元素);</span><br><span class="line"></span><br><span class="line">迭代方法 不会修改原数组</span><br><span class="line">every()、filter()、forEach()、map()、some()</span><br><span class="line">数组/boolean/无 = 数组.every/filter/forEach/map/some(</span><br><span class="line">function(element,index,arr)&#123;</span><br><span class="line">程序和返回值；</span><br><span class="line">&#125;</span><br><span class="line">);</span><br><span class="line">//对数组中每一项运行以下函数，如果都返回true，every返回true，如果有一项返回false，则停止遍历 every返回false；不写默认返回false</span><br><span class="line">array.every(function(item,index,arr) &#123;</span><br><span class="line">&#125;)</span><br><span class="line">//对数组中每一项运行以下函数，该函数返回结果是true的项组成的新数组</span><br><span class="line">var arr = array.filter(function(item,index,arr) &#123;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(arr);</span><br><span class="line">//遍历数组</span><br><span class="line">array.forEach(function(item,index,arr)&#123;</span><br><span class="line">&#125;);</span><br><span class="line">//对数组中每一项运行以下函数，返回该函数的结果组成的新数组</span><br><span class="line">var arr = array.map(function(item,index,arr) &#123;</span><br><span class="line">return &quot;\&quot;&quot; + item + &quot;\&quot;&quot;;</span><br><span class="line">&#125;)</span><br><span class="line">//对数组中每一项运行以下函数，如果该函数对某一项返回true，则some返回true</span><br><span class="line">var b = array.some(function(item,index,arr) &#123;</span><br><span class="line">if (item == &quot;ww&quot;) &#123;</span><br><span class="line">return true;</span><br><span class="line">&#125;</span><br><span class="line">return false;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="清空数组"><a href="#清空数组" class="headerlink" title="清空数组"></a>清空数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,2,3,4,5,6];</span><br><span class="line">array.splice(0,array.length); //删除数组中所有项目</span><br><span class="line">array.length = 0; //length属性可以赋值，其它语言中length是只读</span><br><span class="line">array = []; //推荐</span><br></pre></td></tr></table></figure>
+
+<h2 id="构造函数的原理"><a href="#构造函数的原理" class="headerlink" title="构造函数的原理"></a>构造函数的原理</h2><p>function Num(aaa){</p>
+<p>this[“[[PrimitiveValue]]”] = num/1;</p>
+<p>return aaa/1;</p>
+<p>}</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -197,7 +282,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -206,16 +291,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/行高，盒子，边距，fireworks/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/12/简单对象及数组高级api/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/12/函数和数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">函数和数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,737 +374,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css书写，表签元素，三大特性，修饰，伪类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/">css书写，表签元素，三大特性，修饰，伪类</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="样式表书写位置"><a href="#样式表书写位置" class="headerlink" title="样式表书写位置"></a>样式表书写位置</h2><ul>
-<li>内嵌式写法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=”text/css”&gt;</span><br><span class="line">样式表写法</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简单对象及数组高级api"><span class="toc-number">1.</span> <span class="toc-text">简单对象及数组高级api</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS中的对象（Object）"><span class="toc-number">1.1.</span> <span class="toc-text">JS中的对象（Object）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建空白对象"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">创建空白对象</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数（就是为了创建对象实例）"><span class="toc-number">1.2.</span> <span class="toc-text">构造函数（就是为了创建对象实例）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建自定义对象"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建自定义对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#This"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">This</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#new"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">new</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象字面量个JSON"><span class="toc-number">1.2.2.</span> <span class="toc-text">对象字面量个JSON</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Json组成"><span class="toc-number">1.2.3.</span> <span class="toc-text">Json组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For…in…"><span class="toc-number">1.2.4.</span> <span class="toc-text">For…in…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数和传值问题"><span class="toc-number">1.2.5.</span> <span class="toc-text">参数和传值问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高级数组api"><span class="toc-number">1.3.</span> <span class="toc-text">高级数组api</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#侧重点（四点）"><span class="toc-number">1.3.1.</span> <span class="toc-text">侧重点（四点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array的内置方法"><span class="toc-number">1.3.2.</span> <span class="toc-text">Array的内置方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#判断数组和转换数组。"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">判断数组和转换数组。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组增删和换位置（原数组讲被修改）"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">数组增删和换位置（原数组讲被修改）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其他方法"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">其他方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#清空数组"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">清空数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造函数的原理"><span class="toc-number">1.4.</span> <span class="toc-text">构造函数的原理</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-css选择器，文本元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/11/css选择器，文本元素/">css选择器，文本元素</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/11/css选择器，文本元素/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>css相比较html来说内容的确是丰富了许多，毕竟是控制样式的嘛，css3之前差不多有这些内容：选择器，元素属性，css三大特性，盒子，边距，浮动，清除浮动（水很深），定位，精灵图。啊~，大致也就这吗多，css3是真的比css要厉害得多，但基本的布局还差不多得靠css</strong></p>
-<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><p> 选择器，标签，类，通配符，id，并集，交集，后代，子代，这些选择器基本就是css3,之前的了，到了css3，又多了，伪类选择器，伪元素选择器，序选择器，用这些可以做出许多花里胡哨的东西。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/11/css选择器，文本元素/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-循环链表，双向链表，时间复杂度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/循环链表，双向链表，时间复杂度/">循环链表，双向链表，时间复杂度</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/10/循环链表，双向链表，时间复杂度/" class="archive-article-date">
-  	<time datetime="2019-10-10T13:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="循环链表与双向链表"><a href="#循环链表与双向链表" class="headerlink" title="循环链表与双向链表"></a>循环链表与双向链表</h1><p><strong>这回除了写一写链表知识外，还要在比较一下链表和顺序表哦！</strong></p>
-<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>循环链表是另一种形式的链式存贮结构。它的特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环</p>
-<h3 id="主要语句"><a href="#主要语句" class="headerlink" title="主要语句"></a>主要语句</h3><p>判断空链表的条件是<br>单链表中，判别条件为：<code>p!=NULL或p-&gt;next!=NULL;</code><br>循环链表中，判别条件为：<code>p!=L或p-&gt;next!=L;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">head==head-&gt;next;</span><br><span class="line">rear==rear-&gt;next;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/循环链表，双向链表，时间复杂度/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-链表的合并，分解，插入，逆值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/链表的合并，分解，插入，逆值/">链表的合并，分解，插入，逆值</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/10/链表的合并，分解，插入，逆值/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:30:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><p><em>接着上一篇：链表的基本操作（这两篇应该是同一篇的）</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">LNode *L,*p,*Lb,*Lc，*B,*C;</span><br><span class="line">case 9:</span><br><span class="line">NI_L(L);</span><br><span class="line">cout&lt;&lt;&quot;链表的逆值&quot;;</span><br><span class="line">p=L-&gt;next;</span><br><span class="line">while(p)</span><br><span class="line">&#123;</span><br><span class="line">cout&lt;&lt;p-&gt;data&lt;&lt;&quot; &quot;;</span><br><span class="line">p=p-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line">cout&lt;&lt;endl;</span><br><span class="line">break;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/链表的合并，分解，插入，逆值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-链表的基本操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/链表的基本操作/">链表的基本操作</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/10/链表的基本操作/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>以下内容皆为基本操作</strong></p>
-<h1 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h1><h2 id="主函数："><a href="#主函数：" class="headerlink" title="主函数："></a>主函数：</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/链表的基本操作/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTML小案例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/HTML小案例/">HTML小案例</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/09/HTML小案例/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="tab栏切换案例"><a href="#tab栏切换案例" class="headerlink" title="tab栏切换案例"></a>tab栏切换案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">body &#123;</span><br><span class="line">margin: 0;</span><br><span class="line">padding: 0;</span><br><span class="line">background-color: #F7F7F7;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.tabs &#123;</span><br><span class="line">width: 400px;</span><br><span class="line">margin: 30px auto;</span><br><span class="line">background-color: #FFF;</span><br><span class="line">border: 1px solid #C0DCC0;</span><br><span class="line">box-sizing: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/HTML小案例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-H5新增属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/H5新增属性/">H5新增属性</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/09/H5新增属性/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="web存储"><a href="#web存储" class="headerlink" title="web存储"></a>web存储</h2><p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案</p>
-<p>Storage 存储</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.sessionStorage(浏览器存储)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.localStorage（本地存储）</span><br></pre></td></tr></table></figure>
-
-<p>(向本地保存数据,有可能在浏览器内存里面，有可能在硬盘上面.)<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/H5新增属性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTML及新增DOM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/HTML及新增DOM/">HTML及新增DOM</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/09/HTML及新增DOM/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:35:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>OK，现在我要正式开始我的web前端开发之旅了….</em></p>
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>HTML作为一种标记语言，我觉得就跟Markdown一样，一学就会，当然H5引入了一些比较与意思的东西，我就是先学的HTML（不带数字5），然后在学的HTML5，接着我就总结一下我对HTML这门超文本标记语言的学习吧</strong></p>
-<hr>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/HTML及新增DOM/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-07T02:32:02.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
-</a>
-        
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/07/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -986,8 +425,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
