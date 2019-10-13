@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jQuery-3 | 跌倒的小黄瓜</title>
+  <title>js复习 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
-<meta name="keywords" content="前端,jQuery">
+  <meta name="description" content="数据类型基本数据类型string number boolean复杂数据类型（引用类型）">
+<meta name="keywords" content="前端,js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery-3">
-<meta property="og:url" content="http://yoursite.com/2019/10/13/jQuery-3/index.html">
+<meta property="og:title" content="js复习">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/js复习/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
+<meta property="og:description" content="数据类型基本数据类型string number boolean复杂数据类型（引用类型）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-13T02:17:42.418Z">
+<meta property="og:updated_time" content="2019-10-13T09:20:18.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery-3">
-<meta name="twitter:description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
+<meta name="twitter:title" content="js复习">
+<meta name="twitter:description" content="数据类型基本数据类型string number boolean复杂数据类型（引用类型）">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jQuery-3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js复习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jQuery-3
+      js复习
     </h1>
   
 
         
-        <a href="/2019/10/13/jQuery-3/" class="archive-article-date">
-  	<time datetime="2019-10-13T02:13:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+        <a href="/2019/10/13/js复习/" class="archive-article-date">
+  	<time datetime="2019-10-13T09:19:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
 </a>
         
         
@@ -184,70 +184,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="jQuery事件机制"><a href="#jQuery事件机制" class="headerlink" title="jQuery事件机制"></a>jQuery事件机制</h2><p>jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。</p>
+        <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>基本数据类型<br>string number boolean<br>复杂数据类型（引用类型）</p>
 <a id="more"></a>
-<h3 id="jQuery事件的发展历程（了解）"><a href="#jQuery事件的发展历程（了解）" class="headerlink" title="jQuery事件的发展历程（了解）"></a>jQuery事件的发展历程（了解）</h3><p>简单事件绑定 &gt;&gt; bind事件绑定 &gt;&gt; delegate事件绑定 &gt;&gt; on【重点】</p>
-<p>简单事件绑定：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">click(handler) 单击事件</span><br><span class="line">blur(handler) 失去焦点事件</span><br><span class="line">mouseenter(handler) 鼠标进入事件</span><br><span class="line">mouseleave(handler)	鼠标离开事件</span><br><span class="line">dbclick(handler) 双击事件</span><br><span class="line">change(handler) 改变事件，如：文本框值改变，下来列表值改变等</span><br><span class="line">focus(handler) 获得焦点事件</span><br><span class="line">keydown(handler) 键盘按下事件</span><br></pre></td></tr></table></figure>
+<p>Array Date Object RegExp String Number Boolean<br>如何获取一个数据的数据类型<br>使用关键字 typeof<br>typeof返回值为string类型<br>String Number Date 首字母大写的都是构造函数<br>两个空的类型<br>null<br>undefined<br>什么时候对象会是null<br>//变量不可能为null值，除非手动去设置<br>什么时候要给对象赋值为null？<br>//要解除对象的占用（引用）的时候</p>
+<h2 id="全等于和等于的区别"><a href="#全等于和等于的区别" class="headerlink" title="全等于和等于的区别"></a>全等于和等于的区别</h2><p>=== 全等<br>类型和值都要进行比较<br>== 等于<br>只比较值</p>
+<h2 id="in关键字"><a href="#in关键字" class="headerlink" title="in关键字"></a>in关键字</h2><p>最常用的是在for in 循环中 遍历对象的键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(var k in obj)&#123;</span><br><span class="line">console.log(typeof k);</span><br><span class="line">console.log(k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">判断属性是否存在于对象中</span><br><span class="line">//语法 属性名 in 对象</span><br><span class="line">var propName = &quot;name&quot;;</span><br><span class="line">var isExsit = propName in obj;</span><br><span class="line">console.log(isExsit);</span><br></pre></td></tr></table></figure>
 
-<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">其他参考</a></p>
-<p>bind方式（不推荐，1.7以后的jQuery版本被on取代）<br>作用：给匹配到的元素直接绑定事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 绑定单击事件处理程序</span><br><span class="line">第一个参数：事件类型</span><br><span class="line">第二个参数：事件处理程序</span><br><span class="line">$(&quot;p&quot;).bind(&quot;click mouseenter&quot;, function(e)&#123;</span><br><span class="line">//事件响应方法</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>注意： 使用in关键字的时候，属性名称为字符串类型，需要用引号引起来<br>注意： in关键字操作数组的时候判断的是索引是否存在，而不是值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var arr = [4, 6, 3, 4];</span><br><span class="line"></span><br><span class="line">console.log(0 in arr);（true）</span><br><span class="line">//这里会做一个隐式的类型转换</span><br><span class="line">console.log(&quot;0&quot; in arr);（true）</span><br><span class="line">如何判断数组中是否存在指定的值</span><br><span class="line">//1. for循环 如果找到了就输出</span><br><span class="line">//2. indexOf 返回值为指定的数对应的索引，如果没有找到 返回-1</span><br><span class="line">console.log(arr.indexOf(9));</span><br><span class="line">for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">if(arr.indexOf(i) == target)&#123;</span><br><span class="line">console.log(arr.indexOf(i))</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>比简单事件绑定方式的优势：<br>1．    可以同时绑定多个事件，比如：bind(“mouseenter mouseleave”, function(){})<br>缺点：要绑定事件的元素必须存在文档中。</p>
-<p>3 delegate方式（特点：性能高，支持动态创建的元素）<br>作用：给匹配到的元素绑定事件，对支持动态创建的元素有效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数：selector，要绑定事件的元素</span><br><span class="line">// 第二个参数：事件类型</span><br><span class="line">// 第三个参数：事件处理函数</span><br><span class="line">$(&quot;.parentBox&quot;).delegate(&quot;p&quot;, &quot;click&quot;, function()&#123;</span><br><span class="line">//为 .parentBox下面的所有的p标签绑定事件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="新建对象"><a href="#新建对象" class="headerlink" title="新建对象"></a>新建对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var now = new Date();</span><br><span class="line">console.log(now);</span><br><span class="line"></span><br><span class="line">//GMT 格里尼治标准时间</span><br><span class="line">//UTC 世界协调时间</span><br></pre></td></tr></table></figure>
 
-<p>与前两种方式最大的优势：减少事件绑定次数提高效率，支持动态创建出来的元素绑定事件！</p>
-<h3 id="on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）"><a href="#on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）" class="headerlink" title="on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）"></a>on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）</h3><p>jQuery1.7版本后，jQuery用on统一了所有的事件处理的方法<br>作用：给匹配的元素绑定事件，包括了上面所有绑定事件方式的优点<br>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或者自定义事件）</span><br><span class="line">// 第二个参数：selector, 执行事件的后代元素</span><br><span class="line">// 第三个参数：data，传递给处理函数的数据，事件触发的时候通过event.data来使用</span><br><span class="line">// 第四个参数：handler，事件处理函数</span><br><span class="line">$(selector).on(events[,selector][,data],handler);</span><br><span class="line"></span><br><span class="line">// 表示给$(selector)绑定事件，当必须是它的内部元素span才能执行这个事件</span><br><span class="line">$(selector).on( &quot;click&quot;,“span”, function() &#123;&#125;);</span><br><span class="line"></span><br><span class="line">// 绑定多个事件</span><br><span class="line">// 表示给$(selector)匹配的元素绑定单击和鼠标进入事件</span><br><span class="line">$(selector).on(“click mouseenter”, function()&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="值类型和引用类型"><a href="#值类型和引用类型" class="headerlink" title="值类型和引用类型"></a>值类型和引用类型</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>值类型： string number boolean undefined<br>// 存储的就是数据本身的变量就是值类型的数据<br>//引用类型：object<br>// 存储的是数据在内存中的地址，数据在内存中单独存储 就是引用类型的数据</p>
+<p>/引用类型赋值<br>//引用类型赋值的时候，是将变量中存储的地址复制一份单独存储，但是两个变量共享同一个对象<br>//修改其中一个对象，两外一个引用来访问的时候，也会访问到修改后的对象<br>###特征<br>//值类型的赋值<br>//直接将存储的数据复制一份进行赋值，两份数据在内存中是完全独立的<br>引用类型相反<br>在函数中的使用<br>值类型做函数的参数<br>//函数内部的变量，也就是形参和实参只是简单的赋值操作，两个数据独立存储于内存中的<br>//在函数内部对形参进行修改，不会影响外面的变量<br>/引用类型做函数的参数<br>//还是把实参存储的地址赋值给了形参，在函数内部，形参同样也指向该对象，<br>//所以，在函数内部对该对象进行修改，会影响到外面的变量<br><strong>注意</strong>：如果在函数内部重新创建对象，为该形参赋值，那么两个对象将不再有关系<br>//修改其中一个，另外一个不受影响</p>
+<h2 id="对象的动态特征"><a href="#对象的动态特征" class="headerlink" title="对象的动态特征"></a>对象的动态特征</h2><p>对象的动态性是指，在对象创建出来之后，为对象添加新的属性或者方法<br>使用点语法进行赋值的时候，如果对象存在该属性，是修改操作<br>//如果对象不存在该属性，是给该对象新增属性并且赋值<br>对象是不是就是键值对儿的集合<br>// 对象名[属性名] 注意这里的属性名 是字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(obj[&quot;name&quot;]);</span><br></pre></td></tr></table></figure>
 
-<h3 id="事件解绑"><a href="#事件解绑" class="headerlink" title="事件解绑"></a>事件解绑</h3><p>unbind() 方式<br>作用：解绑 bind方式绑定的事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(selector).unbind(); //解绑所有的事件</span><br><span class="line">$(selector).unbind(“click”); //解绑指定的事件</span><br></pre></td></tr></table></figure>
+<p>//这里如果使用的键不是字符串类型，会隐式的转换成字符串类型<br>/新增属性、方法的方式有：<br>//1.点语法<br>//2.通过 [] 的形式去添加</p>
+<h2 id="逻辑中断"><a href="#逻辑中断" class="headerlink" title="逻辑中断"></a>逻辑中断</h2><p>即c中的短路</p>
+<h2 id="delete关键字"><a href="#delete关键字" class="headerlink" title="delete关键字"></a>delete关键字</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//delete关键字可以用来删除对象的属性，还有未使用var声明的变量</span><br><span class="line">// var num = 10;</span><br><span class="line">// var result = delete num;</span><br><span class="line">// console.log(result);//false</span><br><span class="line">//delete关键字有返回值 用来表示删除属性是否成功</span><br><span class="line">//如果删除的是不存在的属性，返回值为true</span><br><span class="line">var result= delete obj.gender;</span><br><span class="line">console.log(result);</span><br><span class="line">//如果删除的属性存在原型当中，那么返回值为true，但是并未删除</span><br><span class="line">console.log(obj.toString()); //[object Object]</span><br><span class="line">var result = delete obj.toString;</span><br><span class="line">console.log(result);//true</span><br><span class="line">console.log(obj.toString());//[object Object]</span><br></pre></td></tr></table></figure>
 
-<p>undelegate() 方式<br>作用：解绑delegate方式绑定的事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$( selector ).undelegate(); //解绑所有的delegate事件</span><br><span class="line">$( selector).undelegate( “click” ); //解绑所有的click事件</span><br><span class="line"></span><br><span class="line">off解绑on方式绑定的事件（重点）</span><br><span class="line">// 解绑匹配元素的所有事件</span><br><span class="line">$(selector).off();</span><br><span class="line">// 解绑匹配元素的所有click事件</span><br><span class="line">$(selector).off(“click”);</span><br><span class="line">// 解绑所有代理的click事件，元素本身的事件不会被解绑</span><br><span class="line">$(selector).off( “click”, “**” );</span><br></pre></td></tr></table></figure>
+<h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><p>1.函数声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function funcName()&#123;</span><br><span class="line">//函数体</span><br><span class="line">&#125;</span><br><span class="line">//2.函数表达式</span><br><span class="line">//在使用函数表达式声明函数的时候，function后面可以跟函数名</span><br><span class="line">//但是 这个函数名。只限在函数内部使用，外部无法访问</span><br><span class="line">var funcName1 = function name()&#123;</span><br><span class="line">//</span><br><span class="line">console.log(&quot;谁说不可以&quot;);</span><br><span class="line">&#125;</span><br><span class="line">funcName1();</span><br><span class="line">//3.Function</span><br><span class="line">var funcName2 = new Function();</span><br></pre></td></tr></table></figure>
 
-<h3 id="事件触发"><a href="#事件触发" class="headerlink" title="事件触发"></a>事件触发</h3><p>简单事件触发</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).click(); //触发 click事件</span><br></pre></td></tr></table></figure>
+<h2 id="DOM操作复习"><a href="#DOM操作复习" class="headerlink" title="DOM操作复习"></a>DOM操作复习</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//增</span><br><span class="line">//document.createElement</span><br><span class="line">//appendChild</span><br><span class="line">//删</span><br><span class="line">//removeChild</span><br><span class="line">//改</span><br><span class="line">//style</span><br><span class="line">//id</span><br><span class="line">//className</span><br><span class="line">//innerHTML</span><br><span class="line">//innerText</span><br><span class="line">//查</span><br><span class="line">//getElementById</span><br><span class="line">//getElementsByTagName</span><br><span class="line">//getELementsByClassName</span><br></pre></td></tr></table></figure>
 
-<p>trigger方法触发事件，触发浏览器行为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).trigger(“click”);</span><br></pre></td></tr></table></figure>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>异常最大的特征，就是一旦出现异常，后面的代码将不会再执行<br>//那为了保证后面代码在出现异常之后，还能继续执行，所以就要进行异常处理<br>注意 语法异常 try catch无法捕获<br>异常捕获语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">//try catch finally</span><br><span class="line">try&#123;</span><br><span class="line">//// a();</span><br><span class="line">// //可能会出现问题的代码</span><br><span class="line">//</span><br><span class="line">// throw &quot;你的代码坏了！！！&quot;;</span><br><span class="line">// &#125;</span><br><span class="line">// catch(e)&#123;</span><br><span class="line">//</span><br><span class="line">// //出现异常后的处理代码</span><br><span class="line">// console.log(e);</span><br><span class="line">// &#125;</span><br><span class="line">//</span><br><span class="line">// function test() &#123;</span><br><span class="line">// console.log(&quot;我是之后的代码&quot;);</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">sum(0);</span><br><span class="line">&#125;</span><br><span class="line">catch(e)&#123;</span><br><span class="line">console.log(e.errMsg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//异常捕获语句的完整形式</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">//可能出现异常的代码</span><br><span class="line">xyz();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">catch(e)&#123;</span><br><span class="line">//出现异常后的处理代码</span><br><span class="line">&#125;</span><br><span class="line">finally&#123;</span><br><span class="line">console.log(&quot;我是finally中的代码&quot;);</span><br><span class="line">//不管有没有出现异常，这里的代码都会执行</span><br><span class="line">//node.js</span><br><span class="line">//做释放资源的操作。</span><br><span class="line">&#125;</span><br><span class="line">手动抛出异常信息 使用 throw关键字</span><br><span class="line">unction sum(num1, num2)&#123;</span><br><span class="line">if(num1 == undefined || num2 == undefined)&#123;</span><br><span class="line">throw &#123;</span><br><span class="line">errMsg: &quot;能不能好好玩耍了，乖乖给我传参！！&quot;,</span><br><span class="line">errCode: 13888888888</span><br><span class="line">&#125;;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>triggerHandler触发 事件响应方法，不触发浏览器行为<br>比如:文本框获得焦点的默认行为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).triggerHandler(“focus”);</span><br></pre></td></tr></table></figure>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>面向过程的思维方式：<br>//就是把解决问题的关注点，放到解决问题的每一个详细的步骤上面！<br>面向对象的思维方式：<br>//就是把解决问题的关注点，放到解决问题需要的一些列对象身上<br>在JS当中 什么是对象？<br>//键值对儿的组合就是对象<br>现实生活中的对象的特征对应到JS当中是对象的属性！</p>
+<p>现实生活中的对象的行为对应到JS当中就是对象方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//如何在一句话中找出所有的对象</span><br><span class="line">//名词提炼法！！！</span><br><span class="line">//小明在公交车上牵着一只叼着香肠的狗</span><br><span class="line">var xm = &#123;</span><br><span class="line">name:&quot;小明&quot;,</span><br><span class="line">age:12,</span><br><span class="line">liuDog:function () &#123;</span><br><span class="line">console.log(&quot;遛狗啦！！！&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">编程</span><br><span class="line">要求创建出来一个div 并且设置样式，然后加到body标签当中</span><br><span class="line">面向过程</span><br><span class="line">1.创建div</span><br><span class="line">// var div = document.createElement(&quot;div&quot;);</span><br><span class="line">// //2.设置div的样式</span><br><span class="line">// div.style.height = &quot;200px&quot;;</span><br><span class="line">// div.style.width = &quot;200px&quot;;</span><br><span class="line">// div.style.border = &quot;1px solid pink&quot;;</span><br><span class="line">// //3.添加div到body中去</span><br><span class="line">// document.body.appendChild(div);</span><br><span class="line"></span><br><span class="line">面向对象</span><br><span class="line">//使用面向对象的思维方式来解决js问题</span><br><span class="line">$(&quot;body&quot;).append(&quot;&lt;div style=&apos;width:200px;height:200px;border:1px solid pink&apos;&gt;&lt;/div&gt;&quot;)</span><br></pre></td></tr></table></figure>
 
-<h3 id="jQuery事件对象介绍"><a href="#jQuery事件对象介绍" class="headerlink" title="jQuery事件对象介绍"></a>jQuery事件对象介绍</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">event.data 传递给事件处理程序的额外数据</span><br><span class="line">event.currentTarget 等同于this，当前DOM对象</span><br><span class="line">event.pageX 鼠标相对于文档左部边缘的位置</span><br><span class="line">event.target 触发事件源，不一定===this</span><br><span class="line">event.stopPropagation()；	阻止事件冒泡</span><br><span class="line">event.preventDefault(); 阻止默认行为</span><br><span class="line">event.type 事件类型：click，dbclick…</span><br><span class="line">event.which 鼠标的按键类型：左1 中2 右3</span><br><span class="line">event.keyCode	键盘按键代码</span><br><span class="line">案例：按键变色</span><br></pre></td></tr></table></figure>
-
-<h2 id="jQuery补充"><a href="#jQuery补充" class="headerlink" title="jQuery补充"></a>jQuery补充</h2><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><p>链式编程原理：return this;<br>通常情况下，只有设置操作才能把链式编程延续下去。因为获取操作的时候，会返回获取到的相应的值，无法返回 this。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">end(); // 结束当前链最近的一次过滤操作，并且返回匹配元素之前的状态。</span><br></pre></td></tr></table></figure>
-
-<h3 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h3><p>隐式迭代的意思是：在方法的内部会为匹配到的所有元素进行循环遍历，执行相应的方法；而不用我们再进行循环，简化我们的操作，方便我们调用。<br>如果获取的是多元素的值，大部分情况下返回的是第一个元素的值。</p>
-<h3 id="each方法"><a href="#each方法" class="headerlink" title="each方法"></a>each方法</h3><p>有了隐式迭代，为什么还要使用each函数遍历？<br>大部分情况下是不需要使用each方法的，因为jQuery的隐式迭代特性。<br>如果要对每个元素做不同的处理，这时候就用到了each方法</p>
-<p>作用：遍历jQuery对象集合，为每个匹配的元素执行一个函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 参数一表示当前元素在所有匹配元素中的索引号</span><br><span class="line">// 参数二表示当前元素（DOM对象）</span><br><span class="line">$(selector).each(function(index,element)&#123;&#125;);</span><br><span class="line">Element是一个 js对象，需要转换成jquery对象</span><br></pre></td></tr></table></figure>
-
-<h3 id="多库共存"><a href="#多库共存" class="headerlink" title="多库共存"></a>多库共存</h3><p>此处多库共存指的是：jQuery占用了$ 和jQuery这两个变量。当在同一个页面中引用了jQuery这个js库，并且引用的其他库（或者其他版本的jQuery库）中也用到了$或者jQuery这两个变量，那么，要保证每个库都能正常使用，这时候就有了多库共存的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jQuery(function () &#123;</span><br><span class="line">//打印版本号。</span><br><span class="line">// console.log($.fn.jquery);</span><br><span class="line"></span><br><span class="line">//让1.11.1放弃$的使用权</span><br><span class="line">$.noConflict();</span><br><span class="line">console.log($.fn.jquery);</span><br><span class="line">console.log(jQuery.fn.jquery);</span><br><span class="line"></span><br><span class="line">//放弃两个符号的使用权，同时定义一个新的使用权</span><br><span class="line">// var MrLv = $.noConflict(true);</span><br><span class="line">// console.log($.fn.jquery);</span><br><span class="line">// console.log(jQuery.fn.jquery);</span><br><span class="line">// console.log(MrLv.fn.jquery);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 模拟另外的库使用了 $ 这个变量</span><br><span class="line">// 此时，就与jQuery库产生了冲突</span><br><span class="line">var $ = &#123; name : “ygj” &#125;;</span><br><span class="line"></span><br><span class="line">解决方式：</span><br><span class="line">// 作用：让jQuery释放对$的控制权，让其他库能够使用$符号，达到多库共存的目的。此后，只能使用jQuery来调用jQuery提供的方法</span><br><span class="line">$.noConflict(); //true两个都交出来，返回值是新的调用方法</span><br></pre></td></tr></table></figure>
-
-<h2 id="jQuery插件机制"><a href="#jQuery插件机制" class="headerlink" title="jQuery插件机制"></a>jQuery插件机制</h2><p>jQuery这个js库，虽然功能强大，但也不是面面俱到包含所有的功能。<br>jQuery是通过插件的方式，来扩展它的功能：<br>当你需要某个插件的时候，你可以“安装”到jQuery上面，然后，使用。<br>当你不再需要这个插件，那你就可以从jQuery上“卸载”它。<br>（联想：手机软件，安装的app就好比插件，用的时候安装上，不用的时候卸载掉）</p>
-<h3 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h3><p>jQuery.color.js<br>animate()自定义动画：不支持背景的动画效果<br>animate动画支持的属性列表<br>jQuery.lazyload.js<br>使用步骤：</p>
-<ol>
-<li>引入jQuery文件</li>
-<li>引入插件</li>
-<li>使用插件</li>
-<li>7.2    制作插件</li>
-</ol>
-<p><a href="http://learn.jquery.com/plugins/basic-plugin-creation/" target="_blank" rel="noopener">如何创建jQuery插件</a></p>
-<p>全局jQuery函数扩展方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.pluginName = function() &#123;&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>jQuery对象扩展方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.fn. pluginName = function() &#123;&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="jQueryUI"><a href="#jQueryUI" class="headerlink" title="jQueryUI"></a>jQueryUI</h3><p>jQueryUI专指由jQuery官方维护的UI方向的插件。<br><a href="http://api.jqueryui.com/category/all/" target="_blank" rel="noopener">官方API</a><br>其他教程：jQueryUI教程<br>基本使用:<br>1.引入jQueryUI的样式文件<br>2.引入jQuery<br>3.引入jQueryUI的js文件<br>4.使用jQueryUI功能</p>
+<p>面向对象是对面向过程的封装，有了面向对象并不意味着，就可以抛弃面向过程<br><strong>为什么要学习面向对象</strong><br>看懂框架<br>//编写代码的时候的原则：DRY<br>//Don’ t repeat yourself<br>使用函数封装<br>使用函数将代码封装，使得复用性更高</p>
+<h4 id="使用函数封装带来的问题："><a href="#使用函数封装带来的问题：" class="headerlink" title="使用函数封装带来的问题："></a>使用函数封装带来的问题：</h4><p>//1.全局变量污染<br>//2.代码结构不够清晰，维护不方便<br>使用对象封装<br>/使用对象进行封装后的优势<br>//1.暴露在全局的只有一个对象名 不会造成全局变量污染<br>//2.使用对象将代码进行功能模块的划分，有利于日后的维护<br>little tip: itar 敲tab就可以出现for循环</p>
 
       
 
@@ -289,7 +260,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -345,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/jQuery-3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/js复习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -359,18 +330,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/13/ajax基础知识/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ajax基础知识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/13/jQuery-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jQuery-2</div>
+    <a href="/2019/10/13/web/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -397,7 +359,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery事件机制"><span class="toc-number">1.</span> <span class="toc-text">jQuery事件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery事件的发展历程（了解）"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery事件的发展历程（了解）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）"><span class="toc-number">1.2.</span> <span class="toc-text">on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件解绑"><span class="toc-number">1.3.</span> <span class="toc-text">事件解绑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件触发"><span class="toc-number">1.4.</span> <span class="toc-text">事件触发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery事件对象介绍"><span class="toc-number">1.5.</span> <span class="toc-text">jQuery事件对象介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery补充"><span class="toc-number">2.</span> <span class="toc-text">jQuery补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#链式编程"><span class="toc-number">2.1.</span> <span class="toc-text">链式编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐式迭代"><span class="toc-number">2.2.</span> <span class="toc-text">隐式迭代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#each方法"><span class="toc-number">2.3.</span> <span class="toc-text">each方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多库共存"><span class="toc-number">2.4.</span> <span class="toc-text">多库共存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery插件机制"><span class="toc-number">3.</span> <span class="toc-text">jQuery插件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方插件"><span class="toc-number">3.1.</span> <span class="toc-text">第三方插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQueryUI"><span class="toc-number">3.2.</span> <span class="toc-text">jQueryUI</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全等于和等于的区别"><span class="toc-number">2.</span> <span class="toc-text">全等于和等于的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in关键字"><span class="toc-number">3.</span> <span class="toc-text">in关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建对象"><span class="toc-number">4.</span> <span class="toc-text">新建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#值类型和引用类型"><span class="toc-number">5.</span> <span class="toc-text">值类型和引用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">5.1.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象的动态特征"><span class="toc-number">6.</span> <span class="toc-text">对象的动态特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#逻辑中断"><span class="toc-number">7.</span> <span class="toc-text">逻辑中断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#delete关键字"><span class="toc-number">8.</span> <span class="toc-text">delete关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定义函数"><span class="toc-number">9.</span> <span class="toc-text">定义函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM操作复习"><span class="toc-number">10.</span> <span class="toc-text">DOM操作复习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">11.</span> <span class="toc-text">异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象"><span class="toc-number">12.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-number">12.1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用函数封装带来的问题："><span class="toc-number">12.1.1.</span> <span class="toc-text">使用函数封装带来的问题：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
