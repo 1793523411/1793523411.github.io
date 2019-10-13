@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>css书写，表签元素，三大特性，修饰，伪类 | 跌倒的小黄瓜</title>
+  <title>Tag: PHP | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础样式表书写位置 内嵌式写法  12345&amp;lt;head&amp;gt;&amp;lt;style type=”text/css”&amp;gt;样式表写法&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;">
-<meta name="keywords" content="前端,css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="css书写，表签元素，三大特性，修饰，伪类">
-<meta property="og:url" content="http://yoursite.com/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="跌倒的小黄瓜">
+<meta property="og:url" content="http://yoursite.com/tags/PHP/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="基础样式表书写位置 内嵌式写法  12345&amp;lt;head&amp;gt;&amp;lt;style type=”text/css”&amp;gt;样式表写法&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-11T07:23:07.597Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css书写，表签元素，三大特性，修饰，伪类">
-<meta name="twitter:description" content="基础样式表书写位置 内嵌式写法  12345&amp;lt;head&amp;gt;&amp;lt;style type=”text/css”&amp;gt;样式表写法&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;">
+<meta name="twitter:title" content="跌倒的小黄瓜">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,114 +154,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-css书写，表签元素，三大特性，修饰，伪类" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      css书写，表签元素，三大特性，修饰，伪类
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/13/ajax-php/" class="archive-article-date">
+  	<time datetime="2019-10-13T04:42:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/13/ajax-php/">ajax-php</a>
     </h1>
   
 
-        
-        <a href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        
-        
-        <span class="archive-article-date">
-            阅读量 <span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="样式表书写位置"><a href="#样式表书写位置" class="headerlink" title="样式表书写位置"></a>样式表书写位置</h2><ul>
-<li>内嵌式写法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style type=”text/css”&gt;</span><br><span class="line">样式表写法</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<ul>
-<li>外链式写法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">写在head里，&lt;link rel=”stylesheet” href=”1.css”&gt;</span><br></pre></td></tr></table></figure>
-
-
-<ul>
-<li>行内样式表<br><code>class=&quot;color:red;...&quot;</code></li>
-</ul>
-<h3 id="三种写法特点"><a href="#三种写法特点" class="headerlink" title="三种写法特点:"></a>三种写法特点:</h3><ul>
-<li>内嵌式写法，样式只作用于当前文件，没有真正实现结构表现分离。</li>
-<li>外链式写法，作用范围是当前站点，谁调用谁生效，范围广，真正实现结构表现分离。</li>
-<li>行内样式表，作用范围仅限于当前标签，范围小，结构表现混在一起。  （不推荐使用）<h2 id="标签分类-显示方式"><a href="#标签分类-显示方式" class="headerlink" title="标签分类(显示方式)"></a>标签分类(显示方式)</h2><h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3>典型代表,Div,h1-h6,p,ul,li  <br><br>特点:<br>独占一行<br>可以设置宽高<br>嵌套（包含）下，子块元素宽度（没有定义情况下）和父块元素宽度默认一致。<h3 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h3>典型代表 span  ,a,  ,strong , em,  del,  ins<br>特点：1.在一行上显示<br>2.不能直接设置宽高<br>3.元素的宽和高就是内容撑开的宽高<h3 id="行内块元素-内联元素"><a href="#行内块元素-内联元素" class="headerlink" title="行内块元素(内联元素)"></a>行内块元素(内联元素)</h3>典型代表  input  img<br>特点：在一行上显示<br>可以设置宽高      </li>
-</ul>
-<h3 id="块元素、行内元素"><a href="#块元素、行内元素" class="headerlink" title="块元素、行内元素"></a>块元素、行内元素</h3><ul>
-<li><p>块元素转行内元素<br><code>display:inline;</code></p>
-</li>
-<li><p>行内元素转块元素<br><code>display:block;</code></p>
-</li>
-<li><p>块和行内元素转行内块元素<br><code>display:inline-block;</code></p>
-</li>
-</ul>
-<h2 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><p>当多个样式作用于同一个（同一类）标签时，样式发生了冲突，总是执行后边的代码(后边代码层叠前边的代码)。和标签调用选择器的顺序没有关系。</p>
-<h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><p>   继承性发生的前提是包含（嵌套关系）<br>   文字颜色可以继承<br>   文字大小可以继承<br>   字体可以继续<br>   字体粗细可以继承<br>   文字风格可以继承<br>   行高可以继承<br>   总结：文字的所有属性都可以继承。</p>
-<ul>
-<li><p>特殊情况：<br>h系列不能继承文字大小。<br>a标签不能继承文字颜色。<br>５.3    优先级</p>
-<p>默认样式&lt;标签选择器&lt;类选择器&lt;id选择器&lt;行内样式&lt;!important<br>0         1          10     100      1000      1000以上</p>
-</li>
-</ul>
-<h3 id="优先级特点"><a href="#优先级特点" class="headerlink" title="优先级特点"></a>优先级特点</h3><p>继承的权重为0<br>权重会叠加</p>
-<h2 id="链接伪类"><a href="#链接伪类" class="headerlink" title="链接伪类"></a>链接伪类</h2><p>a:link{属性:值;}  a{属性:值}效果是一样的。<br>a:link{属性:值;}       链接默认状态<br>a:visited{属性:值;}     链接访问之后的状态<br>a:hover{属性:值;}      鼠标放到链接上显示的状态      a:active{属性:值;}      链接激活的状态<br>  ：focus{属性:值；}     获取焦点</p>
-<h2 id="修饰"><a href="#修饰" class="headerlink" title="修饰"></a>修饰</h2><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-decoration: none  |   underline   |     line-through</span><br></pre></td></tr></table></figure>
-
-<h3 id="背景属性"><a href="#背景属性" class="headerlink" title="背景属性"></a>背景属性</h3><p><code>background-color</code>    背景颜色<br><code>background-image</code>   背景图片<br><code>Background-repeat</code>    repeat(默认)  |  no-repeat |   repeat-x   |  <code>repeat-y</code>    背景平铺<br><code>Background-position  left  |  right  |  center  |  top  | bottom</code>  ### 背景定位</p>
-<ul>
-<li><p>方位值只写一个的时候，另外一个值默认居中。</p>
-</li>
-<li><p>写2个方位值的时候，顺序没有要求。</p>
-</li>
-<li><p>写2个具体值的时候，第一个值代表水平方向，第二个值代表垂直方向。</p>
-<h4 id="Background-attachment-背景是否滚动-scroll-fixed"><a href="#Background-attachment-背景是否滚动-scroll-fixed" class="headerlink" title="Background-attachment   背景是否滚动   scroll  |  fixed"></a>Background-attachment   背景是否滚动   scroll  |  fixed</h4><h3 id="背景属性连写"><a href="#背景属性连写" class="headerlink" title="背景属性连写"></a>背景属性连写</h3></li>
-<li><p>连写的时候没有顺序要求，url为必写项。</p>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-            <span id="busuanzi_container_page_pv">
-            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-          </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -276,134 +193,29 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/10/11/行高，盒子，边距，fireworks/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          行高，盒子，边距，fireworks
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/11/css选择器，文本元素/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css选择器，文本元素</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础"><span class="toc-number">1.</span> <span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#样式表书写位置"><span class="toc-number">1.1.</span> <span class="toc-text">样式表书写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三种写法特点"><span class="toc-number">1.1.1.</span> <span class="toc-text">三种写法特点:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标签分类-显示方式"><span class="toc-number">1.2.</span> <span class="toc-text">标签分类(显示方式)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块元素"><span class="toc-number">1.2.1.</span> <span class="toc-text">块元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内元素"><span class="toc-number">1.2.2.</span> <span class="toc-text">行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内块元素-内联元素"><span class="toc-number">1.2.3.</span> <span class="toc-text">行内块元素(内联元素)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#块元素、行内元素"><span class="toc-number">1.2.4.</span> <span class="toc-text">块元素、行内元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css三大特性"><span class="toc-number">1.3.</span> <span class="toc-text">css三大特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#层叠性"><span class="toc-number">1.3.1.</span> <span class="toc-text">层叠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承性"><span class="toc-number">1.3.2.</span> <span class="toc-text">继承性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优先级特点"><span class="toc-number">1.3.3.</span> <span class="toc-text">优先级特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接伪类"><span class="toc-number">1.4.</span> <span class="toc-text">链接伪类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修饰"><span class="toc-number">1.5.</span> <span class="toc-text">修饰</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文本"><span class="toc-number">1.5.1.</span> <span class="toc-text">文本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景属性"><span class="toc-number">1.5.2.</span> <span class="toc-text">背景属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Background-attachment-背景是否滚动-scroll-fixed"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">Background-attachment   背景是否滚动   scroll  |  fixed</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景属性连写"><span class="toc-number">1.5.3.</span> <span class="toc-text">背景属性连写</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -429,9 +241,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
