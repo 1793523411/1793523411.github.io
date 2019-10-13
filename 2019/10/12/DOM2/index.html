@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSS最后 | 跌倒的小黄瓜</title>
+  <title>DOM2 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础Css可见性overflow:hidden;   溢出隐藏visibility:hidden;   隐藏元素    隐藏之后还占据原来的位置。display:none;      隐藏元素    隐藏之后不占据原来的位置。Display:block;     元素可见Display:none  和display:block  常配合js使用。">
-<meta name="keywords" content="前端,css">
+  <meta name="description" content="动画封装，事件，冒泡，事件委托匀速动画">
+<meta name="keywords" content="前端,DOM,jS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS最后">
-<meta property="og:url" content="http://yoursite.com/2019/10/11/CSS最后/index.html">
+<meta property="og:title" content="DOM2">
+<meta property="og:url" content="http://yoursite.com/2019/10/12/DOM2/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="基础Css可见性overflow:hidden;   溢出隐藏visibility:hidden;   隐藏元素    隐藏之后还占据原来的位置。display:none;      隐藏元素    隐藏之后不占据原来的位置。Display:block;     元素可见Display:none  和display:block  常配合js使用。">
+<meta property="og:description" content="动画封装，事件，冒泡，事件委托匀速动画">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-11T07:18:38.005Z">
+<meta property="og:updated_time" content="2019-10-13T12:27:54.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS最后">
-<meta name="twitter:description" content="基础Css可见性overflow:hidden;   溢出隐藏visibility:hidden;   隐藏元素    隐藏之后还占据原来的位置。display:none;      隐藏元素    隐藏之后不占据原来的位置。Display:block;     元素可见Display:none  和display:block  常配合js使用。">
+<meta name="twitter:title" content="DOM2">
+<meta name="twitter:description" content="动画封装，事件，冒泡，事件委托匀速动画">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS最后" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-DOM2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS最后
+      DOM2
     </h1>
   
 
         
-        <a href="/2019/10/11/CSS最后/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:10:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
+        <a href="/2019/10/12/DOM2/" class="archive-article-date">
+  	<time datetime="2019-10-12T13:36:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
 </a>
         
         
@@ -184,24 +184,132 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="Css可见性"><a href="#Css可见性" class="headerlink" title="Css可见性"></a>Css可见性</h2><p>overflow:hidden;   溢出隐藏<br>visibility:hidden;   隐藏元素    隐藏之后还占据原来的位置。<br>display:none;      隐藏元素    隐藏之后不占据原来的位置。<br>Display:block;     元素可见<br>Display:none  和display:block  常配合js使用。</p>
-<a id="more"></a>
-<h2 id="css之内容移除（网页优化）"><a href="#css之内容移除（网页优化）" class="headerlink" title="css之内容移除（网页优化）"></a>css之内容移除（网页优化）</h2><p>使用text-indent:-5000em;</p>
-<p>将元素高度设置为0,使用内边距将盒子撑开，给盒子使用overflow:hidden;将文字隐藏。</p>
-<h3 id="Css精灵图"><a href="#Css精灵图" class="headerlink" title="Css精灵图"></a>Css精灵图</h3><p> 略</p>
-<h2 id="emmet快捷键："><a href="#emmet快捷键：" class="headerlink" title="emmet快捷键："></a>emmet快捷键：</h2><p>emmet是我们在sublime中的一个插件在这个插件中集成很多的快捷键。<br> ####html:</p>
-<ul>
-<li>1    生成结构的快捷键：<br>！+ tab,可以生成html5的结构代码。</li>
-<li>2    生成id名和类名<br>标签名.类名#id名+tab<br>没有标签名.类名+tab ==&gt;div</li>
-<li>3    生成同级元素：<br>标签名+标签名+标签名 “+”tab</li>
-<li>4    生成子类标签<br>标签名&gt;子标签名&gt;子标签名&gt;子标签名+tab<br>标签名&gt;子标签名&gt;子标签名&gt;子标签名^^子标签名+tab</li>
-<li>5    带固定数量的标签:<br>  <code>ul&gt;li*5+tab</code></li>
-<li>6    带有序号名称    </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.abc$*3 + tab</span><br></pre></td></tr></table></figure>
+        <h1 id="动画封装，事件，冒泡，事件委托"><a href="#动画封装，事件，冒泡，事件委托" class="headerlink" title="动画封装，事件，冒泡，事件委托"></a>动画封装，事件，冒泡，事件委托</h1><h2 id="匀速动画"><a href="#匀速动画" class="headerlink" title="匀速动画"></a>匀速动画</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function animate(obj,target) &#123;</span><br><span class="line">        clearInterval(obj.timer)</span><br><span class="line"></span><br><span class="line">        var speed = obj.offsetLeft &lt; target ? 15 : -15;</span><br><span class="line"></span><br><span class="line">        obj.timer = setInterval(function () &#123;</span><br><span class="line">            var result = target - obj.offsetLeft;</span><br><span class="line"></span><br><span class="line">            obj.style.left = obj.offsetLeft + speed + &quot;px&quot;;</span><br><span class="line">            console.log(speed);</span><br><span class="line">            if(Math.abs(result) &lt;= 10 )&#123;</span><br><span class="line">                clearInterval(obj.timer);</span><br><span class="line">                obj.style.left = target + &quot;px&quot;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;,10);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<p><strong>终于把css基础弄完了，好不容易，接着，就该CSS3了，好玩的东西来了。</strong></p>
+<h2 id="缓动动画"><a href="#缓动动画" class="headerlink" title="缓动动画"></a>缓动动画</h2><p><strong>缓动框架</strong></p>
+<h3 id="封装框架遇到的两个问题"><a href="#封装框架遇到的两个问题" class="headerlink" title="封装框架遇到的两个问题"></a>封装框架遇到的两个问题</h3><p>原有的方法：div.style.width :这个方法比较固定，不能用变量或者字符串的形式更换属性，不方便我传值获取属性，和给属性赋值。<br>属性值的获取和属性的赋值<br>div.style[“width”] = “5000px”;<br>可以通过传字符串或者变量的方式获取和赋值属性。<br>缺点：他的操作完全是对行内式CSS来操作的。赋值的时候毫无问题。但是，获取值的时候有问题了。</p>
+<h3 id="获取任意类型的CSS样式的属性值"><a href="#获取任意类型的CSS样式的属性值" class="headerlink" title="获取任意类型的CSS样式的属性值"></a>获取任意类型的CSS样式的属性值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Div.style.width    </span><br><span class="line">div.currentStyle.width</span><br><span class="line">Window.getComputedStyle(div,null).width;</span><br></pre></td></tr></table></figure>
+
+<p>他们的公共使用变量或者字符串获取属性值的方法都是：去电属性和点，然后加上中括号和属性的字符串形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Div.style[“width”];</span><br><span class="line">div.currentStyle[“width”];</span><br><span class="line">Window.getComputedStyle(div,null)[“width”];</span><br></pre></td></tr></table></figure>
+
+<h3 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h3><p>定义一个变量。数据可以修改。但是，只能修改成为两个值。<br>** 只是作为一个判断的条件，只有两个值**</p>
+<h3 id="回调函数-js一大特色：异步编程"><a href="#回调函数-js一大特色：异步编程" class="headerlink" title="回调函数(js一大特色：异步编程)"></a>回调函数(js一大特色：异步编程)</h3><p><em>这里不详细讲</em><br>程序执行完毕，在次执行的函数。<br>在函数中给指定的函数定义一个形参，然后程序执行到最后，调用这个形参后面加一个括号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function animate(ele,target) &#123;</span><br><span class="line">                clearInterval(ele.timer);</span><br><span class="line">                ele.timer = setInterval(function () &#123;</span><br><span class="line">                    var step = (target-ele.offsetLeft)/10;</span><br><span class="line">                    step = step&gt;0?Math.ceil(step):Math.floor(step);</span><br><span class="line">                    ele.style.left = ele.offsetLeft + step + &quot;px&quot;;</span><br><span class="line">                    console.log(1);</span><br><span class="line">                    if(Math.abs(target-ele.offsetLeft)&lt;Math.abs(step))&#123;</span><br><span class="line">                        ele.style.left = target + &quot;px&quot;;</span><br><span class="line">                        clearInterval(ele.timer);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,18);</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三个函数"><a href="#三个函数" class="headerlink" title="三个函数"></a>三个函数</h3><p>都是在数轴上向上或者向下取整。<br>Math.ceil()            向上取整<br>Math.floor()          向下取整<br>Math.round();       四舍五入</p>
+<h2 id="缓动动画原理"><a href="#缓动动画原理" class="headerlink" title="缓动动画原理"></a>缓动动画原理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leader=leader+(target-leader)/10;</span><br></pre></td></tr></table></figure>
+
+<p>盒子位置 = 盒子本身位置+（目标位置-盒子本身位置）/ 10；<br>动画原理 = 盒子位置 + 步长（步长越来越小）。<br>体验缓动动画</p>
+<p>分析为什么没有到达指定位置</p>
+<table>
+<thead>
+<tr>
+<th align="center">盒子本身位置</th>
+<th align="center">目标位置</th>
+<th align="center">步长</th>
+<th align="center">已经到达了的位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">400</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">400</td>
+<td align="center">40</td>
+<td align="center">40</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td align="center">400</td>
+<td align="center">36</td>
+<td align="center">76</td>
+</tr>
+<tr>
+<td align="center">76</td>
+<td align="center">400</td>
+<td align="center">32.</td>
+<td align="center">108.4</td>
+</tr>
+<tr>
+<td align="center">………</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">JS实际运算时会四舍五入取整，然后计算。</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">396(四舍五入获取)</td>
+<td align="center">400</td>
+<td align="center">0.4</td>
+<td align="center">396.4</td>
+</tr>
+<tr>
+<td align="center">396(四舍五入获取)</td>
+<td align="center">400</td>
+<td align="center">0.4</td>
+<td align="center">396.4</td>
+</tr>
+<tr>
+<td align="center">….</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">### offsetLeft和style.left的值的获取问题</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">获取盒子距离左侧具有定位的父盒子的距离（没有的body），四舍五入取整。</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Style.left获取的是具体值。    （赋值的时候也是直接赋值）</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">### 按例：筋斗云</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">鼠标悬停和鼠标移开不会影响初始化值，只有点击影响。而移开的情况下，span移动到计数器的位置。</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        window.onload = function () &#123;</span><br><span class="line">            //需求1：鼠标放到哪个li上面，span对应移动到该li上。移开后，回到原位置。</span><br><span class="line">            //需求2：鼠标点击那个li记录该li标签，移开的时候span回到该记录的li标签上。</span><br><span class="line">            //步骤：</span><br><span class="line">            //1.老三步</span><br><span class="line">            //2.计数器</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            //需求1：鼠标放到哪个li上面，span对应移动到该li上。移开后，回到原位置。</span><br><span class="line">            //1.老三步</span><br><span class="line">            var liArr = document.getElementsByTagName(&quot;li&quot;);</span><br><span class="line">            var liWidth = liArr[0].offsetWidth;</span><br><span class="line">            var span = document.getElementsByTagName(&quot;span&quot;)[0];</span><br><span class="line">            //计数器</span><br><span class="line">            var count = 0;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            //for循环绑定事件</span><br><span class="line">            for(var i=0;i&lt;liArr.length;i++)&#123;</span><br><span class="line">                //自定义属性，然后绑定index属性为索引值</span><br><span class="line">                liArr[i].index = i;</span><br><span class="line">                //鼠标进入事件</span><br><span class="line">                liArr[i].onmouseover = function () &#123;</span><br><span class="line">                    //让span运动到该li的索引值位置</span><br><span class="line">                    //图片运动需要封装的方法</span><br><span class="line">                    animate(span,this.index*liWidth);</span><br><span class="line">                &#125;</span><br><span class="line">                //鼠标移开</span><br><span class="line">                liArr[i].onmouseout = function () &#123;</span><br><span class="line">                    //让span运动到该li的索引值位置</span><br><span class="line">                    //图片运动需要封装的方法</span><br><span class="line">                    animate(span,count*liWidth);</span><br><span class="line">                &#125;</span><br><span class="line">                //点击事件，记录功能</span><br><span class="line">                liArr[i].onclick = function () &#123;</span><br><span class="line">                    //需要一个计数器，每次点击以后把所以只记录下来</span><br><span class="line">                    //因为onmouseout事件要用到这个计数器，所以应该是一个全局变量</span><br><span class="line">                    count = this.index;</span><br><span class="line">                    animate(span,count*liWidth);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //缓动动画封装</span><br><span class="line">            function animate(ele,target) &#123;</span><br><span class="line">                clearInterval(ele.timer);</span><br><span class="line">                ele.timer = setInterval(function () &#123;</span><br><span class="line">                    var step = (target-ele.offsetLeft)/10;</span><br><span class="line">                    step = step&gt;0?Math.ceil(step):Math.floor(step);</span><br><span class="line">                    ele.style.left = ele.offsetLeft + step + &quot;px&quot;;</span><br><span class="line">                    console.log(1);</span><br><span class="line">                    if(Math.abs(target-ele.offsetLeft)&lt;Math.abs(step))&#123;</span><br><span class="line">                        ele.style.left = target + &quot;px&quot;;</span><br><span class="line">                        clearInterval(ele.timer);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,18);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="事件对象（event）"><a href="#事件对象（event）" class="headerlink" title="事件对象（event）"></a>事件对象（event）</h2><p>再触发DOM上的某个事件时，会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。所有浏览器都支持event对象，但支持的方式不同。<br>比如鼠标操作时候，会添加鼠标位置的相关信息到事件对象中。（类似Date）<br>普通浏览器支持 event（带参，任意参数）<br>ie 678 支持 window.event（无参，内置）<br>总结：他是一个事件中的内置对象。内部装了很多关于鼠标和事件本身的信息。</p>
+<h3 id="事件对象的获取（event的获取）"><a href="#事件对象的获取（event的获取）" class="headerlink" title="事件对象的获取（event的获取）"></a>事件对象的获取（event的获取）</h3><p>IE678中，window.event<br>在火狐谷歌中，event或者，在事件绑定的函数中，加参，这个参数就是event.<br>  <code>Box.onclick = function (aaa){   aaa就是event     }</code></p>
+<h3 id="兼容获取方式有两种："><a href="#兼容获取方式有两种：" class="headerlink" title="兼容获取方式有两种："></a>兼容获取方式有两种：</h3><p>不写参数直接使用event;<br>写参数，但是为<code>event....var event  = event || window.event;</code>(主要用这种)</p>
+<h2 id="冒泡"><a href="#冒泡" class="headerlink" title="冒泡"></a>冒泡</h2><p>事件冒泡: 当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。(BUG)<br>（本来应该一人做事一人当，结果，我做错了事情，你去告诉我妈）<br>什么是冒泡：子元素事件被触动，父盒子的同样的事件也会被触动。<br>取消冒泡就是取消这种机制。</p>
+<h3 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h3><p>w3c的方法是：（火狐、谷歌、IE11）<br>    event.stopPropagation()<br>IE10以下则是使用：event.cancelBubble = true<br>兼容代码如下：<br>  var event = event || window.event;<br> if(event &amp;&amp; event.stopPropagation){<br>            event.stopPropagation();<br>  }else{<br>            event.cancelBubble = true;<br>  }</p>
+<h3 id="addEventListenner-参数1，参数2，参数3"><a href="#addEventListenner-参数1，参数2，参数3" class="headerlink" title="addEventListenner(参数1，参数2，参数3)"></a>addEventListenner(参数1，参数2，参数3)</h3><p>调用者是：事件源。            参数1：事件去掉on   参数2 ：调用的函数<br>参数3：可有可无。没有默认false.false情况下，支持冒泡。True支持捕获。</p>
+<h3 id="点击空白隐藏模态框"><a href="#点击空白隐藏模态框" class="headerlink" title="点击空白隐藏模态框"></a>点击空白隐藏模态框</h3><p>Document事件的绑定，无论绑定什么事件，只要事件被出发，传递过来的应该是指定的元素本身，而不是document。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head lang=&quot;en&quot;&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        body,html &#123;</span><br><span class="line">            height: 100%;</span><br><span class="line">            padding: 0;</span><br><span class="line">            margin: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        .mask &#123;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 100%;</span><br><span class="line">            position: fixed;</span><br><span class="line">            top: 0;</span><br><span class="line">            left: 0;</span><br><span class="line">            display: none;</span><br><span class="line">            background: rgba(0, 0, 0, 0.6);</span><br><span class="line">        &#125;</span><br><span class="line">        .login &#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            background-color: #fff;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;mask&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;login&quot; id=&quot;login&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;注册&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;#&quot;&gt;登陆&lt;/a&gt;</span><br><span class="line">    &lt;script src=&quot;jquery1.0.0.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        //需求：点击登录按钮，显示模态框。点击出去login以外的所有盒子隐藏模态框。</span><br><span class="line">        //步骤：</span><br><span class="line">        //1.给登录绑定事件</span><br><span class="line">        //2.给document绑定事件，因为可以冒泡，只要判断，点击的不是login，那么隐藏模态框</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //1.给登录绑定事件</span><br><span class="line">        var mask = document.getElementsByClassName(&quot;mask&quot;)[0];</span><br><span class="line">        var a = document.getElementsByTagName(&quot;a&quot;)[1];</span><br><span class="line"></span><br><span class="line">        a.onclick = function (event) &#123;</span><br><span class="line">            //显示模态框</span><br><span class="line">            show(mask);</span><br><span class="line"></span><br><span class="line">            //阻止冒泡</span><br><span class="line">            event = event || window.event;</span><br><span class="line">            if(event &amp;&amp; event.stopPropagation)&#123;</span><br><span class="line">                event.stopPropagation();</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                event.cancelBubble = true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //2.给document绑定事件，因为可以冒泡，只要判断，点击的不是login，那么隐藏模态框</span><br><span class="line">        document.onclick = function (event) &#123;</span><br><span class="line">            //获取点击按钮后传递过来的值。</span><br><span class="line">            event = event || window.event;</span><br><span class="line"></span><br><span class="line">            //兼容获取事件触动时，被传递过来的对象</span><br><span class="line">//            var aaa = event.target || event.srcElement;</span><br><span class="line">            var aaa = event.target?event.target:event.srcElement;</span><br><span class="line"></span><br><span class="line">            console.log(event.target);</span><br><span class="line"></span><br><span class="line">            //判断目标值的ID是否等于login，如果等于不隐藏盒子，否则隐藏盒子。</span><br><span class="line">            if(aaa.id !== &quot;login&quot;)&#123;</span><br><span class="line">                mask.style.display = &quot;none&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p><a href="https://blog.csdn.net/littleCucumber/article/details/100057756" target="_blank" rel="noopener"><strong>具体看我的CSDN博客有一篇关于这个的文章</strong>
+</a></p>
 
       
 
@@ -243,7 +351,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jS</a>
         		</li>
       		
 		</ul>
@@ -299,7 +411,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/11/CSS最后/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/12/DOM2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -313,18 +425,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/12/轮播图/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          css3，选择器，边框，伪类，渐变，背景，图片
+          轮播图
         
       </div>
     </a>
   
   
-    <a href="/2019/10/11/浮动，定位，初始化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">浮动，定位，初始化</div>
+    <a href="/2019/10/12/三大家族/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三大家族</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -351,7 +463,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础"><span class="toc-number">1.</span> <span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Css可见性"><span class="toc-number">1.1.</span> <span class="toc-text">Css可见性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css之内容移除（网页优化）"><span class="toc-number">1.2.</span> <span class="toc-text">css之内容移除（网页优化）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Css精灵图"><span class="toc-number">1.2.1.</span> <span class="toc-text">Css精灵图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#emmet快捷键："><span class="toc-number">1.3.</span> <span class="toc-text">emmet快捷键：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#动画封装，事件，冒泡，事件委托"><span class="toc-number">1.</span> <span class="toc-text">动画封装，事件，冒泡，事件委托</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#匀速动画"><span class="toc-number">1.1.</span> <span class="toc-text">匀速动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓动动画"><span class="toc-number">1.2.</span> <span class="toc-text">缓动动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装框架遇到的两个问题"><span class="toc-number">1.2.1.</span> <span class="toc-text">封装框架遇到的两个问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取任意类型的CSS样式的属性值"><span class="toc-number">1.2.2.</span> <span class="toc-text">获取任意类型的CSS样式的属性值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭原则"><span class="toc-number">1.2.3.</span> <span class="toc-text">开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回调函数-js一大特色：异步编程"><span class="toc-number">1.2.4.</span> <span class="toc-text">回调函数(js一大特色：异步编程)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三个函数"><span class="toc-number">1.2.5.</span> <span class="toc-text">三个函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓动动画原理"><span class="toc-number">1.3.</span> <span class="toc-text">缓动动画原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件对象（event）"><span class="toc-number">1.4.</span> <span class="toc-text">事件对象（event）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#事件对象的获取（event的获取）"><span class="toc-number">1.4.1.</span> <span class="toc-text">事件对象的获取（event的获取）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容获取方式有两种："><span class="toc-number">1.4.2.</span> <span class="toc-text">兼容获取方式有两种：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡"><span class="toc-number">1.5.</span> <span class="toc-text">冒泡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#阻止冒泡"><span class="toc-number">1.5.1.</span> <span class="toc-text">阻止冒泡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#addEventListenner-参数1，参数2，参数3"><span class="toc-number">1.5.2.</span> <span class="toc-text">addEventListenner(参数1，参数2，参数3)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点击空白隐藏模态框"><span class="toc-number">1.5.3.</span> <span class="toc-text">点击空白隐藏模态框</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件委托"><span class="toc-number">1.6.</span> <span class="toc-text">事件委托</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
