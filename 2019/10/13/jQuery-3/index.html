@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 跌倒的小黄瓜</title>
+  <title>jQuery-3 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
+<meta name="keywords" content="前端,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-3">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/jQuery-3/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-13T02:17:42.418Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="jQuery-3">
+<meta name="twitter:description" content="jQuery事件机制jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,162 +159,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jQuery-3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-3
+    </h1>
+  
+
+        
+        <a href="/2019/10/13/jQuery-3/" class="archive-article-date">
+  	<time datetime="2019-10-13T02:13:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
     
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jQuery事件机制"><a href="#jQuery事件机制" class="headerlink" title="jQuery事件机制"></a>jQuery事件机制</h2><p>jQuery的事件机制，指的是：jQuery对JavaScript操作DOM事件的封装，包括了：事件绑定、事件解绑、事件触发。</p>
+<a id="more"></a>
+<h3 id="jQuery事件的发展历程（了解）"><a href="#jQuery事件的发展历程（了解）" class="headerlink" title="jQuery事件的发展历程（了解）"></a>jQuery事件的发展历程（了解）</h3><p>简单事件绑定 &gt;&gt; bind事件绑定 &gt;&gt; delegate事件绑定 &gt;&gt; on【重点】</p>
+<p>简单事件绑定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">click(handler) 单击事件</span><br><span class="line">blur(handler) 失去焦点事件</span><br><span class="line">mouseenter(handler) 鼠标进入事件</span><br><span class="line">mouseleave(handler)	鼠标离开事件</span><br><span class="line">dbclick(handler) 双击事件</span><br><span class="line">change(handler) 改变事件，如：文本框值改变，下来列表值改变等</span><br><span class="line">focus(handler) 获得焦点事件</span><br><span class="line">keydown(handler) 键盘按下事件</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">其他参考</a></p>
+<p>bind方式（不推荐，1.7以后的jQuery版本被on取代）<br>作用：给匹配到的元素直接绑定事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 绑定单击事件处理程序</span><br><span class="line">第一个参数：事件类型</span><br><span class="line">第二个参数：事件处理程序</span><br><span class="line">$(&quot;p&quot;).bind(&quot;click mouseenter&quot;, function(e)&#123;</span><br><span class="line">//事件响应方法</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>比简单事件绑定方式的优势：<br>1．    可以同时绑定多个事件，比如：bind(“mouseenter mouseleave”, function(){})<br>缺点：要绑定事件的元素必须存在文档中。</p>
+<p>3 delegate方式（特点：性能高，支持动态创建的元素）<br>作用：给匹配到的元素绑定事件，对支持动态创建的元素有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数：selector，要绑定事件的元素</span><br><span class="line">// 第二个参数：事件类型</span><br><span class="line">// 第三个参数：事件处理函数</span><br><span class="line">$(&quot;.parentBox&quot;).delegate(&quot;p&quot;, &quot;click&quot;, function()&#123;</span><br><span class="line">//为 .parentBox下面的所有的p标签绑定事件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>与前两种方式最大的优势：减少事件绑定次数提高效率，支持动态创建出来的元素绑定事件！</p>
+<h3 id="on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）"><a href="#on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）" class="headerlink" title="on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）"></a>on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）</h3><p>jQuery1.7版本后，jQuery用on统一了所有的事件处理的方法<br>作用：给匹配的元素绑定事件，包括了上面所有绑定事件方式的优点<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或者自定义事件）</span><br><span class="line">// 第二个参数：selector, 执行事件的后代元素</span><br><span class="line">// 第三个参数：data，传递给处理函数的数据，事件触发的时候通过event.data来使用</span><br><span class="line">// 第四个参数：handler，事件处理函数</span><br><span class="line">$(selector).on(events[,selector][,data],handler);</span><br><span class="line"></span><br><span class="line">// 表示给$(selector)绑定事件，当必须是它的内部元素span才能执行这个事件</span><br><span class="line">$(selector).on( &quot;click&quot;,“span”, function() &#123;&#125;);</span><br><span class="line"></span><br><span class="line">// 绑定多个事件</span><br><span class="line">// 表示给$(selector)匹配的元素绑定单击和鼠标进入事件</span><br><span class="line">$(selector).on(“click mouseenter”, function()&#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件解绑"><a href="#事件解绑" class="headerlink" title="事件解绑"></a>事件解绑</h3><p>unbind() 方式<br>作用：解绑 bind方式绑定的事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(selector).unbind(); //解绑所有的事件</span><br><span class="line">$(selector).unbind(“click”); //解绑指定的事件</span><br></pre></td></tr></table></figure>
+
+<p>undelegate() 方式<br>作用：解绑delegate方式绑定的事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$( selector ).undelegate(); //解绑所有的delegate事件</span><br><span class="line">$( selector).undelegate( “click” ); //解绑所有的click事件</span><br><span class="line"></span><br><span class="line">off解绑on方式绑定的事件（重点）</span><br><span class="line">// 解绑匹配元素的所有事件</span><br><span class="line">$(selector).off();</span><br><span class="line">// 解绑匹配元素的所有click事件</span><br><span class="line">$(selector).off(“click”);</span><br><span class="line">// 解绑所有代理的click事件，元素本身的事件不会被解绑</span><br><span class="line">$(selector).off( “click”, “**” );</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件触发"><a href="#事件触发" class="headerlink" title="事件触发"></a>事件触发</h3><p>简单事件触发</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).click(); //触发 click事件</span><br></pre></td></tr></table></figure>
+
+<p>trigger方法触发事件，触发浏览器行为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).trigger(“click”);</span><br></pre></td></tr></table></figure>
+
+<p>triggerHandler触发 事件响应方法，不触发浏览器行为<br>比如:文本框获得焦点的默认行为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).triggerHandler(“focus”);</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery事件对象介绍"><a href="#jQuery事件对象介绍" class="headerlink" title="jQuery事件对象介绍"></a>jQuery事件对象介绍</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">event.data 传递给事件处理程序的额外数据</span><br><span class="line">event.currentTarget 等同于this，当前DOM对象</span><br><span class="line">event.pageX 鼠标相对于文档左部边缘的位置</span><br><span class="line">event.target 触发事件源，不一定===this</span><br><span class="line">event.stopPropagation()；	阻止事件冒泡</span><br><span class="line">event.preventDefault(); 阻止默认行为</span><br><span class="line">event.type 事件类型：click，dbclick…</span><br><span class="line">event.which 鼠标的按键类型：左1 中2 右3</span><br><span class="line">event.keyCode	键盘按键代码</span><br><span class="line">案例：按键变色</span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery补充"><a href="#jQuery补充" class="headerlink" title="jQuery补充"></a>jQuery补充</h2><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><p>链式编程原理：return this;<br>通常情况下，只有设置操作才能把链式编程延续下去。因为获取操作的时候，会返回获取到的相应的值，无法返回 this。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">end(); // 结束当前链最近的一次过滤操作，并且返回匹配元素之前的状态。</span><br></pre></td></tr></table></figure>
+
+<h3 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h3><p>隐式迭代的意思是：在方法的内部会为匹配到的所有元素进行循环遍历，执行相应的方法；而不用我们再进行循环，简化我们的操作，方便我们调用。<br>如果获取的是多元素的值，大部分情况下返回的是第一个元素的值。</p>
+<h3 id="each方法"><a href="#each方法" class="headerlink" title="each方法"></a>each方法</h3><p>有了隐式迭代，为什么还要使用each函数遍历？<br>大部分情况下是不需要使用each方法的，因为jQuery的隐式迭代特性。<br>如果要对每个元素做不同的处理，这时候就用到了each方法</p>
+<p>作用：遍历jQuery对象集合，为每个匹配的元素执行一个函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 参数一表示当前元素在所有匹配元素中的索引号</span><br><span class="line">// 参数二表示当前元素（DOM对象）</span><br><span class="line">$(selector).each(function(index,element)&#123;&#125;);</span><br><span class="line">Element是一个 js对象，需要转换成jquery对象</span><br></pre></td></tr></table></figure>
+
+<h3 id="多库共存"><a href="#多库共存" class="headerlink" title="多库共存"></a>多库共存</h3><p>此处多库共存指的是：jQuery占用了$ 和jQuery这两个变量。当在同一个页面中引用了jQuery这个js库，并且引用的其他库（或者其他版本的jQuery库）中也用到了$或者jQuery这两个变量，那么，要保证每个库都能正常使用，这时候就有了多库共存的问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">jQuery(function () &#123;</span><br><span class="line">//打印版本号。</span><br><span class="line">// console.log($.fn.jquery);</span><br><span class="line"></span><br><span class="line">//让1.11.1放弃$的使用权</span><br><span class="line">$.noConflict();</span><br><span class="line">console.log($.fn.jquery);</span><br><span class="line">console.log(jQuery.fn.jquery);</span><br><span class="line"></span><br><span class="line">//放弃两个符号的使用权，同时定义一个新的使用权</span><br><span class="line">// var MrLv = $.noConflict(true);</span><br><span class="line">// console.log($.fn.jquery);</span><br><span class="line">// console.log(jQuery.fn.jquery);</span><br><span class="line">// console.log(MrLv.fn.jquery);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 模拟另外的库使用了 $ 这个变量</span><br><span class="line">// 此时，就与jQuery库产生了冲突</span><br><span class="line">var $ = &#123; name : “ygj” &#125;;</span><br><span class="line"></span><br><span class="line">解决方式：</span><br><span class="line">// 作用：让jQuery释放对$的控制权，让其他库能够使用$符号，达到多库共存的目的。此后，只能使用jQuery来调用jQuery提供的方法</span><br><span class="line">$.noConflict(); //true两个都交出来，返回值是新的调用方法</span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery插件机制"><a href="#jQuery插件机制" class="headerlink" title="jQuery插件机制"></a>jQuery插件机制</h2><p>jQuery这个js库，虽然功能强大，但也不是面面俱到包含所有的功能。<br>jQuery是通过插件的方式，来扩展它的功能：<br>当你需要某个插件的时候，你可以“安装”到jQuery上面，然后，使用。<br>当你不再需要这个插件，那你就可以从jQuery上“卸载”它。<br>（联想：手机软件，安装的app就好比插件，用的时候安装上，不用的时候卸载掉）</p>
+<h3 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h3><p>jQuery.color.js<br>animate()自定义动画：不支持背景的动画效果<br>animate动画支持的属性列表<br>jQuery.lazyload.js<br>使用步骤：</p>
+<ol>
+<li>引入jQuery文件</li>
+<li>引入插件</li>
+<li>使用插件</li>
+<li>7.2    制作插件</li>
+</ol>
+<p><a href="http://learn.jquery.com/plugins/basic-plugin-creation/" target="_blank" rel="noopener">如何创建jQuery插件</a></p>
+<p>全局jQuery函数扩展方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.pluginName = function() &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>jQuery对象扩展方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.fn. pluginName = function() &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQueryUI"><a href="#jQueryUI" class="headerlink" title="jQueryUI"></a>jQueryUI</h3><p>jQueryUI专指由jQuery官方维护的UI方向的插件。<br><a href="http://api.jqueryui.com/category/all/" target="_blank" rel="noopener">官方API</a><br>其他教程：jQueryUI教程<br>基本使用:<br>1.引入jQueryUI的样式文件<br>2.引入jQuery<br>3.引入jQueryUI的js文件<br>4.使用jQueryUI功能</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/循环链表，双向链表，时间复杂度/" class="archive-article-date">
-  	<time datetime="2019-10-10T13:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/循环链表，双向链表，时间复杂度/">循环链表，双向链表，时间复杂度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/链表的合并，分解，插入，逆值/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:30:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/链表的合并，分解，插入，逆值/">链表的合并，分解，插入，逆值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/链表的基本操作/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/链表的基本操作/">链表的基本操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML小案例/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML小案例/">HTML小案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -319,143 +289,124 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/jQuery-3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/H5新增属性/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/13/jQuery-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery-2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/H5新增属性/">H5新增属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery事件机制"><span class="toc-number">1.</span> <span class="toc-text">jQuery事件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery事件的发展历程（了解）"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery事件的发展历程（了解）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#on方式（最现代的方式，兼容zepto-移动端类似jQuery的一个库-，强烈建议使用的方式）（重点）"><span class="toc-number">1.2.</span> <span class="toc-text">on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件解绑"><span class="toc-number">1.3.</span> <span class="toc-text">事件解绑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件触发"><span class="toc-number">1.4.</span> <span class="toc-text">事件触发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery事件对象介绍"><span class="toc-number">1.5.</span> <span class="toc-text">jQuery事件对象介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery补充"><span class="toc-number">2.</span> <span class="toc-text">jQuery补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#链式编程"><span class="toc-number">2.1.</span> <span class="toc-text">链式编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐式迭代"><span class="toc-number">2.2.</span> <span class="toc-text">隐式迭代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#each方法"><span class="toc-number">2.3.</span> <span class="toc-text">each方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多库共存"><span class="toc-number">2.4.</span> <span class="toc-text">多库共存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery插件机制"><span class="toc-number">3.</span> <span class="toc-text">jQuery插件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方插件"><span class="toc-number">3.1.</span> <span class="toc-text">第三方插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQueryUI"><span class="toc-number">3.2.</span> <span class="toc-text">jQueryUI</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML及新增DOM/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:35:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML及新增DOM/">HTML及新增DOM</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-07T02:32:02.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
   
 
 
@@ -482,8 +433,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

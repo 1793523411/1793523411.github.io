@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 跌倒的小黄瓜</title>
+  <title>jQuery-2 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="jQuery操作DOM为什么要使用jQuery操作DOM对比JS操作DOM和jQuery操作DOM">
+<meta name="keywords" content="前端,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-2">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/jQuery-2/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="jQuery操作DOM为什么要使用jQuery操作DOM对比JS操作DOM和jQuery操作DOM">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-13T02:15:58.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="jQuery-2">
+<meta name="twitter:description" content="jQuery操作DOM为什么要使用jQuery操作DOM对比JS操作DOM和jQuery操作DOM">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,162 +159,202 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jQuery-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-2
+    </h1>
+  
+
+        
+        <a href="/2019/10/13/jQuery-2/" class="archive-article-date">
+  	<time datetime="2019-10-13T02:12:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
     
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jQuery操作DOM"><a href="#jQuery操作DOM" class="headerlink" title="jQuery操作DOM"></a>jQuery操作DOM</h1><h2 id="为什么要使用jQuery操作DOM"><a href="#为什么要使用jQuery操作DOM" class="headerlink" title="为什么要使用jQuery操作DOM"></a>为什么要使用jQuery操作DOM</h2><p>对比JS操作DOM和jQuery操作DOM</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//原生js</span><br><span class="line">// window.onload = function () &#123;</span><br><span class="line">// var btn = document.getElementsByTagName(&quot;button&quot;)[0];</span><br><span class="line">// var divArr = document.getElementsByTagName(&quot;div&quot;);</span><br><span class="line">//</span><br><span class="line">// btn.onclick = function () &#123;</span><br><span class="line">// for(var i=0;i&lt;divArr.length;i++)&#123;</span><br><span class="line">// divArr[i].style.display = &quot;block&quot;;</span><br><span class="line">// divArr[i].innerHTML = &quot;明日中秋！&quot;;</span><br><span class="line">// &#125;</span><br><span class="line">// &#125;</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">//jquery版</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">//获取元素</span><br><span class="line">var jQbtn = $(&quot;button&quot;);//根据标签名获取元素</span><br><span class="line">var jQdiv = $(&quot;div&quot;);//根据标签名获取元素</span><br><span class="line">//绑定事件</span><br><span class="line">jQbtn.click(function () &#123;</span><br><span class="line">//事件驱动程序</span><br><span class="line">// jQdiv.show(1000);//显示盒子。</span><br><span class="line">// jQdiv.html(&quot;tomorrow中秋！&quot;);//设置内容</span><br><span class="line">jQdiv.show(1000).html(1111);</span><br><span class="line">//1.链式编程。 2.隐式迭代。</span><br><span class="line"></span><br><span class="line">&#125;);//事件绑定是通过方法绑定的。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>使用jQuery的方式来操作DOM更加的简介，方便，统一的调用方式方便我们学习，降低来我们的学习成本。</p>
+<h2 id="重点内容"><a href="#重点内容" class="headerlink" title="重点内容"></a>重点内容</h2><p>样式和类操作<br>jQuery动画<br>节点操作</p>
+<h3 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h3><h4 id="样式属性操作-css"><a href="#样式属性操作-css" class="headerlink" title="样式属性操作 .css()"></a>样式属性操作 .css()</h4><p>作用：设置或获取元素的样式属性值<br>1 设置样式属性操作：<br>a设置单个样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数表示：样式属性名称</span><br><span class="line">// 第二个参数表示：样式属性值</span><br><span class="line">$(selector).css(“color”, “red”);</span><br></pre></td></tr></table></figure>
+
+<p>b设置多个样式：（也可以设置单个）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 参数为 &#123;&#125;（对象）</span><br><span class="line">$(selector).css(&#123;“color”: “red”, “font-size”: “30px”&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>2获取样式属性操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 参数表示要获取的 样式属性名称</span><br><span class="line">$(selector).css(“font-size”);</span><br></pre></td></tr></table></figure>
+
+<p>此时，会返回”font-size”样式属性对应的值。</p>
+<h3 id="类操作"><a href="#类操作" class="headerlink" title="类操作"></a>类操作</h3><p>添加类样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(addClass) 为指定元素添加类className</span><br><span class="line">$(selector).addClass(“liItem”);</span><br></pre></td></tr></table></figure>
+
+<p>注意：此处类名不带点，所有类操作的方法类名都不带点<br>移除类样式：<br><code>removeClass(className)</code> 为指定元素移除类 className</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).removeClass(“liItem”);</span><br></pre></td></tr></table></figure>
+
+<p><code>$(selector).removeClass();</code> 不指定参数，表示移除被选中元素的所有类</p>
+<p>判断有没有类样式：<br><code>hasClass(calssName)</code> 判断指定元素是否包含类 className</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).hasClass(“liItem”);</span><br></pre></td></tr></table></figure>
+
+<p>此时，会返回true或false</p>
+<p>切换类样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">toggleClass(className) 为指定元素切换类 className，该元素有类则移除，没有指定类则添加。</span><br><span class="line">$(selector).toggleClass(“liItem”);</span><br></pre></td></tr></table></figure>
+
+<p>注意点：<br>操作类样式的时候，所有的类名，都不带点（.）<br>经验：<br>1 操作的样式非常少，那么可以通过.css()这个 方法来操作<br>2 操作的样式很多，那么要通过使用类的方式来操作<br>3 如果考虑以后维护方便（把CSS从js中分离出来）的话，推荐使用类的方式来操作。类比CSS书写位置（把css从html中分离出来）</p>
+<p>前面内容特色总结：简约、“粗暴”、干净利落、直截了当</p>
+<h2 id="Query动画是什么？"><a href="#Query动画是什么？" class="headerlink" title="Query动画是什么？"></a>Query动画是什么？</h2><p>jQuery提供的一组网页中常见的动画效果，这些动画是标准的、有规律的效果；同时还提供给我们了自定义动画的功能。</p>
+<h3 id="隐藏显示动画"><a href="#隐藏显示动画" class="headerlink" title="隐藏显示动画"></a>隐藏显示动画</h3><p>1 show方法<br>作用：让匹配的元素展示出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 用法一：</span><br><span class="line">// 参数为数值类型，表示：执行动画时长</span><br><span class="line">/* 单位为：毫秒（ms），参数2000即2秒钟显示完毕 */</span><br><span class="line">$(selector).show(2000);</span><br><span class="line"></span><br><span class="line">// 用法二：</span><br><span class="line">// 参数为字符串类型，是jQuery预设的值，共有三个，分别是：slow、normal、fast</span><br><span class="line">/* 跟用法一的对应关系为： */</span><br><span class="line">/* slow：600ms、normal：400ms、fast：200ms */</span><br><span class="line">$(selector).show(“slow”);</span><br><span class="line"></span><br><span class="line">// 用法三：</span><br><span class="line">// 参数一可以是数值类型或者字符串类型</span><br><span class="line">// 参数二表示：动画执行完后立即执行的回调函数</span><br><span class="line">$(selector).show(2000, function() &#123;&#125;);</span><br><span class="line"></span><br><span class="line">// 用法四：</span><br><span class="line">// 不带参数，作用等同于 css(“display”, ”block”)</span><br><span class="line">/* 注意：此时没有动画效果 */</span><br><span class="line">$(selector).show();</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>jQuery预设的三组动画效果的语法几乎一致：参数可以有两个，第一个是动画的执行时长，第二个是动画执行完成后的回调函数。<br>第一个参数是：可以是指定字符或者毫秒数</p>
+<p>2 hide方法<br>作用：让匹配元素隐藏掉<br>用法参考show方法<br>$(selector).hide(1000); // 1000表示什么？<br>$(selector).hide(“slow”);<br>$(selector).hide(1000, function(){});<br>$(selector).hide();</p>
+<h3 id="滑入滑出动画"><a href="#滑入滑出动画" class="headerlink" title="滑入滑出动画"></a>滑入滑出动画</h3><p>1滑入动画效果（联想：生活中的卷帘门）<br>作用：让元素以下拉动画效果展示出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideDown(speed,callback);</span><br></pre></td></tr></table></figure>
+
+<p>注意：省略参数或者传入不合法的字符串，那么则使用默认值：400毫秒（同样适用于fadeIn/slideDown/slideUp）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideDown();</span><br></pre></td></tr></table></figure>
+
+<p>2 滑出动画效果<br>作用：让元素以上拉动画效果隐藏起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideUp(speed,callback);</span><br></pre></td></tr></table></figure>
+
+<p>3滑入滑出切换动画效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).slideToggle(speed,callback);</span><br></pre></td></tr></table></figure>
+
+<p>参数等同与1.5.1 隐藏和显示</p>
+<h3 id="淡入淡出动画"><a href="#淡入淡出动画" class="headerlink" title="淡入淡出动画"></a>淡入淡出动画</h3><p>1 淡入动画效果<br>作用：让元素以淡淡的进入视线的方式展示出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).fadeIn(speed, callback);</span><br></pre></td></tr></table></figure>
+
+<p>2 淡出动画效果<br>作用：让元素以渐渐消失的方式隐藏起来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).fadeOut(1000);</span><br></pre></td></tr></table></figure>
+
+<p>3淡入淡出切换动画效果<br>作用：通过改变透明度，切换匹配元素的显示或隐藏状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).fadeToggle(&apos;fast&apos;,function()&#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>参数等同与1.5.1 隐藏和显示</p>
+<p>4改变透明度到某个值<br>与淡入淡出的区别：淡入淡出只能控制元素的不透明度从 完全不透明 到完全透明；而fadeTo可以指定元素不透明度的具体值。并且时间参数是必需的！<br>作用：调节匹配元素的不透明度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 用法有别于其他动画效果</span><br><span class="line">// 第一个参数表示：时长</span><br><span class="line">// 第二个参数表示：不透明度值，取值范围：0-1</span><br><span class="line">$(selector).fadeTo(1000, .5); // 0全透，1全不透</span><br><span class="line"></span><br><span class="line">// 第一个参数为0，此时作用相当于：.css(“opacity”, .5);</span><br><span class="line">$(selector).fadeTo(0, .5);</span><br></pre></td></tr></table></figure>
+
+<p>有规律的体现：<br>jQuery提供的这几个动画效果控制的CSS属性包括：高度、宽度、不透明度。{height:400px; width:300px; opacity:.4;}<br>这三个CSS属性的共性是：属性值只有一个，并且这个值是数值（去掉单位后）。</p>
+<h3 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h3><p>注意：所有能够执行动画的属性必须只有一个数字类型的值。<br>比如：要改变字体大小，要使用：<code>fontSize（font-size）</code>，不要使用：font</p>
+<p><a href="http://www.w3school.com.cn/jquery/effect_animate.asp" target="_blank" rel="noopener">动画支持的属性</a></p>
+<p>作用：执行一组CSS属性的自定义动画</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数表示：要执行动画的CSS属性（必选）</span><br><span class="line">// 第二个参数表示：执行动画时长（可选）</span><br><span class="line">// 第三个参数表示：动画执行完后立即执行的回调函数（可选）</span><br><span class="line">$(selector).animate(&#123;params&#125;,speed,callback);</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h3><p>stop()<br>作用：停止当前正在执行的动画<br>为什么要停止动画？<br>如果一个以上的动画方法在同一个元素上调用，那么对这个元素来说，后面的动画将被放到效果队列中。这样就形成了动画队列。（联想：排队进站）<br>动画队列里面的动画不会执行，直到第一个动画执行完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数表示后续动画是否要执行</span><br><span class="line">（true:后续动画不执行 ;false:后续动画会执行）</span><br><span class="line">// 第二个参数表示当前动画是否执行完</span><br><span class="line">（true:立即执行完成当前动画 ;false:立即停止当前动画）</span><br><span class="line">$(selector).stop(clearQueue,jumpToEnd);</span><br></pre></td></tr></table></figure>
+
+<p>都不给，默认false；<br>解释：<br>当调用stop()方法后，队列里面的下一个动画将会立即开始。但是，如果参数clearQueue被设置为true，那么队列面剩余的动画就被删除了，并且永远也不会执行。<br>如果参数jumpToEnd被设置为true，那么当前动画会停止，但是参与动画的每一个CSS属性将被立即设置为它们的目标值。比如：slideUp()方法，那么元素会立即隐藏掉。如果存在回调函数，那么回调函数也会立即执行。</p>
+<p>注意：如果元素动画还没有执行完，此时调用sotp()方法，那么动画将会停止。并且动画没有执行完成，那么回调函数也不会被执行。</p>
+<p>常用方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).stop();</span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery节点操作"><a href="#jQuery节点操作" class="headerlink" title="jQuery节点操作"></a>jQuery节点操作</h2><h3 id="动态创建元素"><a href="#动态创建元素" class="headerlink" title="动态创建元素"></a>动态创建元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// $()函数的另外一个作用：动态创建元素</span><br><span class="line">var $spanNode = $(“&lt;span&gt;我是一个span元素&lt;/span&gt;”);</span><br><span class="line">var node = $(“#box”).html（“&lt;li&gt;我是li&lt;/li&gt;”）；</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><p>在元素的最后一个子元素后面追加元素：<br>append()（重点）<br>作用：在被选元素内部的最后一个子元素（或内容）后面插入内容（存在或者创建出来的元素都可以）<br>如果是页面中存在的元素，那么调用append()后，会把这个元素放到相应的目标元素里面去；但是，原来的这个元素，就不存在了。<br>如果是给多个目标追加元素，那么方法的内部会复制多份这个元素，然后追加到多个目标里面去。<br>常用参数：htmlString 或者 jQuery对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 在$(selector)中追加$node</span><br><span class="line">$(selector).append($node);</span><br><span class="line">// 在$(selector)中追加div元素，参数为htmlString</span><br><span class="line">$(selector).append(&apos;&lt;div&gt;&lt;/div&gt;&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>不常用操作：（用法跟append()方法基本一致）<br>1 appendTo()<br>作用：同append()，区别是：把$(selector)追加到node中去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).appendTo(node);</span><br></pre></td></tr></table></figure>
+
+<p>2 prepend()<br>作用：在元素的第一个子元素前面追加内容或节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).prepend(node);</span><br></pre></td></tr></table></figure>
+
+<p>3 after()<br>作用：在被选元素之后，作为兄弟元素插入内容或节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).after(node);</span><br></pre></td></tr></table></figure>
+
+<p>4 before()<br>作用：在被选元素之前，作为兄弟元素插入内容或节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).before(node);</span><br></pre></td></tr></table></figure>
+
+<h3 id="html创建元素（推荐使用，重点）"><a href="#html创建元素（推荐使用，重点）" class="headerlink" title="html创建元素（推荐使用，重点）"></a>html创建元素（推荐使用，重点）</h3><p>作用：设置或返回所选元素的html内容（包括 HTML 标记）<br>设置内容的时候，如果是html标记，会动态创建元素，此时作用跟js里面的 innerHTML属性相同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 动态创建元素</span><br><span class="line">$(selector).html(‘&lt;span&gt;传智播客&lt;/span&gt;’);</span><br><span class="line">// 获取html内容</span><br><span class="line">$(selector).html();</span><br><span class="line">1.6.4	清空元素</span><br><span class="line">// 清空指定元素的所有子元素（光杆司令）</span><br><span class="line">// 没有参数</span><br><span class="line">$(selector).empty();</span><br><span class="line">$(selector).html(“”);</span><br><span class="line">// “自杀” 把自己（包括所有内部元素）从文档中删除掉</span><br><span class="line">$(selector).remove();</span><br><span class="line"></span><br><span class="line">1.6.5	复制元素</span><br><span class="line">作用：复制匹配的元素</span><br><span class="line">// 复制$(selector)所匹配到的元素</span><br><span class="line">// 返回值为复制的新元素</span><br><span class="line">$(selector).clone();</span><br></pre></td></tr></table></figure>
+
+<p>总结：<br>推荐使用html(“<span></span>”)方法来创建元素或者html(“”)清空元素</p>
+<h3 id="操作form表单"><a href="#操作form表单" class="headerlink" title="操作form表单"></a>操作form表单</h3><h4 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h4><p>设置属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 第一个参数表示：要设置的属性名称</span><br><span class="line">// 第二个参数表示：改属性名称对应的值</span><br><span class="line">$(selector).attr(“title”, “hello”);</span><br></pre></td></tr></table></figure>
+
+<p>获取属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 参数为：要获取的属性的名称，改操作会返回指定属性对应的值</span><br><span class="line">$(selector).attr(“title”);</span><br></pre></td></tr></table></figure>
+
+<p>此时，返回指定属性的值</p>
+<p>移除属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 参数为：要移除的属性的名称</span><br><span class="line">$(selector).removeAttr(“title”);</span><br></pre></td></tr></table></figure>
+
+<p>注意：checked、selected、disabled要使用.prop()方法。<br>prop方法通常用来影响DOM元素的动态状态，而不是改变的HTML属性。例如：input和button的disabled特性，以及checkbox的checked特性。<br><a href="http://api.jquery.com/prop/" target="_blank" rel="noopener">细节参考</a></p>
+<h4 id="值和内容"><a href="#值和内容" class="headerlink" title="值和内容"></a>值和内容</h4><p>val()方法：<br>作用：设置或返回表单元素的值，例如：input,select,textarea的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 获取匹配元素的值，只匹配第一个元素</span><br><span class="line">$(selector).val();</span><br><span class="line">// 设置所有匹配到的元素的值</span><br><span class="line">$(selector).val(“具体值”);</span><br></pre></td></tr></table></figure>
+
+<p>text() 方法:<br>作用：设置或获取匹配元素的文本内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//获取操作不带参数（注意：这时候会把所有匹配到的元素内容拼接为一个字符串，不同于其他获取操作！）</span><br><span class="line">$(selector).text();</span><br><span class="line">//设置操作带参数，参数表示要设置的文本内容</span><br><span class="line">$(selector).text(“我是内容”);</span><br></pre></td></tr></table></figure>
+
+<h3 id="尺寸位置操作"><a href="#尺寸位置操作" class="headerlink" title="尺寸位置操作"></a>尺寸位置操作</h3><h4 id="高度和宽度操作"><a href="#高度和宽度操作" class="headerlink" title="高度和宽度操作"></a>高度和宽度操作</h4><p>高度操作height() ：<br>作用：设置或获取匹配元素的高度值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//带参数表示设置高度</span><br><span class="line">$(selector).height(200);</span><br><span class="line">//不带参数获取高度</span><br><span class="line">$(selector).height();</span><br></pre></td></tr></table></figure>
+
+<p>宽度操作width() ：<br>作用：设置或获取匹配元素的宽度值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//带参数表示设置宽度</span><br><span class="line">//不带参数获取宽度</span><br><span class="line">$(selector).width(200);</span><br></pre></td></tr></table></figure>
+
+<p>css()获取高度和height获取高度的区别？</p>
+<h3 id="坐标值操作"><a href="#坐标值操作" class="headerlink" title="坐标值操作"></a>坐标值操作</h3><p>offset()<br>作用：获取或设置元素相对于文档的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 无参数表示获取，返回值为：&#123;left:num, top:num&#125;，值是相对于document的位置</span><br><span class="line">$(selector).offset();</span><br><span class="line">// 有参数表示设置，参数推荐使用数值类型</span><br><span class="line">$(selector).offset(&#123;left:100, top: 150&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>注意点：设置offset后，如果元素没有定位(默认值：static)，则被修改为relative</p>
+<p>position()<br>作用：获取相对于其最近的具有定位的父元素的位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 获取，返回值为对象：&#123;left:num, top:num&#125;</span><br><span class="line">$(selector).position();</span><br></pre></td></tr></table></figure>
+
+<p>注意：只能获取，不能设置。</p>
+<p>scrollTop()<br>作用：获取或者设置元素垂直方向滚动的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 无参数表示获取偏移</span><br><span class="line">// 有参数表示设置偏移，参数为数值类型</span><br><span class="line">$(selector).scrollTop(100);</span><br></pre></td></tr></table></figure>
+
+<p>scrollLeft()<br>作用：获取或者设置元素水平方向滚动的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).scrollLeft(100);</span><br></pre></td></tr></table></figure>
+
+<p>对scrollTop的理解：<br>垂直滚动条位置 是可滚动区域 在 可视区域上方的 被隐藏区域的高度。<br>如果滚动条在最上方没有滚动 或者 当前元素没有出现滚动条，那么这个距离为0</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/循环链表，双向链表，时间复杂度/" class="archive-article-date">
-  	<time datetime="2019-10-10T13:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/循环链表，双向链表，时间复杂度/">循环链表，双向链表，时间复杂度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/链表的合并，分解，插入，逆值/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:30:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/链表的合并，分解，插入，逆值/">链表的合并，分解，插入，逆值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/链表的基本操作/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/链表的基本操作/">链表的基本操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML小案例/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:47:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML小案例/">HTML小案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -319,143 +364,133 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/jQuery-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/H5新增属性/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:42:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/10/13/jQuery-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          jQuery-3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/13/jQuery-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery-1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/H5新增属性/">H5新增属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery操作DOM"><span class="toc-number">1.</span> <span class="toc-text">jQuery操作DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用jQuery操作DOM"><span class="toc-number">1.1.</span> <span class="toc-text">为什么要使用jQuery操作DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重点内容"><span class="toc-number">1.2.</span> <span class="toc-text">重点内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#样式操作"><span class="toc-number">1.2.1.</span> <span class="toc-text">样式操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#样式属性操作-css"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">样式属性操作 .css()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类操作"><span class="toc-number">1.2.2.</span> <span class="toc-text">类操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Query动画是什么？"><span class="toc-number">1.3.</span> <span class="toc-text">Query动画是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#隐藏显示动画"><span class="toc-number">1.3.1.</span> <span class="toc-text">隐藏显示动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#滑入滑出动画"><span class="toc-number">1.3.2.</span> <span class="toc-text">滑入滑出动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#淡入淡出动画"><span class="toc-number">1.3.3.</span> <span class="toc-text">淡入淡出动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义动画"><span class="toc-number">1.3.4.</span> <span class="toc-text">自定义动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止动画"><span class="toc-number">1.3.5.</span> <span class="toc-text">停止动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery节点操作"><span class="toc-number">1.4.</span> <span class="toc-text">jQuery节点操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态创建元素"><span class="toc-number">1.4.1.</span> <span class="toc-text">动态创建元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加元素"><span class="toc-number">1.4.2.</span> <span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html创建元素（推荐使用，重点）"><span class="toc-number">1.4.3.</span> <span class="toc-text">html创建元素（推荐使用，重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作form表单"><span class="toc-number">1.4.4.</span> <span class="toc-text">操作form表单</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#属性操作"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">属性操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#值和内容"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">值和内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#尺寸位置操作"><span class="toc-number">1.4.5.</span> <span class="toc-text">尺寸位置操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#高度和宽度操作"><span class="toc-number">1.4.5.1.</span> <span class="toc-text">高度和宽度操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#坐标值操作"><span class="toc-number">1.4.6.</span> <span class="toc-text">坐标值操作</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/HTML及新增DOM/" class="archive-article-date">
-  	<time datetime="2019-10-09T07:35:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/HTML及新增DOM/">HTML及新增DOM</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-07T02:32:02.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
   
 
 
@@ -482,8 +517,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
