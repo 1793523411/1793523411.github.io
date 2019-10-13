@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | 跌倒的小黄瓜</title>
+  <title>web | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/page/3/index.html">
+  <meta name="description" content="viewport手机拥有了浏览器的初期,人们并没有专门为移动设备设计页面,造成的直接结果就是,访问的页面是直接将电脑页面进行缩放,操作起来有诸多不便,viewport就是用来解决这个问题的">
+<meta name="keywords" content="前端,web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/web/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="viewport手机拥有了浏览器的初期,人们并没有专门为移动设备设计页面,造成的直接结果就是,访问的页面是直接将电脑页面进行缩放,操作起来有诸多不便,viewport就是用来解决这个问题的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-13T08:53:34.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="web">
+<meta name="twitter:description" content="viewport手机拥有了浏览器的初期,人们并没有专门为移动设备设计页面,造成的直接结果就是,访问的页面是直接将电脑页面进行缩放,操作起来有诸多不便,viewport就是用来解决这个问题的">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,36 +159,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-web" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      web
+    </h1>
+  
+
+        
+        <a href="/2019/10/13/web/" class="archive-article-date">
+  	<time datetime="2019-10-13T08:52:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
     
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h2><p>手机拥有了浏览器的初期,人们并没有专门为移动设备设计页面,造成的直接结果就是,访问的页面是直接将电脑页面进行缩放,操作起来有诸多不便,viewport就是用来解决这个问题的</p>
+<a id="more"></a>
+<h3 id="viewport的概念"><a href="#viewport的概念" class="headerlink" title="viewport的概念"></a>viewport的概念</h3><p>移动设备上,用来显示网页的区域.<br>如果把移动设备的浏览器(也有可能是app中的webview) ,当做相框的话<br>viewport就相当于相框中的画,可能会比相框小,可能会比相框大,如果刚好一样大,那就皆大欢喜.<br>修改viewport<br>我们可以通过meta标签去修改viewport的值 ,防止滚动条出现,提升用户体验</p>
+<h3 id="移动web常见设置"><a href="#移动web常见设置" class="headerlink" title="移动web常见设置"></a>移动web常见设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>该属性最早是苹果公司在Safari中推出用来解决移动设备的viewport问题的.后来被各大安卓以及浏览器厂商效仿,所以说这个属性真的是非常有用的<br>可选值</p>
+<ul>
+<li>width:</li>
+<li>设置layout viewport 的宽度，为一个正整数，或字符串”width-device”</li>
+<li>initial-scale:</li>
+<li>设置页面的初始缩放值，为一个数字，可以带小数</li>
+<li>minimum-scale:</li>
+<li>允许用户的最小缩放值，为一个数字，可以带小数</li>
+<li>maximum-scale:</li>
+<li>允许用户的最大缩放值，为一个数字，可以带小数</li>
+<li>height:</li>
+<li>设置layout viewport 的高度，这个属性对我们并不重要，很少使用</li>
+<li>user-scalable:</li>
+<li>是否允许用户进行缩放，值为”no”或”yes”, no 代表不允许，yes代表允许</li>
+</ul>
+<h2 id="移动web注意细节样式"><a href="#移动web注意细节样式" class="headerlink" title="移动web注意细节样式"></a>移动web注意细节样式</h2><p>移动端开发不同于桌面端开发,需要注意一些细节</p>
+<h3 id="点击高亮效果"><a href="#点击高亮效果" class="headerlink" title="点击高亮效果"></a>点击高亮效果</h3><p>在移动端浏览器会遇见点击出现高亮的效果，在某项项目是不需要这个默认的效果的。那么我们通常会把这个点击的颜色设置成透明。</p>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-tap-highlight-color:transparent;/*清除点击高亮效果*/</span><br></pre></td></tr></table></figure>
+
+<p>盒子模型<br>通过css3的新属性box-sizing我们能够让盒子有限顾及自己的尺寸而不是内容,避免出现多余的滚动条</p>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*设置宽度以边框开始计算*/</span><br><span class="line">-webkit-box-sizing: border-box;/*webkit内核兼容性写法*/</span><br><span class="line">box-sizing: border-box;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Input默认样式清除"><a href="#Input默认样式清除" class="headerlink" title="Input默认样式清除"></a>Input默认样式清除</h4><p>在移动设备的浏览器中input标签一般会有默认的样式,通过<strong>border=none,outline=none</strong>无法去除,比如立体效果,3d效果等等,我们需要添加下列样式</p>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*在移动端清除浏览器默认样式*/</span><br><span class="line">-webkit-appearance: none;</span><br></pre></td></tr></table></figure>
+
+<p>最小宽度和最大的宽度<br>考虑到移动设备在大尺寸的的屏幕不会过度缩放 失去清晰度,在小尺寸的屏幕中不会出现布局错乱的问题</p>
+<p>css代码<br>注 下列代码取值不是固定的,根据实际情况需要进行调整</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">max-width: 640px; /*在行业当中的移动端的设计图一般使用的是640px*/</span><br><span class="line">min-width: 300px; /*在移动设备当中现在最小的尺寸320px*/</span><br></pre></td></tr></table></figure>
+
+<p>结构伪类选择器<br><code>nth-child()</code>如果有多个不同兄弟节点获取的时候,索引需要特殊计算,我们可以限定在某一个类型上,语法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:first-of-type匹配同类型中的第一个元素E。</span><br><span class="line">E:last-of-type匹配同类型中的最后一个元素E。</span><br><span class="line">E:nth-of-type(n) 匹配同类型中的第n个元素E。</span><br></pre></td></tr></table></figure>
+
+<h2 id="touch事件"><a href="#touch事件" class="headerlink" title="touch事件"></a>touch事件</h2><p>移动端使用的是touch事件,但是并不能直接通过ontouch等语法访问,需要使用<code>addEventListener</code>进行绑定</p>
+<p>可选事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">touchstart:手指触摸时触发</span><br><span class="line">touchmove:手指在屏幕上滑动时连续触发</span><br><span class="line">touchend:当手指离开屏幕时触发。</span><br><span class="line">touchcancel:系统停止跟踪触摸时候会触发。(这个事件使用较少,了解即可)</span><br></pre></td></tr></table></figure>
+
+<p>事件参数中 能够获取移动的一些属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dom.addEventListener(&apos;touchstart&apos;,function(e)&#123;</span><br><span class="line">console.log(e.targetTouches); //目标元素的所有当前触摸</span><br><span class="line">console.log(e.changedTouches);//最新更改的所有触摸</span><br><span class="line">console.log(e.touches);//所有的触摸</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/小安卓，哆啦A梦/" class="archive-article-date">
-  	<time datetime="2019-10-11T13:20:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/小安卓，哆啦A梦/">小安卓，哆啦A梦</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,410 +272,124 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/web/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-css">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/动画，字体，弹性布局/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:14:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/13/同源以及跨域/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">同源以及跨域</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/动画，字体，弹性布局/">动画，字体，弹性布局</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#viewport"><span class="toc-number">1.</span> <span class="toc-text">viewport</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#viewport的概念"><span class="toc-number">1.1.</span> <span class="toc-text">viewport的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动web常见设置"><span class="toc-number">1.2.</span> <span class="toc-text">移动web常见设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动web注意细节样式"><span class="toc-number">2.</span> <span class="toc-text">移动web注意细节样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#点击高亮效果"><span class="toc-number">2.1.</span> <span class="toc-text">点击高亮效果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Input默认样式清除"><span class="toc-number">2.1.1.</span> <span class="toc-text">Input默认样式清除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#touch事件"><span class="toc-number">3.</span> <span class="toc-text">touch事件</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/选择器，边框，伪类，渐变，背景，图片/">css3，选择器，边框，伪类，渐变，背景，图片</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/CSS最后/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:10:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/CSS最后/">CSS最后</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/浮动，定位，初始化/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/浮动，定位，初始化/">浮动，定位，初始化</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/行高，盒子，边距，fireworks/" class="archive-article-date">
-  	<time datetime="2019-10-11T07:03:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/行高，盒子，边距，fireworks/">行高，盒子，边距，fireworks</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/css书写，表签元素，三大特性，修饰，伪类/">css书写，表签元素，三大特性，修饰，伪类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/css选择器，文本元素/" class="archive-article-date">
-  	<time datetime="2019-10-11T06:56:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/css选择器，文本元素/">css选择器，文本元素</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/循环链表，双向链表，时间复杂度/" class="archive-article-date">
-  	<time datetime="2019-10-10T13:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/循环链表，双向链表，时间复杂度/">循环链表，双向链表，时间复杂度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/链表的合并，分解，插入，逆值/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:30:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/链表的合并，分解，插入，逆值/">链表的合并，分解，插入，逆值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">线性表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/10/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2019/10/">1</a><a class="page-number" href="/archives/2019/10/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2019/10/page/4/">4</a><a class="extend next" rel="next" href="/archives/2019/10/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -623,8 +416,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
