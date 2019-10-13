@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 跌倒的小黄瓜</title>
+  <title>canvas高级 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="高级篇变换Canvas 绘图中支持矩阵变换功能. 其中涉及的常用方法有">
+<meta name="keywords" content="前端,canvas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas高级">
+<meta property="og:url" content="http://yoursite.com/2019/10/13/canvas高级/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="高级篇变换Canvas 绘图中支持矩阵变换功能. 其中涉及的常用方法有">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-13T14:29:11.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="canvas高级">
+<meta name="twitter:description" content="高级篇变换Canvas 绘图中支持矩阵变换功能. 其中涉及的常用方法有">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,36 +159,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-canvas高级" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      canvas高级
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/canvas高级/" class="archive-article-date">
+
+        
+        <a href="/2019/10/13/canvas高级/" class="archive-article-date">
   	<time datetime="2019-10-13T14:24:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/canvas高级/">canvas高级</a>
-    </h1>
-  
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="高级篇"><a href="#高级篇" class="headerlink" title="高级篇"></a>高级篇</h1><h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p>Canvas 绘图中支持矩阵变换功能. 其中涉及的常用方法有</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.transform()</span><br><span class="line">CanvasRenderingContext2D.scale()</span><br><span class="line">CanvasRenderingContext2D.translate()</span><br><span class="line">CanvasRenderingContext2D.rotate()</span><br><span class="line">CanvasRenderingContext2D.setTransForm()</span><br></pre></td></tr></table></figure>
+
+<p>还有一些方法, 暂时没有普及与确定. 因此这里的几个方法才是最常用的方法.</p>
+<h3 id="什么是变换"><a href="#什么是变换" class="headerlink" title="什么是变换"></a>什么是变换</h3><p>计算机图形学是建立在解析几何基础之上的. 也就是说所有绘制的图形都是基于坐标进行计算得到的. 那么利用坐标系位置的调整, 同样的坐标可以得到不同的效果. 例如有一个点 A ( 10, 10 ). 可以在坐标系中绘制出该点.</p>
+<p>如果调整坐标系. 比如将坐标系向右移动 10 个单位, 得到</p>
+<p>此时同样是 A 点, 坐标就变成了 ( 0, 10 ). 然后再把坐标系向上移动 10 个单位, 得到</p>
+<p>那么针对新坐标系, 这个点的坐标就是 ( 0, 0 ). 这个就是坐标变换. 通过移动坐标的位置, 对坐标进行旋转, 以及对坐标轴数据的缩放, 从而使得原有点的坐标发生变化, 或利用原有的坐标点绘制新的效果.</p>
+<p>坐标变换有一套完整的数学公式. 利用矩阵可以很容易的表示坐标的所有变换.</p>
+<p>这里的 a, b, c, d, e, f 就刚好是 transform 函数的 参数.</p>
+<p>其中 a 有时又标记为 m11. 它表示水平缩放.<br>其中 b 有时又标记为 m12. 它表示水平倾斜.<br>其中 c 有时又标记为 m21. 它表示垂直倾斜.<br>其中 d 有时又标记为 m22. 它表示垂直缩放.<br>其中 e 有时又标记为 dx. 它表示水平移动.<br>其中 f 有时又标记为 dy. 它表示垂直移动.<br>演示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">ctx.transform( 1, 0, 0, 1, 0, 0 );</span><br><span class="line">ctx.fillRect( 0, 0, 100, 100 );</span><br></pre></td></tr></table></figure>
+
+<p>这里矩阵变换会比较复杂, 因此在使用中一般使用简单的, 平移, 旋转 和 缩放 的简单 api.</p>
+<h3 id="平移变换"><a href="#平移变换" class="headerlink" title="平移变换"></a>平移变换</h3><p>平移变换就是将原有坐标轴进行平行移动, 那么坐标轴移动后就可以使用新坐标来绘制图形了.</p>
+<p>语法: <code>CanvasRenderingContext2D.translate( x, y )</code></p>
+<p>描述:</p>
+<p>该方法将坐标进行平移.<br>x 表示水平移动, 正数向右, 负数向左.<br>y 表示垂直移动, 正数向下, 负数向上.<br>变换可以重复调用, 变换是可以累加的.<br>使用该变换, 常常用于绘制不同位置, 但是形状重复的图形.</p>
+<p>注意: 变换也会被 “继承”, 开启新路径后依旧保留原先变换.</p>
+<h3 id="旋转变换"><a href="#旋转变换" class="headerlink" title="旋转变换"></a>旋转变换</h3><p>语法:<code>CanvasRenderingContext2D.rotate( radian )</code></p>
+<p>描述:</p>
+<p>该方法将坐标轴进行旋转变换.<br>参数是弧度, 表示旋转的方式. 正数表示顺时针旋转, 负数表示逆时针旋转.<br>该变换常常用于实现旋转动画等.</p>
+<h3 id="缩放变换"><a href="#缩放变换" class="headerlink" title="缩放变换"></a>缩放变换</h3><p>语法: <code>CanvasRenderingContext2D.scale( x, y )</code></p>
+<p>描述:</p>
+<p>该方法实现水平与垂直的缩放.<br>参数 x 控制水平缩放倍率. 传参 1 表示不作缩放, 传入大于 1 的数字表示扩大.<br>参数 y 控制垂直缩放倍率. 传参 1 表示不作缩放, 传入大于 1 的数字表示扩大.<br>该变换常常用于放大与缩小, 以及反转的效果.</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>前面提到 Canvas 是含有状态的, 也就是说需要修改颜色, 直线样式, 绘图方式等效果时需要开启一个新的状态. 但是有时在绘制过程中需要修改状态, 同时绘制完当前状态后又需要回到之前的状态中继续绘制另外的形状. 那么只有再将修改过的样式载更改回来. 如果在该状态中修改的属性较多, 那么每次在回到之前状态时就有很多的代码.</p>
+<p>Canvas 中引入了状态的<strong>保持机制</strong>. 使用 CanvasRenderingContext2D.save() 方法可以保存当前状态. 如果需要恢复到已经保存的状态, 只需要调用 CanvasRenderingContext2D.restore() 方法即可.</p>
+<p>状态保持的机制是基于状态栈实现的. 也就是说 save 一次就存储一个状态. restore 一次就将刚刚存入的恢复. 如果 save 两次, 就需要 restore 两次, 才可以恢复到最先的状态.</p>
+<p>一般在封装绘图的时候都会采用开始绘制之前, save 一次, 然后 开启一个新路径, 然后绘制结束后 restore, 然后再开启一个新路径. 这样保持当前状态不会对其他绘图代码构成影响.</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>canvas 在绘制图片的时候, drawImage 方法还支持将一个 canvas 绘制到另一个 canvas 中. 因此使用该功能, 可以在内存中完成复杂的绘图, 将绘制好的半成品再绘制到 canvas 中合成需要的效果.</p>
+<h2 id="画布保存"><a href="#画布保存" class="headerlink" title="画布保存"></a>画布保存</h2><p>画布在绘制后实际上就是一张图片, 可以直接右键另存为. 同时也支持使用 js 代码将其保存为 base64 编码的字符串.</p>
+<p>语法: <code>Canvas.ToDataURL( type, encoderOptions )</code></p>
+<p>描述:</p>
+<p>该方法可以将画布转换成 base64 格式的数据<br>type 表示输出类型. 例如: image/png 或 image/jpeg 等<br>encoderOptions 表示图片输出质量, 其取值在 0 到 1 之间. 如果是 1, 表示无损压缩, 必须使用 image/jpeg 或 image/webp 才起作用<br>…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;img id=&quot;img&quot;/&gt;</span><br><span class="line">...</span><br><span class="line">var img = document.getElementById( &apos;img&apos; );</span><br><span class="line"></span><br><span class="line">var cas = document.createElement( &apos;canvas&apos; );</span><br><span class="line">cas.width = 100, cas.height = 100;</span><br><span class="line">var ctx = cas.getContext( &apos;2d&apos; );</span><br><span class="line">ctx.fillStyle = &apos;pink&apos;;</span><br><span class="line">ctx.fillRect( 0, 0, 100, 100 );</span><br><span class="line"></span><br><span class="line">var data = cas.toDataURL( &apos;image/png&apos;, 1 );</span><br><span class="line"></span><br><span class="line">img.src = data;</span><br></pre></td></tr></table></figure>
+
+<h2 id="渐变和图案"><a href="#渐变和图案" class="headerlink" title="渐变和图案"></a>渐变和图案</h2><p>绘制图像有两个主要方法, 一个是描边, 一个是填充. 前面介绍过要设置其样式, 可以使用 strokeStyle 和 fillStyle 属性, 只需要给它们提供颜色就可以了. 但是不仅仅是颜色, 它还支持渐变和重复.</p>
+<p>相关方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.createLinearGradient()</span><br><span class="line">CanvasRenderingContext2D.createRadialGradient()</span><br><span class="line">CanvasRenderingContext2D.createPattern()</span><br></pre></td></tr></table></figure>
+
+<h2 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h2><p>语法: <code>CanvasRenderingContext2D.createLinearGradient( x0, y0, x1, y1 )</code></p>
+<p>描述:</p>
+<p>该方法返回一个 CanvasGradient 对象. 用于描述渐变的方式.<br>该方法有两个参数, 用于表示线型渐变的方向与位置.<br>使用的时候, 首先创建一个 CanvasGradient 对象, 然后利用 addColorStop 方法添加颜色区间.<br>方法语法: CanvasGradient.addColorStop( rate, color ).<br>该方法用于设置在某个比例位置的颜色是什么. rate 的取值是 0 到 1 之间.<br>可以添加多个渐变点.<br>然后将该对象赋值给 *Style 属性即可.<br>案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">var canvasGradient = ctx.createLinearGradient( 0, 25, 200, 25 );</span><br><span class="line">canvasGradient.addColorStop( 0, &apos;blue&apos; );</span><br><span class="line">canvasGradient.addColorStop( 1, &apos;red&apos; );</span><br><span class="line">ctx.fillStyle = canvasGradient;</span><br><span class="line"></span><br><span class="line">ctx.fillRect( 0, 100, 200, 50 );</span><br></pre></td></tr></table></figure>
+
+<p>注意: 渐变点的坐标是基于坐标轴来计算的.</p>
+<h3 id="放射渐变"><a href="#放射渐变" class="headerlink" title="放射渐变"></a>放射渐变</h3><p>语法:<code>CanvasRenderingContext2D.createRadialGradient( x0, y0, r0, x1, y1, r1 )</code></p>
+<p>描述:</p>
+<p>该方法实现放射渐变, 渐变的是在两个圆之间. 一般会使用两个内含关系的圆.<br>前三个参数分别表示其中一个圆的圆心的坐标, 以及半径.<br>后三个参数分别表示另一个圆的圆心的坐标, 以及半径.<br>绘制渐变效果用法与线性渐变一样.<br>案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x = cas.width / 2, y = cas.height / 2, r = 100;</span><br><span class="line">var g = ctx.createRadialGradient( x + r * 2 / 3, y - r * 2 / 3, 0, x + r / 3, y - r / 3, r * 4 / 3 );</span><br><span class="line">g.addColorStop( 0, &apos;#fff&apos; );</span><br><span class="line">g.addColorStop( 1, &apos;#f00&apos; );</span><br><span class="line">ctx.fillStyle = g;</span><br><span class="line">ctx.arc( x, y, r, 0, 2 * Math.PI );</span><br><span class="line">ctx.fill();</span><br></pre></td></tr></table></figure>
+
+<h2 id="重复填充"><a href="#重复填充" class="headerlink" title="重复填充"></a>重复填充</h2><p>语法: <code>CanvasRenderingContext2D.createPattern( img, repetition )</code></p>
+<p>描述:</p>
+<p>该方法表示使用图片来填充的设置方法. 需要两个参数, 一个是图片, 一个是重复的方式.<br>图片允许是 img 标签, 图片, canvas 等对象<br>可选择的重复方式与 CSS 一致. 有: repeat, repeat-x, repeat-y, no-repeat.<br>如果是 空或””, 但不是 undefined, 默认就是 repeat.<br>准备一张图片</p>
+<p>案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var img = new Image();</span><br><span class="line">img.src = &apos;imgs/04d91106ecb1ec84b6708cd9796fc772.jpg&apos;;</span><br><span class="line">img.onload = function () &#123;</span><br><span class="line">var p = ctx.createPattern( img, &apos;repeat&apos; );</span><br><span class="line">ctx.fillStyle = p;</span><br><span class="line">ctx.fillRect( 50, 50, 550, 350 );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><p>在 Canvas 中还可以给绘制的内容设置阴影. 但是一般不这么用, 因为性能不高.</p>
+<p>相关属性:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.shadowBlur 属性表示模糊程度.</span><br><span class="line">CanvasRenderingContext2D.shadowColor 属性表示模糊颜色.</span><br><span class="line">CanvasRenderingContext2D.shadowOffsetX 属性表示模糊位置 x 坐标偏移.</span><br><span class="line">CanvasRenderingContext2D.shadowOffsetY 属性表示模糊位置 y 坐标偏移.</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -199,404 +295,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/canvas高级/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/canvas中级/" class="archive-article-date">
-  	<time datetime="2019-10-13T14:23:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/13/canvas中级/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">canvas中级</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/canvas中级/">canvas中级</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#高级篇"><span class="toc-number">1.</span> <span class="toc-text">高级篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变换"><span class="toc-number">1.1.</span> <span class="toc-text">变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是变换"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平移变换"><span class="toc-number">1.1.2.</span> <span class="toc-text">平移变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转变换"><span class="toc-number">1.1.3.</span> <span class="toc-text">旋转变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缩放变换"><span class="toc-number">1.1.4.</span> <span class="toc-text">缩放变换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境"><span class="toc-number">1.2.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化"><span class="toc-number">1.3.</span> <span class="toc-text">优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#画布保存"><span class="toc-number">1.4.</span> <span class="toc-text">画布保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#渐变和图案"><span class="toc-number">1.5.</span> <span class="toc-text">渐变和图案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性渐变"><span class="toc-number">1.6.</span> <span class="toc-text">线性渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#放射渐变"><span class="toc-number">1.6.1.</span> <span class="toc-text">放射渐变</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重复填充"><span class="toc-number">1.7.</span> <span class="toc-text">重复填充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阴影"><span class="toc-number">1.8.</span> <span class="toc-text">阴影</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/canvas基本/" class="archive-article-date">
-  	<time datetime="2019-10-13T14:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/canvas基本/">canvas基本</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/apply，注册事件/" class="archive-article-date">
-  	<time datetime="2019-10-13T13:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/apply，注册事件/">apply，注册事件</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/闭包练习，缓存，沙箱，函数模式/" class="archive-article-date">
-  	<time datetime="2019-10-13T13:19:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/闭包练习，缓存，沙箱，函数模式/">闭包练习，缓存，沙箱，函数模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/作用域，闭包/" class="archive-article-date">
-  	<time datetime="2019-10-13T13:18:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/作用域，闭包/">作用域，闭包</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/继承，原型链/" class="archive-article-date">
-  	<time datetime="2019-10-13T13:18:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/继承，原型链/">继承，原型链</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/歌曲管理/" class="archive-article-date">
-  	<time datetime="2019-10-13T12:22:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/歌曲管理/">歌曲管理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">案例</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/递归与原型/" class="archive-article-date">
-  	<time datetime="2019-10-13T12:22:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/递归与原型/">递归与原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/对象与原型/" class="archive-article-date">
-  	<time datetime="2019-10-13T12:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/对象与原型/">对象与原型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -623,8 +433,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
