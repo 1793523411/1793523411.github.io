@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>apply，注册事件 | 跌倒的小黄瓜</title>
+  <title>栈，递归，链表 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="apply补充当时用call和apply传入的第一个参数为值类型的时候会将值类型转换成对应的对象（引用类型） 然后赋值给this">
-<meta name="keywords" content="前端,js">
+  <meta name="description" content="今天实验课又写了几串代码 首先是用栈实现进制转换1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374/***链栈实现数制的转换***/#include&amp;lt;iostream">
+<meta name="keywords" content="数据结构,栈,链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="apply，注册事件">
-<meta property="og:url" content="http://yoursite.com/2019/10/13/apply，注册事件/index.html">
+<meta property="og:title" content="栈，递归，链表">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/栈，递归,链表/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="apply补充当时用call和apply传入的第一个参数为值类型的时候会将值类型转换成对应的对象（引用类型） 然后赋值给this">
+<meta property="og:description" content="今天实验课又写了几串代码 首先是用栈实现进制转换1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374/***链栈实现数制的转换***/#include&amp;lt;iostream">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-13T13:22:59.097Z">
+<meta property="og:updated_time" content="2019-10-14T12:09:41.034Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="apply，注册事件">
-<meta name="twitter:description" content="apply补充当时用call和apply传入的第一个参数为值类型的时候会将值类型转换成对应的对象（引用类型） 然后赋值给this">
+<meta name="twitter:title" content="栈，递归，链表">
+<meta name="twitter:description" content="今天实验课又写了几串代码 首先是用栈实现进制转换1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374/***链栈实现数制的转换***/#include&amp;lt;iostream">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-apply，注册事件" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-栈，递归,链表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      apply，注册事件
+      栈，递归，链表
     </h1>
   
 
         
-        <a href="/2019/10/13/apply，注册事件/" class="archive-article-date">
-  	<time datetime="2019-10-13T13:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+        <a href="/2019/10/14/栈，递归,链表/" class="archive-article-date">
+  	<time datetime="2019-10-14T12:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
 </a>
         
         
@@ -184,28 +184,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="apply补充"><a href="#apply补充" class="headerlink" title="apply补充"></a>apply补充</h2><p>当时用call和apply传入的第一个参数为值类型的时候<br>会将值类型转换成对应的对象（引用类型） 然后赋值给this</p>
-<a id="more"></a>
+        <p>今天实验课又写了几串代码</p>
+<h2 id="首先是用栈实现进制转换"><a href="#首先是用栈实现进制转换" class="headerlink" title="首先是用栈实现进制转换"></a>首先是用栈实现进制转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">/***链栈实现数制的转换***/</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define OK 1</span><br><span class="line">#define ERROR 0</span><br><span class="line">#define OVERFLOW -2</span><br><span class="line">typedef int Status;</span><br><span class="line">typedef struct SNode&#123;</span><br><span class="line">int data;</span><br><span class="line">struct SNode *next;</span><br><span class="line">&#125;SNode,*LinkStack;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Status InitStack(LinkStack &amp;S)</span><br><span class="line">&#123;</span><br><span class="line">S = NULL;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line">bool StackEmpty(LinkStack S)</span><br><span class="line">&#123;</span><br><span class="line">if(!S)</span><br><span class="line">return true;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">Status Push(LinkStack &amp;S,int e)</span><br><span class="line">&#123;</span><br><span class="line">SNode *p = new SNode;</span><br><span class="line">if(!p)</span><br><span class="line">&#123;</span><br><span class="line">return OVERFLOW;</span><br><span class="line">&#125;</span><br><span class="line">p-&gt;data = e;</span><br><span class="line">p-&gt;next = S;</span><br><span class="line">S = p;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line">Status Pop(LinkStack &amp;S,int &amp;e)</span><br><span class="line">&#123;</span><br><span class="line">SNode *p;</span><br><span class="line">if(!S)</span><br><span class="line">return ERROR;</span><br><span class="line">e = S-&gt;data;</span><br><span class="line">p = S;</span><br><span class="line">S = S-&gt;next;</span><br><span class="line">delete p;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//算法3.8　数制的转换(链栈实现)</span><br><span class="line">void conversion (int N) &#123;</span><br><span class="line">//对于输入的任意一个非负十进制数，打印输出与其等值的八进制数</span><br><span class="line">//请填写完整</span><br><span class="line">SNode *S;</span><br><span class="line">int e;</span><br><span class="line">InitStack(S);</span><br><span class="line">while(N)&#123;</span><br><span class="line">Push(S,N%8);</span><br><span class="line">N=N/8;</span><br><span class="line">&#125;</span><br><span class="line">while(!StackEmpty(S))&#123;</span><br><span class="line">Pop(S,e);</span><br><span class="line">cout&lt;&lt;e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int N;</span><br><span class="line">cin&gt;&gt;N;</span><br><span class="line">conversion(N);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">//当传入的第一个参数为 null或者Undefined的时候，</span><br><span class="line">//会把this赋值为 window</span><br><span class="line">//正确的代码</span><br><span class="line">var arr = [].concat.apply([],obj);</span><br><span class="line">//[].concat(obj[0],obj[1],obj[2])</span><br><span class="line">console.log(arr);</span><br><span class="line"></span><br><span class="line">function test() &#123;</span><br><span class="line">// console.log(this.valueOf());</span><br><span class="line">// console.log(+this);</span><br><span class="line">console.log(&quot;&quot;+this);</span><br><span class="line">&#125;</span><br><span class="line">test.apply(1);</span><br><span class="line">test.apply(&quot;abc&quot;);</span><br><span class="line">test.apply(true)</span><br><span class="line">test.apply(undefined)</span><br><span class="line">//借用构造函数 实现继承</span><br><span class="line">function Person()&#123;</span><br><span class="line">this.name = &quot;张莎&quot;;</span><br><span class="line">this.age = 18;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Student()&#123;</span><br><span class="line">var stu = this;</span><br><span class="line">Person.apply(stu);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var stu = new Student();</span><br><span class="line">console.log(stu);</span><br></pre></td></tr></table></figure>
+<p>分析一下：</p>
+<ul>
+<li>用push入栈，入栈存放的是余数，这里存放数据的方式是链栈。</li>
+<li>定义一个int类型的数来接受pop出栈的数，并cin</li>
+<li>入栈循环，结束条件：传入的数不为0，即余数整数位不为0；</li>
+<li>出栈循环，结束条件：栈为空，定义了一个函数来判断栈是否为空</li>
+</ul>
+<h2 id="第二个实验"><a href="#第二个实验" class="headerlink" title="第二个实验"></a>第二个实验</h2><p>第二个是链表求最值，还要输出节点的数据，这个感觉不太像栈的内容，这里要求用递归来实现节点输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">/***依次输出链表中的各个结点***/</span><br><span class="line">/*添加求最大值*/</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define OK 1</span><br><span class="line">#define ERROR 0</span><br><span class="line">#define OVERFLOW -2</span><br><span class="line">typedef int Status;</span><br><span class="line">typedef int ElemType;</span><br><span class="line">typedef struct LNode &#123;</span><br><span class="line">ElemType data; //结点的数据域</span><br><span class="line">LNode *next; //结点的指针域</span><br><span class="line">&#125; LNode, *LinkList;//头指针</span><br><span class="line"></span><br><span class="line">//后插法创建链表算法</span><br><span class="line">void CreateList_L(LinkList &amp;L, int n) &#123;</span><br><span class="line">L = new LNode;</span><br><span class="line">L-&gt;next = NULL;</span><br><span class="line">LNode *p, *r;</span><br><span class="line">r = L;</span><br><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">p = new LNode;</span><br><span class="line">cin &gt;&gt; p-&gt;data;</span><br><span class="line">p-&gt;next = NULL;</span><br><span class="line">r-&gt;next = p;</span><br><span class="line">r = p;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//算法3.9　遍历输出链表中各个结点的递归算法</span><br><span class="line">void TraverseList(LinkList p) &#123;</span><br><span class="line">if (p == NULL)</span><br><span class="line">return; //递归终止</span><br><span class="line">else &#123;</span><br><span class="line">cout &lt;&lt; p-&gt;data &lt;&lt; endl; //输出当前结点的数据域</span><br><span class="line">TraverseList(p-&gt;next); //p指向后继指点继续递归</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int MaxList_L(LinkList L)&#123;</span><br><span class="line">LNode *p;</span><br><span class="line">int max;</span><br><span class="line">p=L-&gt;next;</span><br><span class="line">max=p-&gt;data;</span><br><span class="line">p=p-&gt;next;</span><br><span class="line">while(p)&#123;</span><br><span class="line">if(p-&gt;data&gt;max)&#123;</span><br><span class="line">max=p-&gt;data;</span><br><span class="line">&#125;</span><br><span class="line">//	cout&lt;&lt;max&lt;&lt;&quot;\n&quot;;</span><br><span class="line">p=p-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line">//cout&lt;&lt;max;</span><br><span class="line">return max;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">int n;</span><br><span class="line">LinkList L;</span><br><span class="line">//InitList(L);</span><br><span class="line">cout &lt;&lt; &quot;请输入元素个数：&quot; &lt;&lt; endl;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line">cout &lt;&lt; &quot;请输入链表元素(以空格隔开，按回车结束)：&quot; &lt;&lt; endl;</span><br><span class="line">CreateList_L(L, n); //后插法创建链表算法</span><br><span class="line">cout &lt;&lt; &quot;链表中的元素依次为&quot; &lt;&lt; endl;</span><br><span class="line">TraverseList(L-&gt;next);</span><br><span class="line">/*求最大值*/</span><br><span class="line">cout&lt;&lt;&quot;the max number is:\n&quot;;</span><br><span class="line">cout&lt;&lt;MaxList_L(L);</span><br><span class="line">cout &lt;&lt; endl;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="注册事件的兼容性处理"><a href="#注册事件的兼容性处理" class="headerlink" title="注册事件的兼容性处理"></a>注册事件的兼容性处理</h2><ol>
-<li>ele.on事件类型 = function(){}</li>
-<li>addEventListener(事件类型,事件处理函数,useCapture) 第三个参数默认是false，冒泡阶段执行</li>
-<li>attachEvent(事件类型，事件处理函数)<br>封装成函数，问题是每次都会判断</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// function registeEvent(target, type, handler)&#123;</span><br><span class="line">// if(target.addEventListener)&#123;</span><br><span class="line">// target.addEventListener(type,handler)</span><br><span class="line">// &#125;else if(target.attachEvent)&#123;</span><br><span class="line">// target.attachEvent(&quot;on&quot;+type,handler)</span><br><span class="line">// &#125;else&#123;</span><br><span class="line">// target[&quot;on&quot;+type] = handler;</span><br><span class="line">// &#125;</span><br><span class="line">// &#125;</span><br></pre></td></tr></table></figure>
+<p>后插法创建了链表<br>开始遇到了一些问题：当输入两位数时，输出全是一位数，求最值也始终求不对，上课时有点疑惑，逻辑代码明明是正确的<br>下课来到自己电脑面前，深吸一口气一边说话一边看着代码的首部，我去，<code>typedef char ElemType;</code>,怪不得，数的全是字符，能对才怪，老师这是故意的吧<br>幸好我发现了，解决了，真开心</p>
+<p>递归调用！！！，求十进制转八进制</p>
+<ul>
+<li>一：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int func(int num)</span><br><span class="line">&#123;</span><br><span class="line">if(num&lt;=8)</span><br><span class="line">return num;</span><br><span class="line">return num%8+10*func(num/8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>1.在注册事件的时候，判断浏览器的注册事件的方式，然后直接使用该方式进行注册事件<br>复用性太差<br>2.将注册事件的代码封装到一个函数中<br>//每次调用该函数，都会进行浏览器能力检测<br>3.在函数中返回函数，让外部函数只执行一次，判断也就只会执行一次<br>使用函数内创建的函数返回给外界，就可以重复使用该函数，进行事件的注册</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">function createEventRegister()&#123;</span><br><span class="line">if(window.addEventListener)&#123;</span><br><span class="line">return function(target, type, handler)&#123;</span><br><span class="line">// this ---&gt; window</span><br><span class="line">target.addEventListener(type,handler)</span><br><span class="line">&#125;</span><br><span class="line">&#125;else if(window.attachEvent)&#123;</span><br><span class="line">return function(target, type, handler) &#123;</span><br><span class="line">target.attachEvent(&quot;on&quot; + type, function()&#123;</span><br><span class="line">handler.call(target, window.event);</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">return function(target, type, handler) &#123;</span><br><span class="line">target[&quot;on&quot; + type] = handler;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var registeEvent = createEventRegister();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">window.onload =function () &#123;</span><br><span class="line">var div = document.getElementById(&quot;div1&quot;);</span><br><span class="line">registeEvent(div,&quot;click&quot;,function(e)&#123;</span><br><span class="line">console.log(e);</span><br><span class="line">console.log(this);</span><br><span class="line">//this----&gt;该事件的触发对象</span><br><span class="line">alert(&quot;太阳天空照，花儿对我笑，小鸟说：完了&quot;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用更好的方式，避免了多次的判断<br>这里存在问题就是</p>
-<p>我们使用统一的方式，进行事件注册</p>
-<p>1、注册的事件的处理函数中的，this指向不一致<br>使用addEventListener的方式注册的点击事件的回调函数中的this 指向target<br>但是使用attachEvent的方式注册点击事件的回调函数中的this 指向window</p>
-<p>2、3种注册事件的方式中，回调函数内获取事件对象的方式也是不一致的<br>要让他们统一，<br>在第二种的事件注册方式（attachEvent）中，手动给handler传递window.event</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">div.addEventListener(&quot;click&quot;,function(e)&#123;</span><br><span class="line">// this</span><br><span class="line">// e.screenX;</span><br><span class="line">// &#125;)</span><br><span class="line">//</span><br><span class="line">// div.attachEvent(&quot;onclick&quot;.function()&#123;</span><br><span class="line">//// this---&gt;window</span><br><span class="line">// window.event.screenX</span><br><span class="line">// &#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="注册事件兼容性分析"><a href="#注册事件兼容性分析" class="headerlink" title="注册事件兼容性分析"></a>注册事件兼容性分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var div = document.getElementById(&quot;dvd1&quot;);</span><br><span class="line"></span><br><span class="line">function huidiao(e)&#123;</span><br><span class="line">console.log(e+&quot;就是当前的事件对象&quot;)</span><br><span class="line">console.log( this+ &quot;就是当前你点击的对象&quot;);</span><br><span class="line">alert(&quot;我是div的点击事件，所有浏览器中，我的功能都是弹出来这句话！&quot;);</span><br><span class="line">&#125;</span><br><span class="line">//通用的</span><br><span class="line">// div.onclick = huidiao;</span><br><span class="line"></span><br><span class="line">//ie9以上才支持</span><br><span class="line">// div.addEventListener(&quot;click&quot;,huidiao)</span><br><span class="line"></span><br><span class="line">//ie9（不包括9）以下支持的</span><br><span class="line">// div.attachEvent(&quot;onclick&quot;,function()&#123;</span><br><span class="line">// huidiao.call(div, window.event);</span><br><span class="line">// &#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void change (int n)</span><br><span class="line">&#123;</span><br><span class="line">int i=n%8;</span><br><span class="line">if(i)</span><br><span class="line">&#123;</span><br><span class="line">change(n/8);</span><br><span class="line">printf(&quot;%d&quot;,i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -244,11 +246,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">栈</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
         		</li>
       		
 		</ul>
@@ -304,7 +310,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/13/apply，注册事件/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/14/栈，递归,链表/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +324,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/13/canvas基本/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          canvas基本
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/13/闭包练习，缓存，沙箱，函数模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">闭包练习，缓存，沙箱，函数模式</div>
+    <a href="/2019/10/14/mongoose/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mongoose</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -356,7 +353,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#apply补充"><span class="toc-number">1.</span> <span class="toc-text">apply补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册事件的兼容性处理"><span class="toc-number">2.</span> <span class="toc-text">注册事件的兼容性处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册事件兼容性分析"><span class="toc-number">3.</span> <span class="toc-text">注册事件兼容性分析</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#首先是用栈实现进制转换"><span class="toc-number">1.</span> <span class="toc-text">首先是用栈实现进制转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个实验"><span class="toc-number">2.</span> <span class="toc-text">第二个实验</span></a></li></ol>
                     </div>
                 </span>
             </div>
