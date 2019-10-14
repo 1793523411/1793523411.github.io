@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 跌倒的小黄瓜</title>
+  <title>mongodb练习 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="1.进入my_test数据库use my_test">
+<meta name="keywords" content="数据库,MongoDB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/10/07/hello-world/index.html">
+<meta property="og:title" content="mongodb练习">
+<meta property="og:url" content="http://yoursite.com/2019/10/14/mongodb练习/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1.进入my_test数据库use my_test">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-09T11:12:08.138Z">
+<meta property="og:updated_time" content="2019-10-14T07:06:09.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="mongodb练习">
+<meta name="twitter:description" content="1.进入my_test数据库use my_test">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -158,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mongodb练习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      mongodb练习
     </h1>
   
 
         
-        <a href="/2019/10/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-07T02:32:02.310Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+        <a href="/2019/10/14/mongodb练习/" class="archive-article-date">
+  	<time datetime="2019-10-14T06:55:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
 </a>
         
         
@@ -183,19 +184,70 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p><strong>1.进入my_test数据库</strong><br><code>use my_test</code></p>
+<a id="more"></a>
+<p><strong>2.向数据库的user集合中插入一个文档</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.users.insert(&#123;</span><br><span class="line">    username:&quot;sunwukong&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><br> <a id="more"></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>3.查询user集合中的文档</strong><br><code>db.users.find();</code></p>
+<p><strong>4.向数据库的user集合中插入一个文档</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.users.insert(&#123;</span><br><span class="line">    username:&quot;zhubajie&quot;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><strong>5.查询数据库user集合中的文档</strong><br><code>db.users.find();</code></p>
+<p><strong>6.统计数据库user集合中的文档数量</strong><br><code>db.users.find().count();</code></p>
+<p><strong>7.查询数据库user集合中username为sunwukong的文档</strong><br><code>db.users.find({username:&quot;sunwukong&quot;});</code></p>
+<p><strong>8.向数据库user集合中的username为sunwukong的文档，添加一个address属性，属性值为huaguoshan</strong><br><code>db.users.update({username:&quot;sunwukong&quot;},{$set:{address:&quot;huaguoshan&quot;}});</code></p>
+<p><strong>9.使用{username:”tangseng”} 替换 username 为 zhubajie的文档</strong><br><code>db.users.replaceOne({username:&quot;zhubajie&quot;},{username:&quot;tangseng&quot;});</code> </p>
+<p><strong>10.删除username为sunwukong的文档的address属性</strong><br><code>db.users.update({username:&quot;sunwukong&quot;},{$unset:{address:1}});</code></p>
+<p><strong>11.向username为sunwukong的文档中，添加一个hobby:</strong><br><code>{cities:[&quot;beijing&quot;,&quot;shanghai&quot;,&quot;shenzhen&quot;] , movies:[&quot;sanguo&quot;,&quot;hero&quot;]}</code><br><strong>MongoDB的文档的属性值也可以是一个文档，当一个文档的属性值是一个文档时，我们称这个文档叫做 内嵌文档</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.users.update(&#123;username:&quot;sunwukong&quot;&#125;,&#123;$set:&#123;hobby:&#123;cities:[&quot;beijing&quot;,&quot;shanghai&quot;,&quot;shenzhen&quot;] , movies:[&quot;sanguo&quot;,&quot;hero&quot;]&#125;&#125;&#125;);</span><br><span class="line">db.users.find();</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong>12.向username为tangseng的文档中，添加一个hobby:</strong><br><code>{movies:[&quot;A Chinese Odyssey&quot;,&quot;King of comedy&quot;]}</code><br><code>db.users.update({username:&quot;tangseng&quot;},{$set:{hobby:{movies:[&quot;A Chinese Odyssey&quot;,&quot;King of comedy&quot;]}}})</code></p>
+<p><strong>13.查询喜欢电影hero的文档</strong><br>MongoDB支持直接通过内嵌文档的属性进行查询，如果要查询内嵌文档则可以通过.的形式来匹配<br>如果要通过内嵌文档来对文档进行查询，此时属性名必须使用引号<br><code>db.users.find({&#39;hobby.movies&#39;:&quot;hero&quot;});</code></p>
+<p><strong>14.向tangseng中添加一个新的电影Interstellar</strong><br>$push 用于向数组中添加一个新的元素<br>$addToSet 向数组中添加一个新元素 ， 如果数组中已经存在了该元素，则不会添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.users.update(&#123;username:&quot;tangseng&quot;&#125;,&#123;$push:&#123;&quot;hobby.movies&quot;:&quot;Interstellar&quot;&#125;&#125;);</span><br><span class="line">db.users.update(&#123;username:&quot;tangseng&quot;&#125;,&#123;$addToSet:&#123;&quot;hobby.movies&quot;:&quot;Interstellar&quot;&#125;&#125;);</span><br><span class="line">db.users.find();</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><strong>15.删除喜欢beijing的用户</strong><br><code>db.users.remove({&quot;hobby.cities&quot;:&quot;beijing&quot;});</code></p>
+<p><strong>16.删除user集合</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db.users.remove(&#123;&#125;);</span><br><span class="line">db.users.drop();</span><br><span class="line"></span><br><span class="line">show dbs;</span><br></pre></td></tr></table></figure>
+
+<p><strong>17.向numbers中插入20000条数据 7.2s</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for(var i=1 ; i&lt;=20000 ; i++)&#123;</span><br><span class="line">    db.numbers.insert(&#123;num:i&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">db.numbers.find()</span><br><span class="line"></span><br><span class="line">db.numbers.remove(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">db.numbers.drop();</span><br></pre></td></tr></table></figure>
+
+<p><strong>0.4s</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [];</span><br><span class="line"></span><br><span class="line">for(var i=1 ; i&lt;=20000 ; i++)&#123;</span><br><span class="line">    arr.push(&#123;num:i&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">db.numbers.insert(arr);</span><br></pre></td></tr></table></figure>
+
+<p><strong>18.查询numbers中num为500的文档</strong><br><code>db.numbers.find({num:500})</code></p>
+<p><strong>19.查询numbers中num大于5000的文档</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.numbers.find(&#123;num:&#123;$gt:500&#125;&#125;);</span><br><span class="line">db.numbers.find(&#123;num:&#123;$eq:500&#125;&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>20.查询numbers中num小于30的文档</strong><br><code>db.numbers.find({num:{$lt:30}});</code></p>
+<p><strong>21.查询numbers中num大于40小于50的文档</strong><br><code>db.numbers.find({num:{$gt:40 , $lt:50}});</code></p>
+<p><strong>22.查询numbers中num大于19996的文档</strong><br><code>db.numbers.find({num:{$gt:19996}});</code></p>
+<p><strong>23.查看numbers集合中的前10条数据</strong><br><code>db.numbers.find({num:{$lte:10}});</code></p>
+<p><strong>limit()设置显示数据的上限</strong><br><code>db.numbers.find().limit(10);</code><br><strong>在开发时，我们绝对不会执行不带条件的查询</strong><br><code>db.numbers.find();</code></p>
+<p><strong>24.查看numbers集合中的第11条到20条数据</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    分页 每页显示10条</span><br><span class="line">        1-10     0</span><br><span class="line">        11-20    10</span><br><span class="line">        21-30    20</span><br><span class="line">        。。。</span><br><span class="line">        </span><br><span class="line">        skip((页码-1) * 每页显示的条数).limit(每页显示的条数);</span><br><span class="line">        </span><br><span class="line">    skip()用于跳过指定数量的数据    </span><br><span class="line">    </span><br><span class="line">    MongoDB会自动调整skip和limit的位置</span><br><span class="line">*/</span><br><span class="line">db.numbers.find().skip(10).limit(10);</span><br></pre></td></tr></table></figure>
+
+<p><strong>25.查看numbers集合中的第21条到30条数据</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.numbers.find().skip(20).limit(10);</span><br><span class="line"></span><br><span class="line">db.numbers.find().limit(10).skip(10);</span><br></pre></td></tr></table></figure>
+
+<p><strong>26.将dept和emp集合导入到数据库中</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.dept.find()</span><br><span class="line">db.emp.find()</span><br></pre></td></tr></table></figure>
+
+<p><strong>27.查询工资小于2000的员工</strong><br><code>db.emp.find({sal:{$lt:2000}});</code></p>
+<p><strong>28.查询工资在1000-2000之间的员工</strong><br><code>db.emp.find({sal:{$lt:2000 , $gt:1000}});</code></p>
+<p><strong>29.查询工资小于1000或大于2500的员工</strong><br><code>db.emp.find({$or:[{sal:{$lt:1000}} , {sal:{$gt:2500}}]});</code></p>
+<p><strong>30.查询财务部的所有员工</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(depno)</span><br><span class="line">var depno = db.dept.findOne(&#123;dname:&quot;财务部&quot;&#125;).deptno;</span><br><span class="line">db.emp.find(&#123;depno:depno&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>31.查询销售部的所有员工</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var depno = db.dept.findOne(&#123;dname:&quot;销售部&quot;&#125;).deptno;</span><br><span class="line">db.emp.find(&#123;depno:depno&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>32.查询所有mgr为7698的所有员工</strong><br><code>db.emp.find({mgr:7698})</code></p>
+<p><strong>33.为所有薪资低于1000的员工增加工资400元</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.emp.updateMany(&#123;sal:&#123;$lte:1000&#125;&#125; , &#123;$inc:&#123;sal:400&#125;&#125;);</span><br><span class="line">db.emp.find()</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -228,6 +280,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -278,7 +345,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/07/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/14/mongodb练习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,15 +359,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/09/HTML及新增DOM/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/14/mongoose/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          HTML及新增DOM
+          mongoose
         
       </div>
     </a>
   
+  
+    <a href="/2019/10/14/文档，sort与投影/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文档，sort与投影</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -325,7 +397,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
