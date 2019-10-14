@@ -178,31 +178,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天实验课又写了几串代码</p>
-<h2 id="首先是用栈实现进制转换"><a href="#首先是用栈实现进制转换" class="headerlink" title="首先是用栈实现进制转换"></a>首先是用栈实现进制转换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">/***链栈实现数制的转换***/</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define OK 1</span><br><span class="line">#define ERROR 0</span><br><span class="line">#define OVERFLOW -2</span><br><span class="line">typedef int Status;</span><br><span class="line">typedef struct SNode&#123;</span><br><span class="line">int data;</span><br><span class="line">struct SNode *next;</span><br><span class="line">&#125;SNode,*LinkStack;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Status InitStack(LinkStack &amp;S)</span><br><span class="line">&#123;</span><br><span class="line">S = NULL;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line">bool StackEmpty(LinkStack S)</span><br><span class="line">&#123;</span><br><span class="line">if(!S)</span><br><span class="line">return true;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">Status Push(LinkStack &amp;S,int e)</span><br><span class="line">&#123;</span><br><span class="line">SNode *p = new SNode;</span><br><span class="line">if(!p)</span><br><span class="line">&#123;</span><br><span class="line">return OVERFLOW;</span><br><span class="line">&#125;</span><br><span class="line">p-&gt;data = e;</span><br><span class="line">p-&gt;next = S;</span><br><span class="line">S = p;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line">Status Pop(LinkStack &amp;S,int &amp;e)</span><br><span class="line">&#123;</span><br><span class="line">SNode *p;</span><br><span class="line">if(!S)</span><br><span class="line">return ERROR;</span><br><span class="line">e = S-&gt;data;</span><br><span class="line">p = S;</span><br><span class="line">S = S-&gt;next;</span><br><span class="line">delete p;</span><br><span class="line">return OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//算法3.8　数制的转换(链栈实现)</span><br><span class="line">void conversion (int N) &#123;</span><br><span class="line">//对于输入的任意一个非负十进制数，打印输出与其等值的八进制数</span><br><span class="line">//请填写完整</span><br><span class="line">SNode *S;</span><br><span class="line">int e;</span><br><span class="line">InitStack(S);</span><br><span class="line">while(N)&#123;</span><br><span class="line">Push(S,N%8);</span><br><span class="line">N=N/8;</span><br><span class="line">&#125;</span><br><span class="line">while(!StackEmpty(S))&#123;</span><br><span class="line">Pop(S,e);</span><br><span class="line">cout&lt;&lt;e;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int N;</span><br><span class="line">cin&gt;&gt;N;</span><br><span class="line">conversion(N);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>分析一下：</p>
-<ul>
-<li>用push入栈，入栈存放的是余数，这里存放数据的方式是链栈。</li>
-<li>定义一个int类型的数来接受pop出栈的数，并cin</li>
-<li>入栈循环，结束条件：传入的数不为0，即余数整数位不为0；</li>
-<li>出栈循环，结束条件：栈为空，定义了一个函数来判断栈是否为空</li>
-</ul>
-<h2 id="第二个实验"><a href="#第二个实验" class="headerlink" title="第二个实验"></a>第二个实验</h2><p>第二个是链表求最值，还要输出节点的数据，这个感觉不太像栈的内容，这里要求用递归来实现节点输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">/***依次输出链表中的各个结点***/</span><br><span class="line">/*添加求最大值*/</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#define OK 1</span><br><span class="line">#define ERROR 0</span><br><span class="line">#define OVERFLOW -2</span><br><span class="line">typedef int Status;</span><br><span class="line">typedef int ElemType;</span><br><span class="line">typedef struct LNode &#123;</span><br><span class="line">ElemType data; //结点的数据域</span><br><span class="line">LNode *next; //结点的指针域</span><br><span class="line">&#125; LNode, *LinkList;//头指针</span><br><span class="line"></span><br><span class="line">//后插法创建链表算法</span><br><span class="line">void CreateList_L(LinkList &amp;L, int n) &#123;</span><br><span class="line">L = new LNode;</span><br><span class="line">L-&gt;next = NULL;</span><br><span class="line">LNode *p, *r;</span><br><span class="line">r = L;</span><br><span class="line">for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">p = new LNode;</span><br><span class="line">cin &gt;&gt; p-&gt;data;</span><br><span class="line">p-&gt;next = NULL;</span><br><span class="line">r-&gt;next = p;</span><br><span class="line">r = p;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//算法3.9　遍历输出链表中各个结点的递归算法</span><br><span class="line">void TraverseList(LinkList p) &#123;</span><br><span class="line">if (p == NULL)</span><br><span class="line">return; //递归终止</span><br><span class="line">else &#123;</span><br><span class="line">cout &lt;&lt; p-&gt;data &lt;&lt; endl; //输出当前结点的数据域</span><br><span class="line">TraverseList(p-&gt;next); //p指向后继指点继续递归</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int MaxList_L(LinkList L)&#123;</span><br><span class="line">LNode *p;</span><br><span class="line">int max;</span><br><span class="line">p=L-&gt;next;</span><br><span class="line">max=p-&gt;data;</span><br><span class="line">p=p-&gt;next;</span><br><span class="line">while(p)&#123;</span><br><span class="line">if(p-&gt;data&gt;max)&#123;</span><br><span class="line">max=p-&gt;data;</span><br><span class="line">&#125;</span><br><span class="line">//	cout&lt;&lt;max&lt;&lt;&quot;\n&quot;;</span><br><span class="line">p=p-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line">//cout&lt;&lt;max;</span><br><span class="line">return max;</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line">int n;</span><br><span class="line">LinkList L;</span><br><span class="line">//InitList(L);</span><br><span class="line">cout &lt;&lt; &quot;请输入元素个数：&quot; &lt;&lt; endl;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line">cout &lt;&lt; &quot;请输入链表元素(以空格隔开，按回车结束)：&quot; &lt;&lt; endl;</span><br><span class="line">CreateList_L(L, n); //后插法创建链表算法</span><br><span class="line">cout &lt;&lt; &quot;链表中的元素依次为&quot; &lt;&lt; endl;</span><br><span class="line">TraverseList(L-&gt;next);</span><br><span class="line">/*求最大值*/</span><br><span class="line">cout&lt;&lt;&quot;the max number is:\n&quot;;</span><br><span class="line">cout&lt;&lt;MaxList_L(L);</span><br><span class="line">cout &lt;&lt; endl;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>后插法创建了链表<br>开始遇到了一些问题：当输入两位数时，输出全是一位数，求最值也始终求不对，上课时有点疑惑，逻辑代码明明是正确的<br>下课来到自己电脑面前，深吸一口气一边说话一边看着代码的首部，我去，<code>typedef char ElemType;</code>,怪不得，数的全是字符，能对才怪，老师这是故意的吧<br>幸好我发现了，解决了，真开心</p>
-<p>递归调用！！！，求十进制转八进制</p>
-<ul>
-<li>一：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int func(int num)</span><br><span class="line">&#123;</span><br><span class="line">if(num&lt;=8)</span><br><span class="line">return num;</span><br><span class="line">return num%8+10*func(num/8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>二：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void change (int n)</span><br><span class="line">&#123;</span><br><span class="line">int i=n%8;</span><br><span class="line">if(i)</span><br><span class="line">&#123;</span><br><span class="line">change(n/8);</span><br><span class="line">printf(&quot;%d&quot;,i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="首先是用栈实现进制转换"><a href="#首先是用栈实现进制转换" class="headerlink" title="首先是用栈实现进制转换"></a>首先是用栈实现进制转换</h2>
+        
       
 
       
@@ -1091,15 +1068,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">jS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1115,11 +1092,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1139,15 +1116,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">线性表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1160,10 +1141,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线性表</a>
               </li>
             
             <div class="clearfix"></div>
