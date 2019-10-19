@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: web | 跌倒的小黄瓜</title>
+  <title>串的结构与匹配算法 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="跌倒的小黄瓜">
-<meta property="og:url" content="http://yoursite.com/tags/web/index.html">
+  <meta name="description" content="串的存储结构顺序存储 定长顺序存储串长也为结构体的一部分">
+<meta name="keywords" content="数据结构,串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="串的结构与匹配算法">
+<meta property="og:url" content="http://yoursite.com/2019/10/19/串基本操作/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
+<meta property="og:description" content="串的存储结构顺序存储 定长顺序存储串长也为结构体的一部分">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pz56qt9o7.bkt.clouddn.com/9.gif">
+<meta property="og:image" content="http://pz56qt9o7.bkt.clouddn.com/10.gif">
+<meta property="og:updated_time" content="2019-10-19T13:25:33.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跌倒的小黄瓜">
+<meta name="twitter:title" content="串的结构与匹配算法">
+<meta name="twitter:description" content="串的存储结构顺序存储 定长顺序存储串长也为结构体的一部分">
+<meta name="twitter:image" content="http://pz56qt9o7.bkt.clouddn.com/9.gif">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -154,64 +162,232 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-串基本操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/web/" class="archive-article-date">
-  	<time datetime="2019-10-13T08:52:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/web/">web</a>
+    <h1 class="article-title" itemprop="name">
+      串的结构与匹配算法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/19/串基本操作/" class="archive-article-date">
+  	<time datetime="2019-10-19T13:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
+</a>
+        
+        
+        <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="串的存储结构"><a href="#串的存储结构" class="headerlink" title="串的存储结构"></a>串的存储结构</h2><p><strong>顺序存储</strong></p>
+<h3 id="定长顺序存储"><a href="#定长顺序存储" class="headerlink" title="定长顺序存储"></a>定长顺序存储</h3><p>串长也为结构体的一部分</p>
+<a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN<span class="comment">//串的最大长度</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[MAXLEN+<span class="number">1</span>];<span class="comment">//存储串的一维数组</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//当前长度</span></span><br><span class="line">&#125;SString;</span><br></pre></td></tr></table></figure>
+
+<h3 id="堆式顺序存储结构"><a href="#堆式顺序存储结构" class="headerlink" title="堆式顺序存储结构"></a>堆式顺序存储结构</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> *ch;<span class="comment">//若是非空串，按串的长度分配存储区，否则串为空</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//当前长度</span></span><br><span class="line">&#125;HString;</span><br></pre></td></tr></table></figure>
+
+<p><strong>链式存储</strong></p>
+<h3 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h3><p>特点：</p>
+<ul>
+<li>存储密度小</li>
+<li>方便插入删除<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CHUNKSIZE 80</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Chunk</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[CHUNKSIZE];</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Chunk</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;Chunk;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Chunk *head,*tail;<span class="comment">//出头指针外，可附设一个尾指针，指示链表的最后一个节点，并给出链表长度。如此定义的串存储结构称为块链结构</span></span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="串的模式匹配算法"><a href="#串的模式匹配算法" class="headerlink" title="串的模式匹配算法"></a>串的模式匹配算法</h2><h3 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Index_BF</span><span class="params">(SString S,SString T,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">    i=pos; j=<span class="number">1</span>;<span class="comment">//pos为指定从字符串的哪一个位置开始查找</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;=S.length &amp;&amp; j&lt;=T.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(S.ch[i]==T.ch[i])&#123;</span><br><span class="line">            ++i;++j;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            i=i-j+<span class="number">2</span>;j=<span class="number">1</span>;<span class="comment">//这里j是从一开始的，决定了i=i-j+2</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">if</span>(j&gt;T.length) <span class="keyword">return</span> i-T.length;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析：设子串m,主串n</p>
+<ul>
+<li>最好情况下，每趟不匹配的字符都发生在第一个<ul>
+<li>前i-1趟中对子串:i-1 + m 次</li>
+<li>对主串：由1到n-m+1<br>平均此次数为:(m+n)/2;</li>
+</ul>
+</li>
+<li>最坏情况下，每趟不匹配的字符都发生在最后一个<ul>
+<li>前i-1趟：（i-1）*m次,第i趟：m次</li>
+<li>对主串：由1到n-m+1<br>平均次数为：m*(n-m+2)/2;</li>
+</ul>
+</li>
+<li><em>由于每次不匹配时都要回溯，造成算法时间复杂度较高*</em><h3 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Index_KMP</span><span class="params">(SString S,SString T,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">    i=pos;j=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=S.length &amp;&amp; j&lt;=T.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(j==<span class="number">0</span>||S.ch[i]==T.ch[j])&#123;</span><br><span class="line">            ++i;++j;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            j=next[j];<span class="comment">//模式串向右移动</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(j&gt;T.length ) <span class="keyword">return</span> i-T.Length;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="计算next函数值"><a href="#计算next函数值" class="headerlink" title="计算next函数值"></a>计算next函数值</h3><p>next函数的值取决于模式串本身，而和相匹配的主串无关</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_next</span><span class="params">(SString T,<span class="keyword">int</span> next[])</span></span>&#123;</span><br><span class="line">    i=<span class="number">1</span>;next[<span class="number">1</span>]=<span class="number">0</span>;j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;T.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(j==T.ch[i]==T.ch[j])&#123;</span><br><span class="line">            ++i;++j;next[i]=j;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            j=next[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pz56qt9o7.bkt.clouddn.com/9.gif" alt>  </p>
+<h3 id="计算next函数修正值"><a href="#计算next函数修正值" class="headerlink" title="计算next函数修正值"></a>计算next函数修正值</h3><p>你不上面next的某些缺陷具体看图</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_nextval</span><span class="params">(SString T,<span class="keyword">int</span> nextval[])</span></span>&#123;</span><br><span class="line">    i=<span class="number">1</span>;nextval[<span class="number">1</span>]=<span class="number">0</span>;j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;T.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(j==<span class="number">0</span>||T.ch[i]==T.ch[j])&#123;</span><br><span class="line">            ++i;++j;</span><br><span class="line">            <span class="keyword">if</span>(T.ch[i]!=T.ch[j]) nextval[i]=j;</span><br><span class="line">            <span class="keyword">else</span> nextval[i]=nextval[j];</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            j=nextval[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pz56qt9o7.bkt.clouddn.com/10.gif" alt>  </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+            <span id="busuanzi_container_page_pv">
+            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">串</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/19/串基本操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/19/舞伴问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">舞伴问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#串的存储结构"><span class="toc-number">1.</span> <span class="toc-text">串的存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定长顺序存储"><span class="toc-number">1.1.</span> <span class="toc-text">定长顺序存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#堆式顺序存储结构"><span class="toc-number">1.2.</span> <span class="toc-text">堆式顺序存储结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链式存储结构"><span class="toc-number">1.3.</span> <span class="toc-text">链式存储结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#串的模式匹配算法"><span class="toc-number">2.</span> <span class="toc-text">串的模式匹配算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BF算法"><span class="toc-number">2.1.</span> <span class="toc-text">BF算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#KMP算法"><span class="toc-number">2.2.</span> <span class="toc-text">KMP算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算next函数值"><span class="toc-number">2.3.</span> <span class="toc-text">计算next函数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算next函数修正值"><span class="toc-number">2.4.</span> <span class="toc-text">计算next函数修正值</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -237,9 +413,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
