@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>node简介，模块系统 | 跌倒的小黄瓜</title>
+  <title>Tag: Python | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
-<meta name="keywords" content="前端,node">
-<meta property="og:type" content="article">
-<meta property="og:title" content="node简介，模块系统">
-<meta property="og:url" content="http://yoursite.com/2019/10/15/nodejs-1/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="跌倒的小黄瓜">
+<meta property="og:url" content="http://yoursite.com/tags/Python/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-15T09:58:38.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node简介，模块系统">
-<meta name="twitter:description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
+<meta name="twitter:title" content="跌倒的小黄瓜">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,341 +154,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nodejs-1" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      node简介，模块系统
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/26/Python快速入门/" class="archive-article-date">
+  	<time datetime="2019-10-26T15:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/26/Python快速入门/">Python快速入门</a>
     </h1>
   
 
-        
-        <a href="/2019/10/15/nodejs-1/" class="archive-article-date">
-  	<time datetime="2019-10-15T12:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
-</a>
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">709字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
-      </span>
-    </span>
-</div>
+        <div class="article-info info-on-right">
           
-        <!-- 添加完成 -->
-        
-        
-        
-        <span class="archive-article-date">
-            阅读量 <span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Node-js-1"><a href="#Node-js-1" class="headerlink" title="Node.js-1"></a>Node.js-1</h1><h2 id="node简介"><a href="#node简介" class="headerlink" title="node简介"></a>node简介</h2><ul>
-<li>Node.js 是什么<ul>
-<li>JavaScript 运行时<a id="more"></a></li>
-<li>既不是语言，也不是框架，它是一个平台</li>
-</ul>
-</li>
-<li>Node.js 中的 JavaScript<ul>
-<li>没有 BOM、DOM</li>
-<li>EcmaScript 基本的 JavaScript 语言部分</li>
-<li>在 Node 中为 JavaScript 提供了一些服务器级别的 API<ul>
-<li>文件操作的能力</li>
-<li>http 服务的能力</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
-<li><p>Node 中的 JavaScript</p>
-<ul>
-<li>EcmaScript<ul>
-<li>变量</li>
-<li>方法</li>
-<li>数据类型</li>
-<li>内置对象</li>
-<li>Array</li>
-<li>Object</li>
-<li>Date</li>
-<li>Math</li>
-</ul>
-</li>
-<li>模块系统<ul>
-<li>在 Node 中没有全局作用域的概念</li>
-<li>在 Node 中，只能通过 require 方法来加载执行多个 JavaScript 脚本文件</li>
-<li>require 加载只能是执行其中的代码，文件与文件之间由于是模块作用域，所以不会有污染的问题<ul>
-<li>模块完全是封闭的</li>
-<li>外部无法访问内部</li>
-<li>内部也无法访问外部</li>
-</ul>
-</li>
-<li>模块作用域固然带来了一些好处，可以加载执行多个文件，可以完全避免变量命名冲突污染的问题</li>
-<li>但是某些情况下，模块与模块是需要进行通信的</li>
-<li>在每个模块中，都提供了一个对象：<code>exports</code></li>
-<li>该对象默认是一个空对象</li>
-<li>你要做的就是把需要被外部访问使用的成员手动的挂载到 <code>exports</code> 接口对象中</li>
-<li>然后谁来 <code>require</code> 这个模块，谁就可以得到模块内部的 <code>exports</code> 接口对象</li>
-<li>还有其它的一些规则，具体后面讲，以及如何在项目中去使用这种编程方式，会通过后面的案例来处理</li>
-</ul>
-</li>
-<li>核心模块<ul>
-<li>核心模块是由 Node 提供的一个个的具名的模块，它们都有自己特殊的名称标识，例如<ul>
-<li>fs 文件操作模块</li>
-<li>http 网络服务构建模块</li>
-<li>os 操作系统信息模块</li>
-<li>path 路径处理模块</li>
-<li>。。。。</li>
-</ul>
-</li>
-<li>所有核心模块在使用的时候都必须手动的先使用 <code>require</code> 方法来加载，然后才可以使用，例如：<ul>
-<li><code>var fs = require(&#39;fs&#39;)</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>http</p>
-<ul>
-<li>require</li>
-<li>端口号<ul>
-<li>ip 地址定位计算机</li>
-<li>端口号定位具体的应用程序</li>
-</ul>
-</li>
-<li>Content-Type<ul>
-<li>服务器最好把每次响应的数据是什么内容类型都告诉客户端，而且要正确的告诉</li>
-<li>不同的资源对应的 Content-Type 是不一样，具体参照：<a href="http://tool.oschina.net/commons" target="_blank" rel="noopener">http://tool.oschina.net/commons</a></li>
-<li>对于文本类型的数据，最好都加上编码，目的是为了防止中文解析乱码问题</li>
-</ul>
-</li>
-<li>通过网络发送文件<ul>
-<li>发送的并不是文件，本质上来讲发送是文件的内容</li>
-<li>当浏览器收到服务器响应内容之后，就会根据你的 Content-Type 进行对应的解析处理</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>模块系统</p>
-</li>
-<li><p>Node 中的其它的核心模块</p>
-</li>
-<li><p>做一个小管理系统：</p>
-<ul>
-<li>CRUD</li>
-</ul>
-</li>
-<li><p>Express Web 开发框架</p>
-<ul>
-<li><code>npm install express</code></li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-            <span id="busuanzi_container_page_pv">
-            本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-          </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/15/nodejs-1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/10/17/链表的递归操作/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          链表的递归
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/15/nodejs-4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">回调函数，数据库</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js-1"><span class="toc-number">1.</span> <span class="toc-text">Node.js-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#node简介"><span class="toc-number">1.1.</span> <span class="toc-text">node简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-number">1.2.</span> <span class="toc-text">知识点</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2019/10/15/nodejs-1/",
-  owner: '1793523411',
-  repo: '1793523411.github.io',
-  oauth: {
-    client_id: '44f1b54780168da1f3a3',
-    client_secret: 'a963bb49155c166f4ff233bf56cccd65fc2cde52',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -528,9 +242,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

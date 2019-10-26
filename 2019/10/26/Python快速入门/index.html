@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>node简介，模块系统 | 跌倒的小黄瓜</title>
+  <title>Python快速入门 | 跌倒的小黄瓜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
-<meta name="keywords" content="前端,node">
+  <meta name="description" content="Python入门真的很快速很快速很快速！！！… 第一部分one定义变量不用写数据类型，不用var，直接：">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="node简介，模块系统">
-<meta property="og:url" content="http://yoursite.com/2019/10/15/nodejs-1/index.html">
+<meta property="og:title" content="Python快速入门">
+<meta property="og:url" content="http://yoursite.com/2019/10/26/Python快速入门/index.html">
 <meta property="og:site_name" content="跌倒的小黄瓜">
-<meta property="og:description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
+<meta property="og:description" content="Python入门真的很快速很快速很快速！！！… 第一部分one定义变量不用写数据类型，不用var，直接：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-15T09:58:38.098Z">
+<meta property="og:updated_time" content="2019-10-26T15:32:02.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node简介，模块系统">
-<meta name="twitter:description" content="Node.js-1node简介 Node.js 是什么 JavaScript 运行时">
+<meta name="twitter:title" content="Python快速入门">
+<meta name="twitter:description" content="Python入门真的很快速很快速很快速！！！… 第一部分one定义变量不用写数据类型，不用var，直接：">
   
     <link rel="alternative" href="/atom.xml" title="跌倒的小黄瓜" type="application/atom+xml">
   
@@ -159,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nodejs-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python快速入门" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      node简介，模块系统
+      Python快速入门
     </h1>
   
 
         
-        <a href="/2019/10/15/nodejs-1/" class="archive-article-date">
-  	<time datetime="2019-10-15T12:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+        <a href="/2019/10/26/Python快速入门/" class="archive-article-date">
+  	<time datetime="2019-10-26T15:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
 </a>
         <!-- 开始添加字数统计-->
         
@@ -181,7 +181,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">709字</span>
+        <span class="post-count">365字</span>
       </span>
     </span>
 
@@ -190,7 +190,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -207,108 +207,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Node-js-1"><a href="#Node-js-1" class="headerlink" title="Node.js-1"></a>Node.js-1</h1><h2 id="node简介"><a href="#node简介" class="headerlink" title="node简介"></a>node简介</h2><ul>
-<li>Node.js 是什么<ul>
-<li>JavaScript 运行时<a id="more"></a></li>
-<li>既不是语言，也不是框架，它是一个平台</li>
-</ul>
-</li>
-<li>Node.js 中的 JavaScript<ul>
-<li>没有 BOM、DOM</li>
-<li>EcmaScript 基本的 JavaScript 语言部分</li>
-<li>在 Node 中为 JavaScript 提供了一些服务器级别的 API<ul>
-<li>文件操作的能力</li>
-<li>http 服务的能力</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
-<li><p>Node 中的 JavaScript</p>
-<ul>
-<li>EcmaScript<ul>
-<li>变量</li>
-<li>方法</li>
-<li>数据类型</li>
-<li>内置对象</li>
-<li>Array</li>
-<li>Object</li>
-<li>Date</li>
-<li>Math</li>
-</ul>
-</li>
-<li>模块系统<ul>
-<li>在 Node 中没有全局作用域的概念</li>
-<li>在 Node 中，只能通过 require 方法来加载执行多个 JavaScript 脚本文件</li>
-<li>require 加载只能是执行其中的代码，文件与文件之间由于是模块作用域，所以不会有污染的问题<ul>
-<li>模块完全是封闭的</li>
-<li>外部无法访问内部</li>
-<li>内部也无法访问外部</li>
-</ul>
-</li>
-<li>模块作用域固然带来了一些好处，可以加载执行多个文件，可以完全避免变量命名冲突污染的问题</li>
-<li>但是某些情况下，模块与模块是需要进行通信的</li>
-<li>在每个模块中，都提供了一个对象：<code>exports</code></li>
-<li>该对象默认是一个空对象</li>
-<li>你要做的就是把需要被外部访问使用的成员手动的挂载到 <code>exports</code> 接口对象中</li>
-<li>然后谁来 <code>require</code> 这个模块，谁就可以得到模块内部的 <code>exports</code> 接口对象</li>
-<li>还有其它的一些规则，具体后面讲，以及如何在项目中去使用这种编程方式，会通过后面的案例来处理</li>
-</ul>
-</li>
-<li>核心模块<ul>
-<li>核心模块是由 Node 提供的一个个的具名的模块，它们都有自己特殊的名称标识，例如<ul>
-<li>fs 文件操作模块</li>
-<li>http 网络服务构建模块</li>
-<li>os 操作系统信息模块</li>
-<li>path 路径处理模块</li>
-<li>。。。。</li>
-</ul>
-</li>
-<li>所有核心模块在使用的时候都必须手动的先使用 <code>require</code> 方法来加载，然后才可以使用，例如：<ul>
-<li><code>var fs = require(&#39;fs&#39;)</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>http</p>
-<ul>
-<li>require</li>
-<li>端口号<ul>
-<li>ip 地址定位计算机</li>
-<li>端口号定位具体的应用程序</li>
-</ul>
-</li>
-<li>Content-Type<ul>
-<li>服务器最好把每次响应的数据是什么内容类型都告诉客户端，而且要正确的告诉</li>
-<li>不同的资源对应的 Content-Type 是不一样，具体参照：<a href="http://tool.oschina.net/commons" target="_blank" rel="noopener">http://tool.oschina.net/commons</a></li>
-<li>对于文本类型的数据，最好都加上编码，目的是为了防止中文解析乱码问题</li>
-</ul>
-</li>
-<li>通过网络发送文件<ul>
-<li>发送的并不是文件，本质上来讲发送是文件的内容</li>
-<li>当浏览器收到服务器响应内容之后，就会根据你的 Content-Type 进行对应的解析处理</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>模块系统</p>
-</li>
-<li><p>Node 中的其它的核心模块</p>
-</li>
-<li><p>做一个小管理系统：</p>
-<ul>
-<li>CRUD</li>
-</ul>
-</li>
-<li><p>Express Web 开发框架</p>
-<ul>
-<li><code>npm install express</code></li>
-</ul>
-</li>
-</ul>
+        <p><strong>Python入门真的很快速很快速很快速！！！…</strong></p>
+<h2 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h2><h3 id="one"><a href="#one" class="headerlink" title="one"></a>one</h3><p>定义变量不用写数据类型，不用var，直接：</p>
+<a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=a+<span class="number">1</span></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># 这样输出</span></span><br></pre></td></tr></table></figure>
+
+<p>还不用写分号！</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>int 整数</p>
+<p>float 浮点数</p>
+<p>complex 复数</p>
+<p><code>str</code> 字符串</p>
+<p>查看数据类型：<code>print(type(i))</code></p>
+<p>类型转换：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=float(a)</span><br></pre></td></tr></table></figure>
+
+<p>格式化输出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">1.23</span></span><br><span class="line">print(<span class="string">"%.lf"</span>%(a))<span class="comment"># 1.2</span></span><br><span class="line">print(<span class="string">"%.3f"</span>%(a))<span class="comment"># 1.230</span></span><br></pre></td></tr></table></figure>
+
+<p>运算符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">10</span></span><br><span class="line">b=<span class="number">9</span></span><br><span class="line">print(b**a)<span class="string">""""9的十次方"""</span></span><br><span class="line">print(a//b)</span><br><span class="line"><span class="comment"># 向下取整</span></span><br></pre></td></tr></table></figure>
+
+<p>字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"hello word"</span></span><br><span class="line">print(a[<span class="number">0</span>])<span class="comment"># h</span></span><br><span class="line">print(a[<span class="number">-1</span>])<span class="comment"># d</span></span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])<span class="comment"># hel</span></span><br><span class="line">print(a[<span class="number">6</span>:<span class="number">11</span>])<span class="comment"># word</span></span><br><span class="line">b=<span class="string">"ygj"</span></span><br><span class="line">c=a[<span class="number">0</span>:<span class="number">5</span>]+<span class="string">" "</span>+b</span><br><span class="line">print(c)<span class="comment"># hello ygj</span></span><br></pre></td></tr></table></figure>
+
+<p>关于转义</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"\'\'"</span></span><br><span class="line">b=<span class="string">r"\\"</span><span class="comment"># r(R)刻意忽略转义</span></span><br><span class="line">print(a)<span class="comment"># ''</span></span><br><span class="line">print(b)<span class="comment"># \\</span></span><br></pre></td></tr></table></figure>
+
+<p>字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"he"</span></span><br><span class="line">b=<span class="string">"llo"</span></span><br><span class="line">c=a+b</span><br><span class="line">print(c)<span class="comment"># hello</span></span><br><span class="line">print(c[<span class="number">4</span>])<span class="comment"># o</span></span><br><span class="line">d=a*<span class="number">2</span></span><br><span class="line">print(d)<span class="comment"># hehe</span></span><br><span class="line">print(<span class="string">"a"</span> <span class="keyword">in</span> c)<span class="comment"># false</span></span><br><span class="line">print(<span class="string">"a"</span> <span class="keyword">not</span> <span class="keyword">in</span> c)<span class="comment"># true</span></span><br></pre></td></tr></table></figure>
+
+<p>三引号(原样输出)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">"""hello</span></span><br><span class="line"><span class="string">word"""</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出：hello</span></span><br><span class="line"><span class="comment"># word</span></span><br></pre></td></tr></table></figure>
+
+<p>列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">print(a[<span class="number">0</span>])</span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">2</span>])</span><br><span class="line"><span class="comment"># 输出：</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">3</span>])<span class="comment"># [2,3]</span></span><br><span class="line"><span class="keyword">del</span> a[<span class="number">1</span>]</span><br><span class="line">print(a)<span class="comment"># [1,3]</span></span><br><span class="line">b=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">c=a+b</span><br><span class="line">print(c)<span class="comment"># [1,2,3,1,2,3]</span></span><br><span class="line">a[<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(a)<span class="comment"># [100,3]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">b=[<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">c=[a,b]</span><br><span class="line">print(c)<span class="comment"># [[1,2],[3,4]]</span></span><br><span class="line">print(len(c))<span class="comment"># 4</span></span><br><span class="line">print(max(c))<span class="comment"># 4</span></span><br><span class="line">print(min(c))<span class="comment"># 1</span></span><br><span class="line">a.append(<span class="number">100</span>)</span><br><span class="line">print(a)<span class="comment">#[1,2,100] </span></span><br><span class="line">d=[<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>]</span><br><span class="line">print(d.count(<span class="number">3</span>))<span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+
+<p>一次添加多个元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b=[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment"># a=a+b</span></span><br><span class="line">a.extend(b)</span><br><span class="line">print(a)<span class="comment"># [1,2,3,3,4,5]</span></span><br></pre></td></tr></table></figure>
+
+<p>哇塞，首次接触Python，这也太简单了吧，后面说不定会很难，加油！！！</p>
 
       
 
@@ -346,11 +286,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -406,7 +342,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/15/nodejs-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/26/Python快速入门/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -420,18 +356,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/17/链表的递归操作/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          链表的递归
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/15/nodejs-4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">回调函数，数据库</div>
+    <a href="/2019/10/21/HTTP读后感/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTTP总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -458,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js-1"><span class="toc-number">1.</span> <span class="toc-text">Node.js-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#node简介"><span class="toc-number">1.1.</span> <span class="toc-text">node简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-number">1.2.</span> <span class="toc-text">知识点</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一部分"><span class="toc-number">1.</span> <span class="toc-text">第一部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#one"><span class="toc-number">1.1.</span> <span class="toc-text">one</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -483,7 +410,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/10/15/nodejs-1/",
+  id: "http://yoursite.com/2019/10/26/Python快速入门/",
   owner: '1793523411',
   repo: '1793523411.github.io',
   oauth: {
